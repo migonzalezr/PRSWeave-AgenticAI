@@ -1,0 +1,16 @@
+{
+  "observation": "Phenotype assessment reports exact site correspondence (total_body) via the source GWAS GCST005348. The score's own trait fields name no site. Predictive validity is not measurable because the target data are synthetic dosages with no phenotypes or ancestry. Technical compatibility is not yet assessed, and the checksum already matches its pin.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "inspect_variant_coverage", "assessment": "Required next. It covers genotype layout, variant matching, coverage and invalid values for inputs/dosages.tsv, and it unlocks approve_plan."},
+    {"action": "validate_effect_alleles", "assessment": "Useful, but only after the layout and coverage are known."},
+    {"action": "verify_checksum", "assessment": "Metadata already shows matches_pin true, so this is not urgent."},
+    {"action": "search_alternative_scores", "assessment": "Unnecessary. The phenotype correspondence is exact, so the provided score is not shown ineligible."},
+    {"action": "request_human_review", "assessment": "Premature. Technical issues have not been assessed yet."},
+    {"action": "abstain", "assessment": "Premature. Site correspondence is exact, and limitations can be reported rather than blocking."}
+  ],
+  "selected_action": "inspect_variant_coverage",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "approve_plan requires a coverage inspection of inputs/dosages.tsv, and technical compatibility is still marked not yet assessed. The phenotype evidence shows exact total-body correspondence, so the next step is to check the genotype data.",
+  "expected_result": "A report of the file layout and column order, how many of the 81 variants match, coverage, and any invalid dosage values."
+}

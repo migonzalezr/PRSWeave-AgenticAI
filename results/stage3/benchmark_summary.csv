@@ -1,0 +1,16 @@
+run,kind,scenario,final_state,outcome_class,released,n_model_calls,model_tokens,planner_tool_uses,n_tool_executions,critic_judgments,tool_time_s,relay_latency_s,wall_time_s,failed_checks
+results/stage3/scenario_a/run_1,agentic,A,REQUIRES_HUMAN_REVIEW,safe_non_completion,False,9,603886,9,6,FAIL,0.004,74.06,1215.76,
+results/stage3/scenario_a/run_2,agentic,A,COMPLETED,verified_success,True,8,510295,12,6,PASS,0.004,396.7,711.58,
+results/stage3/scenario_b/run_1,agentic,B,REQUIRES_HUMAN_REVIEW,safe_non_completion,False,11,684337,12,8,FAIL,0.005,184.71,1368.22,
+results/stage3/scenario_b/run_2,agentic,B,COMPLETED,verified_success,True,12,838729,21,9,FAIL|PASS,0.007,843.88,1060.96,
+results/stage3/scenario_c/run_1,agentic,C,ABSTAINED,verified_success,False,5,304791,5,4,,0.208,46.19,674.46,
+results/stage3/scenario_d/run_1,agentic,D,REQUIRES_HUMAN_REVIEW,safe_non_completion,False,10,687072,10,7,FAIL,0.005,102.39,1309.19,
+results/stage3/scenario_d/run_2,agentic,D,COMPLETED,verified_success,True,13,944782,22,9,FAIL|PASS,0.008,849.18,1149.22,
+results/stage3/baseline/baseline_strict/scenario_a,baseline_strict,A,COMPLETED,verified_success,True,0,,,4,PASS,0.002,0,0.03,
+results/stage3/baseline/baseline_strict/scenario_b,baseline_strict,B,FAILED,safe_non_completion,False,0,,,4,,0.001,0,0.0,AD2
+results/stage3/baseline/baseline_strict/scenario_c,baseline_strict,C,ABSTAINED,verified_success,False,0,,,2,,0.001,0,0.0,
+results/stage3/baseline/baseline_strict/scenario_d,baseline_strict,D,COMPLETED,verified_success,True,0,,,5,FAIL|PASS,0.003,0,0.05,
+results/stage3/baseline/baseline_robust/scenario_a,baseline_robust,A,COMPLETED,verified_success,True,0,,,5,PASS,0.003,0,0.03,
+results/stage3/baseline/baseline_robust/scenario_b,baseline_robust,B,COMPLETED,verified_success,True,0,,,6,PASS,0.004,0,0.03,
+results/stage3/baseline/baseline_robust/scenario_c,baseline_robust,C,ABSTAINED,verified_success,False,0,,,2,,0.001,0,0.0,
+results/stage3/baseline/baseline_robust/scenario_d,baseline_robust,D,COMPLETED,verified_success,True,0,,,6,FAIL|PASS,0.004,0,0.06,

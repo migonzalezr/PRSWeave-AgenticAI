@@ -1,0 +1,17 @@
+{
+  "note": "Corrections to relay metadata. The event logs are hash-chained and append-only, so corrections are recorded here instead of editing them. Applied by Claude Code (relay).",
+  "corrections": [
+    {"run": "results/stage3/scenario_b/run_1", "step": "S011", "field": "latency_ms / total_tokens",
+     "logged": {"latency_ms": 0, "total_tokens": null},
+     "actual_from_task_notification": {"latency_ms": 14367, "subagent_tokens": 86584, "tool_uses": 1},
+     "cause": "The relay stepped the controller before Claude Code's usage notification for that turn arrived."},
+    {"run": "results/stage3/scenario_b/run_1", "step": "S007", "field": "planner_tool_uses",
+     "logged": {"planner_tool_uses": 2, "latency_ms": 86609},
+     "investigation": "A targeted search of the subagent transcript found only SubagentHandback tool calls (one per turn) and no file, shell, web or other tool calls. The extra count and long latency could not be explained from the transcript; the reported value was kept as logged."}
+  ],
+  "relay_format_notes": [
+    "Packets 1-4 and 6-8 were pasted from the controller's message files. Packet 5 (all runs) was retyped by the relay in compact JSON; its key values were checked afterwards against packet_005.json and matched, but the text was not byte-identical.",
+    "From packet 9 on, each relayed packet was rendered to packets/relay_NNN.txt, checked to be JSON-equal to packets/packet_NNN.json, and pasted from that file."
+  ],
+  "subagent_tokens_interpretation": "Claude Code reports 'subagent_tokens' per turn. The values grow monotonically within a run (about 53k to 87k), which suggests a running context size rather than tokens used in that turn. Summing them overstates usage; use the last value per run as an approximate context size. No dollar cost was reported."
+}

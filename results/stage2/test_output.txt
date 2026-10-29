@@ -1,0 +1,24 @@
+test_all_two_is_twice_weight_sum (tests.test_stage2.DosageBoundaries.test_all_two_is_twice_weight_sum) ... ok
+test_all_zero_scores_zero (tests.test_stage2.DosageBoundaries.test_all_zero_scores_zero) ... ok
+test_invalid_dosages_rejected (tests.test_stage2.DosageBoundaries.test_invalid_dosages_rejected) ... ok
+test_negative_weight_dosage_two (tests.test_stage2.DosageBoundaries.test_negative_weight_dosage_two) ... ok
+test_single_copy_adds_weight_once (tests.test_stage2.DosageBoundaries.test_single_copy_adds_weight_once) ... ok
+test_all_missing_is_no_data_not_zero (tests.test_stage2.MissingData.test_all_missing_is_no_data_not_zero) ... ok
+test_effect_allele_mismatch_rejected (tests.test_stage2.MissingData.test_effect_allele_mismatch_rejected) ... ok
+test_low_coverage_withholds_score (tests.test_stage2.MissingData.test_low_coverage_withholds_score) ... ok
+test_missing_tokens_excluded_not_imputed (tests.test_stage2.MissingData.test_missing_tokens_excluded_not_imputed) ... ok
+test_partial_coverage_threshold (tests.test_stage2.MissingData.test_partial_coverage_threshold) ... ok
+test_variant_absent_from_genotype_file (tests.test_stage2.MissingData.test_variant_absent_from_genotype_file) ... ok
+test_agreement_with_missing (tests.test_stage2.PrimaryVsIndependent.test_agreement_with_missing) ... ok
+test_independent_rejects_bad_dosage (tests.test_stage2.PrimaryVsIndependent.test_independent_rejects_bad_dosage) ... ok
+test_approved_file_loads (tests.test_stage2.ScoringFileChecks.test_approved_file_loads) ... ok
+test_tampered_file_rejected (tests.test_stage2.ScoringFileChecks.test_tampered_file_rejected) ... ok
+test_unsupported_model_rejected (tests.test_stage2.ScoringFileChecks.test_unsupported_model_rejected) ... ok
+test_different_seed_differs (tests.test_stage2.SyntheticGenerator.test_different_seed_differs) ... ok
+test_dosages_in_range (tests.test_stage2.SyntheticGenerator.test_dosages_in_range) ... ok
+test_same_seed_identical (tests.test_stage2.SyntheticGenerator.test_same_seed_identical) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests
+
+OK

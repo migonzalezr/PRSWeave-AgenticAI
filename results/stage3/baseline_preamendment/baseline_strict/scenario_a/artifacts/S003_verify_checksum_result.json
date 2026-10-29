@@ -1,0 +1,15 @@
+{
+  "tool": "verify_checksum",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "pgs_id": "PGS005206",
+    "path": "data/raw/scoring_files/PGS005206/PGS005206_hmPOS_GRCh38.txt.gz",
+    "sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+    "pinned_sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+    "match": true,
+    "approval": "DR-0001"
+  },
+  "artifacts": [],
+  "network_hosts": []
+}

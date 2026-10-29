@@ -1,0 +1,2 @@
+{"timestamp": "2026-10-29T14:46:32.200+00:00", "action": "prepare", "scenario_id": "C", "rep": 1, "run_id": "R3a6d4f6c", "scenario_sha256": "6ecff8a0cd108c8a775770884bba496f3d11caaf208584c3ecf10a9aa442963b"}
+{"timestamp": "2026-10-29T14:46:32.201+00:00", "action": "copy_input", "source": "data/synthetic/PGS005206_synthetic_dosages_seed20261029.tsv", "source_sha256": "ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd", "dest": "inputs/dosages.tsv"}

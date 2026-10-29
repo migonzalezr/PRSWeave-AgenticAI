@@ -1,0 +1,27 @@
+{
+  "run_id": "BL-baseline_robust-D",
+  "variant": "baseline_robust",
+  "scenario_id": "D",
+  "final_state": "COMPLETED",
+  "reason": "validated",
+  "released": true,
+  "n_planner_decisions": 0,
+  "n_model_calls": 0,
+  "n_tool_executions": 6,
+  "critic_judgments": [
+    "FAIL",
+    "PASS"
+  ],
+  "action_sequence": [
+    "inspect_score_metadata",
+    "assess_phenotype_compatibility",
+    "verify_checksum",
+    "inspect_variant_coverage",
+    "calculate_prs",
+    "submit_for_validation",
+    "calculate_prs",
+    "submit_for_validation"
+  ],
+  "runtime_s": 0.0461,
+  "finished_at": "2026-10-29T14:48:05.171+00:00"
+}

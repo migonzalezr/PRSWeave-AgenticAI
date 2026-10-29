@@ -1,0 +1,1030 @@
+[
+  {
+    "id": "PGS000121",
+    "name": "2018_BMD62_GRS.FN",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": "Femoral neck BMD (g/cm2)",
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 62,
+    "genome_build": "NCBI36",
+    "weight_type": "NR",
+    "method": "Weighted sum of risk alleles",
+    "pmid": 27649491
+  },
+  {
+    "id": "PGS000122",
+    "name": "2018_BMD33_GRS.FN",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": "Femoral neck BMD (g/cm2)",
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 33,
+    "genome_build": "NCBI36",
+    "weight_type": "NR",
+    "method": "Weighted sum of risk alleles (with random forest selection)",
+    "pmid": 27649491
+  },
+  {
+    "id": "PGS000657",
+    "name": "gSOS",
+    "trait_reported": "Heel quantitative ultrasound speed of sound (SOS)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 21716,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "LASSO (biglasso)",
+    "pmid": 32614825
+  },
+  {
+    "id": "PGS000951",
+    "name": "GBE_INI3144",
+    "trait_reported": "Heel Broadband ultrasound attenuation, direct entry",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI3144",
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 13735,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS000952",
+    "name": "GBE_INI3147",
+    "trait_reported": "Heel quantitative ultrasound index (QUI), direct entry",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI3147",
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 14311,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS000953",
+    "name": "GBE_INI4101",
+    "trait_reported": "Left heel broadband ultrasound attenuation",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4101",
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 7688,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS000954",
+    "name": "GBE_INI4104",
+    "trait_reported": "Left heel quantitative ultrasound index (QUI), direct entry",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4104",
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 9272,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS000955",
+    "name": "GBE_INI4120",
+    "trait_reported": "Right heel broadband ultrasound attenuation",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4120",
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 7069,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS000956",
+    "name": "GBE_INI4123",
+    "trait_reported": "Right heel quantitative ultrasound index (QUI), direct entry",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4123",
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 9756,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001026",
+    "name": "GBE_HC83",
+    "trait_reported": "Forearm or wrist fracture",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/HC83",
+    "trait_efo": [
+      "EFO_0009514"
+    ],
+    "variants_number": 45,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001037",
+    "name": "GBE_INI78",
+    "trait_reported": "Heel bone mineral density (BMD) T-score, automated",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI78",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 14310,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001038",
+    "name": "GBE_INI4106",
+    "trait_reported": "Left heel bone mineral density (BMD) T-score, automated",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4106",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 9275,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001039",
+    "name": "GBE_INI4125",
+    "trait_reported": "Right heel bone mineral density (BMD) T-score, automated",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4125",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 9753,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001258",
+    "name": "GBE_HC57",
+    "trait_reported": "Radius fracture",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/HC57",
+    "trait_efo": [
+      "MONDO_0005325"
+    ],
+    "variants_number": 365,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001273",
+    "name": "GBE_HC22",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/HC22",
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 316,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001274",
+    "name": "GBE_HC1268",
+    "trait_reported": "Osteoporosis without pathological fracture (time-to-event)",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/HC1268",
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 1270,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001402",
+    "name": "GBE_INI3148",
+    "trait_reported": "Heel bone mineral density (BMD)",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI3148",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 14251,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001403",
+    "name": "GBE_INI4105",
+    "trait_reported": "Heel bone mineral density (BMD) (L)",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4105",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 8285,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001404",
+    "name": "GBE_INI4124",
+    "trait_reported": "Heel bone mineral density (BMD) (R)",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4124",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 9637,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001529",
+    "name": "GBE_INI3146",
+    "trait_reported": "Speed of sound through heel",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI3146",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 13172,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001530",
+    "name": "GBE_INI4103",
+    "trait_reported": "Speed of sound through heel (L)",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4103",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 8419,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001531",
+    "name": "GBE_INI4122",
+    "trait_reported": "Speed of sound through heel (R)",
+    "trait_additional": "https://biobankengine.stanford.edu/RIVAS_HG19/snpnet/INI4122",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 8912,
+    "genome_build": "GRCh37",
+    "weight_type": "NR",
+    "method": "snpnet",
+    "pmid": 35324888
+  },
+  {
+    "id": "PGS001883",
+    "name": "portability-PLR_743.1",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": "musculoskeletal",
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 365,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Penalized regression (bigstatsr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS001921",
+    "name": "portability-PLR_fracture_5y",
+    "trait_reported": "Fractured/broken bones in last 5 years",
+    "trait_additional": "injuries & poisonings",
+    "trait_efo": [
+      "MONDO_0005315"
+    ],
+    "variants_number": 7965,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Penalized regression (bigstatsr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS001955",
+    "name": "portability-PLR_log_heel_BMD",
+    "trait_reported": "Heel bone mineral density (BMD)",
+    "trait_additional": "physical measures",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 73565,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Penalized regression (bigstatsr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS001956",
+    "name": "portability-PLR_log_heel_BUA",
+    "trait_reported": "Heel Broadband ultrasound attenuation, direct entry",
+    "trait_additional": "physical measures",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 69537,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Penalized regression (bigstatsr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS002095",
+    "name": "portability-ldpred2_743.1",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": "musculoskeletal",
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 658775,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2 (bigsnpr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS002137",
+    "name": "portability-ldpred2_fracture_5y",
+    "trait_reported": "Fractured/broken bones in last 5 years",
+    "trait_additional": "injuries & poisonings",
+    "trait_efo": [
+      "MONDO_0005315"
+    ],
+    "variants_number": 738021,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2 (bigsnpr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS002173",
+    "name": "portability-ldpred2_log_heel_BMD",
+    "trait_reported": "Heel bone mineral density (BMD)",
+    "trait_additional": "physical measures",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 729074,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2 (bigsnpr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS002174",
+    "name": "portability-ldpred2_log_heel_BUA",
+    "trait_reported": "Heel Broadband ultrasound attenuation, direct entry",
+    "trait_additional": "physical measures",
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 732595,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2 (bigsnpr)",
+    "pmid": 34995502
+  },
+  {
+    "id": "PGS002315",
+    "name": "bmd_HEEL_TSCOREz.BOLT-LMM",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 1109311,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "BOLT-LMM",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002387",
+    "name": "bmd_HEEL_TSCOREz.P+T.0.0001",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 25831,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Pruning and Thresholding (P+T)",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002436",
+    "name": "bmd_HEEL_TSCOREz.P+T.0.001",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 53472,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Pruning and Thresholding (P+T)",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002485",
+    "name": "bmd_HEEL_TSCOREz.P+T.0.01",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 171392,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Pruning and Thresholding (P+T)",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002534",
+    "name": "bmd_HEEL_TSCOREz.P+T.1e-06",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 11440,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Pruning and Thresholding (P+T)",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002583",
+    "name": "bmd_HEEL_TSCOREz.P+T.5e-08",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 7908,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "Pruning and Thresholding (P+T)",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002632",
+    "name": "bmd_HEEL_TSCOREz.PolyFun-pred",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 432286,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "PolyFun-pred",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002681",
+    "name": "bmd_HEEL_TSCOREz.SBayesR",
+    "trait_reported": "Bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 984276,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "SBayesR",
+    "pmid": 35393596
+  },
+  {
+    "id": "PGS002768",
+    "name": "BMD_prscs",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": "PGS for bone mineral density (BMD), with high PRS indicating low BMD",
+    "trait_efo": [
+      "EFO_0009270",
+      "MONDO_0005298"
+    ],
+    "variants_number": 1091549,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "PRS-CS",
+    "pmid": 36347255
+  },
+  {
+    "id": "PGS003535",
+    "name": "cont-decay-log_heel_BMD",
+    "trait_reported": "Heel bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 979739,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2-auto",
+    "pmid": 37198491
+  },
+  {
+    "id": "PGS003536",
+    "name": "cont-decay-log_heel_BUA",
+    "trait_reported": "Heel Broadband ultrasound attenuation, direct entry",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 979739,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2-auto",
+    "pmid": 37198491
+  },
+  {
+    "id": "PGS004411",
+    "name": "X78.score",
+    "trait_reported": "Heel bone mineral density (BMD) T-score, automated",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004413",
+    "name": "X3144.score",
+    "trait_reported": "Heel Broadband ultrasound attenuation, direct entry",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004414",
+    "name": "X3147.score",
+    "trait_reported": "Heel quantitative ultrasound index (QUI), direct entry",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004415",
+    "name": "X3148.score",
+    "trait_reported": "Heel bone mineral density (BMD)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004417",
+    "name": "X4101.score",
+    "trait_reported": "Heel broadband ultrasound attenuation (left)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004418",
+    "name": "X4104.score",
+    "trait_reported": "Heel quantitative ultrasound index (QUI), direct entry (left)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004419",
+    "name": "X4105.score",
+    "trait_reported": "Heel bone mineral density (BMD) (left)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004420",
+    "name": "X4106.score",
+    "trait_reported": "Heel bone mineral density (BMD) T-score, automated (left)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004422",
+    "name": "X4120.score",
+    "trait_reported": "Heel broadband ultrasound attenuation (right)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004423",
+    "name": "X4123.score",
+    "trait_reported": "Heel quantitative ultrasound index (QUI), direct entry (right)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0004514"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004424",
+    "name": "X4124.score",
+    "trait_reported": "Heel bone mineral density (BMD) (right)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004425",
+    "name": "X4125.score",
+    "trait_reported": "Heel bone mineral density (BMD) T-score, automated (right)",
+    "trait_additional": null,
+    "trait_efo": [
+      "EFO_0009270"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004490",
+    "name": "disease.M81.score",
+    "trait_reported": "M81 (Osteoporosis without pathological fracture)",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004495",
+    "name": "disease.osteoporosis.score",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004560",
+    "name": "meta.M81.score",
+    "trait_reported": "M81 (Osteoporosis without pathological fracture)",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "RFDiseasemetaPRS",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004565",
+    "name": "meta.osteoporosis.score",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 1059939,
+    "genome_build": "GRCh37",
+    "weight_type": "beta",
+    "method": "RFDiseasemetaPRS",
+    "pmid": 38351177
+  },
+  {
+    "id": "PGS004809",
+    "name": "osteoporosis_PRSmix_eur",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 863731,
+    "genome_build": "hg38",
+    "weight_type": "beta",
+    "method": "PRSmix",
+    "pmid": 38508198
+  },
+  {
+    "id": "PGS004810",
+    "name": "osteoporosis_PRSmixPlus_eur",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 1876917,
+    "genome_build": "hg38",
+    "weight_type": "beta",
+    "method": "PRSmixPlus",
+    "pmid": 38508198
+  },
+  {
+    "id": "PGS005146",
+    "name": "Osteoporosis (PRS-CS; EAS)",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 908465,
+    "genome_build": "hg19",
+    "weight_type": "beta",
+    "method": "PRS-CS",
+    "pmid": 40045046
+  },
+  {
+    "id": "PGS005155",
+    "name": "Osteoporosis (PRS-CSx; EAS+EUR)",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 908465,
+    "genome_build": "hg19",
+    "weight_type": "beta",
+    "method": "PRS-CSx",
+    "pmid": 40045046
+  },
+  {
+    "id": "PGS005206",
+    "name": "BMD_PRS",
+    "trait_reported": "Bone mineral density",
+    "trait_additional": null,
+    "trait_efo": [
+      "OBA_1000110"
+    ],
+    "variants_number": 81,
+    "genome_build": "NR",
+    "weight_type": "beta",
+    "method": "Genome-wide significant SNPs",
+    "pmid": 38460828
+  },
+  {
+    "id": "PGS019722",
+    "name": "TPMI_743_Lassosum2",
+    "trait_reported": "Osteoporosis osteopenia and pathological fracture",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298",
+      "MONDO_0005315"
+    ],
+    "variants_number": 69652,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "Lassosum2",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019723",
+    "name": "TPMI_743_LDpred2",
+    "trait_reported": "Osteoporosis osteopenia and pathological fracture",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298",
+      "MONDO_0005315"
+    ],
+    "variants_number": 365313,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019724",
+    "name": "TPMI_743_MegaPRS",
+    "trait_reported": "Osteoporosis osteopenia and pathological fracture",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298",
+      "MONDO_0005315"
+    ],
+    "variants_number": 16942,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "MegaPRS",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019725",
+    "name": "TPMI_743_PRS-CS",
+    "trait_reported": "Osteoporosis osteopenia and pathological fracture",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298",
+      "MONDO_0005315"
+    ],
+    "variants_number": 983829,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "PRS-CS",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019726",
+    "name": "TPMI_743_SBayesR",
+    "trait_reported": "Osteoporosis osteopenia and pathological fracture",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298",
+      "MONDO_0005315"
+    ],
+    "variants_number": 957929,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "SBayesR",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019727",
+    "name": "TPMI_743.11_Lassosum2",
+    "trait_reported": "Osteoporosis NOS",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 419,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "Lassosum2",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019728",
+    "name": "TPMI_743.11_LDpred2",
+    "trait_reported": "Osteoporosis NOS",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 317022,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "LDpred2",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019729",
+    "name": "TPMI_743.11_MegaPRS",
+    "trait_reported": "Osteoporosis NOS",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 27110,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "MegaPRS",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019730",
+    "name": "TPMI_743.11_PRS-CS",
+    "trait_reported": "Osteoporosis NOS",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 983826,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "PRS-CS",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS019731",
+    "name": "TPMI_743.11_SBayesR",
+    "trait_reported": "Osteoporosis NOS",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 989191,
+    "genome_build": "GRCh38",
+    "weight_type": "beta",
+    "method": "SBayesR",
+    "pmid": 41094136
+  },
+  {
+    "id": "PGS020003",
+    "name": "GRS14_osteoporosis",
+    "trait_reported": "Osteoporosis",
+    "trait_additional": null,
+    "trait_efo": [
+      "MONDO_0005298"
+    ],
+    "variants_number": 14,
+    "genome_build": "NR",
+    "weight_type": "beta",
+    "method": "Genome-wide significant SNPs",
+    "pmid": 38771526
+  }
+]

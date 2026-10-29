@@ -1,0 +1,38 @@
+{
+  "observation": "Effect alleles show 0 mismatches across 81 checked variants. The checks so far are complete: phenotype site is exact via the source GWAS, coverage is 1.0 with no invalid cells, and the scoring file matches its pin (reported in the metadata). Caveats noted by the tool: 24 variants have an ambiguous other allele, 5 are palindromic, and the allele agreement says nothing about strand resolution because the file is already coded as effect-allele dosage.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "approve_plan",
+      "assessment": "All prerequisite eligibility checks are complete and clean. A plan can be committed that carries the limitations forward."
+    },
+    {
+      "action": "verify_checksum",
+      "assessment": "Redundant. The metadata already reports matches_pin true for approval DR-0001."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Not required. The target phenotype is unchanged, and no blocking issue was found."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Not justified. The evidence permits a computation, with limitations to be reported."
+    },
+    {
+      "action": "search_alternative_scores",
+      "assessment": "Unnecessary. The provided score corresponds exactly to the requested site."
+    }
+  ],
+  "selected_action": "approve_plan",
+  "action_arguments": {
+    "plan": [
+      "Compute PGS005206 (81 variants, GRCh38 harmonized scoring file pinned under DR-0001) as the weighted sum of effect-allele dosages in inputs/dosages.tsv for all 20 individuals, with no change to weights, thresholds or phenotype.",
+      "Submit the raw scores for validation.",
+      "Write the report as a short factual summary stating that the data are synthetic and that the score's phenotype is bone mineral density, with total-body BMD supported by the linked source GWAS GCST005348 (the score's own trait fields name no skeletal site).",
+      "State the limitations: no phenotypes or ancestry in the target data, so predictive validity and transferability cannot be measured; the only recorded evaluation is in European children (n=3470, Generation R); 24 variants have an ambiguous other allele and 5 are palindromic; original genome build is not reported; the derivation of the 81 weights is unverified; and allele agreement does not test strand harmonization of real genotypes.",
+      "Do not report percentiles, risk categories or clinical interpretation."
+    ]
+  },
+  "decision_justification": "Phenotype site correspondence is exact (total_body via GCST005348), coverage is 1.0 with 0 invalid cells, effect alleles have 0 mismatches across 81 variants, and the scoring file matches its approved pin. These are the stated prerequisites for approving a plan, and the limitations are written into the plan.",
+  "expected_result": "The plan is approved, which unlocks calculate_prs on inputs/dosages.tsv with PGS005206."
+}

@@ -1,0 +1,2 @@
+{"timestamp": "2026-10-29T14:48:04.990+00:00", "action": "prepare", "scenario_id": "A", "variant": "baseline_strict"}
+{"timestamp": "2026-10-29T14:48:04.991+00:00", "action": "copy_input", "source": "data/synthetic/PGS005206_synthetic_dosages_seed20261029.tsv", "source_sha256": "ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd", "dest": "inputs/dosages.tsv"}

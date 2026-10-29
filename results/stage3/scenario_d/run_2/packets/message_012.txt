@@ -1,0 +1,275 @@
+STATE PACKET:
+{
+ "packet_number": 12,
+ "run_id": "R5576ba54",
+ "researcher_request": "Using the published polygenic score provided (PGS005206) and the genotype dosage file provided for 20 individuals, compute a validated polygenic score for total-body BMD for each individual and report the results with their limitations.",
+ "provided_inputs": {
+  "genotype_artifact": "inputs/dosages.tsv",
+  "provided_scores": [
+   "PGS005206"
+  ]
+ },
+ "current_genotype_artifact": "derived/regenerated_authorized_dosages.tsv",
+ "current_score": "PGS005206",
+ "workflow_state": "PLAN_APPROVED",
+ "budgets": {
+  "decisions_used": 11,
+  "max_decisions": 14,
+  "recovery_cycles_used": 1,
+  "max_recovery_cycles": 2
+ },
+ "permitted_actions": [
+  {
+   "action": "inspect_score_metadata",
+   "description": "Retrieve PGS Catalog score, performance and source-GWAS records with provenance.",
+   "arguments": {
+    "pgs_id": "PGS Catalog score ID"
+   }
+  },
+  {
+   "action": "search_alternative_scores",
+   "description": "Text search of the full PGS Catalog score index (all terms must match).",
+   "arguments": {
+    "terms": "list of search terms"
+   }
+  },
+  {
+   "action": "assess_phenotype_compatibility",
+   "description": "Compare requested phenotype with the score's phenotype evidence; report technical compatibility, scientific suitability evidence and predictive-validity status separately.",
+   "arguments": {
+    "pgs_id": "score ID with an evidence record"
+   }
+  },
+  {
+   "action": "inspect_variant_coverage",
+   "description": "Inspect a genotype file by header names: layout, variant matching, coverage, invalid values.",
+   "arguments": {
+    "genotype_artifact": "run-relative path",
+    "pgs_id": "score ID"
+   }
+  },
+  {
+   "action": "validate_effect_alleles",
+   "description": "Check effect alleles in a genotype file against the scoring file.",
+   "arguments": {
+    "genotype_artifact": "run-relative path",
+    "pgs_id": "score ID"
+   }
+  },
+  {
+   "action": "select_alternative_eligible_score",
+   "description": "Check whether another score may replace the provided one without researcher approval (requires exact phenotype correspondence and an approved pinned file).",
+   "arguments": {
+    "pgs_id": "candidate score ID"
+   }
+  },
+  {
+   "action": "verify_checksum",
+   "description": "Verify the scoring file against its approved SHA-256 pin.",
+   "arguments": {
+    "pgs_id": "score ID"
+   }
+  },
+  {
+   "action": "calculate_prs",
+   "description": "Run the validated Stage 2 scorer (strict reader, exact arithmetic, DR-0002 QC).",
+   "arguments": {
+    "genotype_artifact": "run-relative path",
+    "pgs_id": "score ID"
+   }
+  },
+  {
+   "action": "repair_column_order",
+   "description": "Rewrite a genotype table into canonical column order using header names only; verifies every cell is unchanged; original left untouched.",
+   "arguments": {
+    "genotype_artifact": "run-relative path"
+   }
+  },
+  {
+   "action": "regenerate_authorized_test_input",
+   "description": "Restore the authorized synthetic test file from its seed, only if the given file is cell-identical to it; verifies the authorized checksum.",
+   "arguments": {
+    "genotype_artifact": "run-relative path"
+   }
+  },
+  {
+   "action": "approve_plan",
+   "description": "Commit to a scoring plan once eligibility checks for the current score and genotype file are complete.",
+   "arguments": {
+    "plan": "list of planned steps"
+   }
+  },
+  {
+   "action": "request_human_review",
+   "description": "Stop and ask the researcher to decide (terminal).",
+   "arguments": {
+    "question": "what the researcher must decide"
+   }
+  },
+  {
+   "action": "abstain",
+   "description": "Stop without releasing results (terminal).",
+   "arguments": {
+    "reason": "evidence-based reason"
+   }
+  }
+ ],
+ "not_permitted_now": [
+  {
+   "action": "submit_for_validation",
+   "reason": "requires a successful calculate_prs"
+  }
+ ],
+ "last_action_result": {
+  "step": "S011",
+  "action": "approve_plan",
+  "status": "ok",
+  "data": {
+   "plan": [
+    "Run calculate_prs on derived/regenerated_authorized_dosages.tsv (sha256 ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd, matching the authorized checksum) with PGS005206, using the scoring file pinned under DR-0001 (checksum re-verified before scoring), and without changing weights, thresholds or phenotype.",
+    "Do not modify the new scores file after it is written, and submit it unchanged to submit_for_validation.",
+    "Submit with phenotype_reported stating the score's full recorded phenotype: 'Bone mineral density', with source GWAS 'Total body bone mineral density' (GCST005348), as the critic requires. State that the data are synthetic.",
+    "Report the limitations: no phenotypes or ancestry in the target data, so predictive validity and transferability cannot be measured; the only recorded evaluation is in European children (n=3470, Generation R); 24 variants have an ambiguous other allele and 5 are palindromic; original genome build is not reported; the derivation of the 81 weights is unverified; and allele agreement does not test strand harmonization of real genotypes.",
+    "Do not report percentiles, risk categories or clinical interpretation."
+   ]
+  }
+ },
+ "last_decision_rejected": null,
+ "critic_feedback": {
+  "step": "S008",
+  "judgment": "FAIL",
+  "failed_criteria": [
+   "V4_output_integrity",
+   "V5_independent_numerical_agreement",
+   "V6a_phenotype_label_correct"
+  ],
+  "retry_allowed": true,
+  "remediation": [
+   "The scores file changed after it was written; recompute it with calculate_prs from verified inputs.",
+   "Recompute scores with calculate_prs from verified inputs, then resubmit.",
+   "Report the score's actual phenotype (total-body BMD)."
+  ],
+  "missing_evidence": null,
+  "failed_evidence": [
+   {
+    "sha256_now": "887c63664332a0c0223b0b44b983e6aff80a1f1b6ce9e10a23dbca51a5a72231",
+    "sha256_at_write": "7c1e4edd2801ff0e6e86e560a80d74ebf9211f7a3b1615a3fb8044ab60a9d85d"
+   },
+   {
+    "tolerance_abs": 1e-09,
+    "max_abs_diff": 0.08100000000000007,
+    "disagreements": [
+     {
+      "IID": "SYN11",
+      "submitted": "-0.709",
+      "independent": "-0.79",
+      "abs_diff": 0.08100000000000007
+     }
+    ],
+    "independent_returncode": 0,
+    "independent_stderr": "",
+    "independent_output": "critic/S008_verdict.independent.csv"
+   },
+   {
+    "phenotype_reported": "Bone mineral density",
+    "score_phenotype_evidence": "Bone mineral density  Total body bone mineral density",
+    "evidence_record": "artifacts/S001_inspect_score_metadata_result.json"
+   }
+  ]
+ },
+ "history": [
+  {
+   "step": "S001",
+   "action": "inspect_score_metadata",
+   "arguments": {
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S002",
+   "action": "assess_phenotype_compatibility",
+   "arguments": {
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S003",
+   "action": "inspect_variant_coverage",
+   "arguments": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S004",
+   "action": "validate_effect_alleles",
+   "arguments": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S005",
+   "action": "approve_plan",
+   "status": "ok"
+  },
+  {
+   "step": "S006",
+   "action": "verify_checksum",
+   "arguments": {
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S007",
+   "action": "calculate_prs",
+   "arguments": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S008",
+   "action": "submit_for_validation",
+   "status": "FAIL"
+  },
+  {
+   "step": "S009",
+   "action": "regenerate_authorized_test_input",
+   "arguments": {
+    "genotype_artifact": "inputs/dosages.tsv"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S010",
+   "action": "inspect_variant_coverage",
+   "arguments": {
+    "genotype_artifact": "derived/regenerated_authorized_dosages.tsv",
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S011",
+   "action": "approve_plan",
+   "status": "ok"
+  }
+ ]
+}
+
+Reply with only the JSON object.

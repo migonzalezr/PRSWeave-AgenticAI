@@ -1,0 +1,14 @@
+{
+  "observation": "verify_checksum reports match true: the scoring file SHA-256 equals the pinned value (approval DR-0001). The plan is approved and calculate_prs is now permitted.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "calculate_prs", "assessment": "All gates are met: phenotype assessed, coverage 81/81, 0 effect-allele mismatches, checksum verified, plan approved. This is the next step in the plan."},
+    {"action": "request_human_review", "assessment": "No blocking issue. The limitations will be reported with the results."},
+    {"action": "abstain", "assessment": "Not justified by the evidence."},
+    {"action": "search_alternative_scores", "assessment": "Unnecessary. The provided score is eligible."}
+  ],
+  "selected_action": "calculate_prs",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "The checksum match completes the last prerequisite. Earlier results show exact total-body site correspondence, 81 of 81 variants matched with no invalid cells, and 0 effect-allele mismatches.",
+  "expected_result": "The Stage 2 scorer returns per-individual raw scores for the 20 individuals, with DR-0002 QC metrics (per-individual coverage near 1.0) and no errors."
+}

@@ -1,0 +1,7 @@
+{
+  "scores_artifact": "artifacts/prs_scores_1.csv",
+  "pgs_id": "PGS005206",
+  "phenotype_reported": "Bone mineral density (PGS Catalog trait_reported; source GWAS GCST005348 is total body bone mineral density)",
+  "fulfils_request": "true",
+  "summary": "PGS005206 (BMD_PRS; PGS Catalog reported trait: Bone mineral density; source GWAS GCST005348: total body bone mineral density) was applied to a synthetic effect-allele dosage file for 20 individuals, using the approved pinned GRCh38 harmonized scoring file (SHA-256 verified against pin DR-0001). The file was reordered by column name only (1620 cells compared, all identical). All 81 score variants were matched with no missing or invalid cells, no effect-allele mismatches were found, and all 20 individuals were scored with QC status PASS. Limitations: all data are synthetic with no phenotypes or ancestry, so predictive validity and ancestry transferability could not be assessed; the score's own trait fields name no skeletal site, which was taken from the linked source GWAS; the only catalog evaluation is a single European pediatric cohort (Generation R, n=3470); 24 variants have an ambiguous other allele and 5 are palindromic, and strand resolution cannot be tested in dosage-coded data; the original genome build is not reported and derivation of the weights was not verified. Raw scores are reported without percentiles, risk categories or clinical interpretation."
+}

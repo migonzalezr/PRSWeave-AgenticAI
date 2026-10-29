@@ -1,0 +1,73 @@
+{
+  "source": "Medina-Gomez 2018 AJHG Table 1 (novel loci only)",
+  "n_table1": 36,
+  "n_in_pgs": 12,
+  "tally": {
+    "identical": 4,
+    "same_allele_same_sign_diff_magnitude": 8,
+    "conflict": 0,
+    "absent_from_pgs": 24
+  },
+  "per_snp": {
+    "rs10490046": {
+      "gwas_effect_aligned": "0.043",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    },
+    "rs10048745": {
+      "gwas_effect_aligned": "-0.039",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    },
+    "rs11745493": {
+      "gwas_effect_aligned": "0.044",
+      "agreement": "identical",
+      "grch37_position_match": true
+    },
+    "rs28362721": {
+      "gwas_effect_aligned": "-0.059",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    },
+    "rs1548607": {
+      "gwas_effect_aligned": "0.036",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    },
+    "rs10788264": {
+      "gwas_effect_aligned": "-0.034",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    },
+    "rs2553773": {
+      "gwas_effect_aligned": "-0.037",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    },
+    "rs10777212": {
+      "gwas_effect_aligned": "0.045",
+      "agreement": "identical",
+      "grch37_position_match": true
+    },
+    "rs73200209": {
+      "gwas_effect_aligned": "0.045",
+      "agreement": "identical",
+      "grch37_position_match": true
+    },
+    "rs1545161": {
+      "gwas_effect_aligned": "0.041",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    },
+    "rs9976876": {
+      "gwas_effect_aligned": "-0.038",
+      "agreement": "identical",
+      "grch37_position_match": true
+    },
+    "rs11910328": {
+      "gwas_effect_aligned": "-0.043",
+      "agreement": "same_allele_same_sign_diff_magnitude",
+      "grch37_position_match": true
+    }
+  }
+}

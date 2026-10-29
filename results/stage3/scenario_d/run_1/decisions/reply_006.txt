@@ -1,0 +1,14 @@
+{
+  "observation": "The plan is approved, but calculate_prs is blocked because verify_checksum has not been run for this score in this run. The metadata record already showed matches_pin true, but the gate needs a dedicated verification step.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "verify_checksum", "assessment": "This is the explicit prerequisite for calculate_prs. It confirms the scoring file against its approved SHA-256 pin."},
+    {"action": "calculate_prs", "assessment": "Not permitted until verify_checksum has run."},
+    {"action": "request_human_review", "assessment": "Not needed. Nothing blocks the workflow."},
+    {"action": "abstain", "assessment": "Not justified. All eligibility checks passed."}
+  ],
+  "selected_action": "verify_checksum",
+  "action_arguments": {"pgs_id": "PGS005206"},
+  "decision_justification": "The state packet says calculate_prs requires verify_checksum for this score in this run. The plan already specifies the pinned scoring file under approval DR-0001.",
+  "expected_result": "The scoring file SHA-256 matches the approved pin 406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3, which unlocks calculate_prs."
+}

@@ -1,0 +1,8 @@
+{
+  "plan": [
+    "Use PGS005206 (pinned GRCh38 harmonized scoring file, sha256 matches DR-0001) for total-body BMD, with the target site taken from source GWAS GCST005348",
+    "Score derived/dosages_canonical_columns.tsv (cell-identical to inputs/dosages.tsv, 81/81 variants, 20 individuals) as the weighted sum of effect-allele dosages, without altering weights or inventing genotypes",
+    "Submit the per-individual raw scores for validation",
+    "Report the data as synthetic, and report limitations: score trait fields name no skeletal site; the only evaluation is one European pediatric cohort (Generation R, n=3470); predictive validity and ancestry transferability are not measurable with synthetic dosages lacking phenotypes and ancestry; 24 variants with ambiguous other allele and 5 palindromic variants cannot be strand-checked in dosage-coded data; original build not reported; derivation of weights unverified; no percentiles or clinical interpretation"
+  ]
+}

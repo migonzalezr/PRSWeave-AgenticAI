@@ -1,0 +1,16 @@
+{
+  "observation": "Coverage inspection of inputs/dosages.tsv shows 20 individuals, all 81 of 81 score variants matched by ID, rsIDs consistent, no missing or invalid cells, coverage 1.0 for everyone, and no issues. Effect-allele agreement with the scoring file has not been checked yet.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "validate_effect_alleles", "assessment": "Not yet done. It confirms that the dosage encoding matches the scoring file's effect alleles. A mismatch would silently flip scores, so it should come before the plan is approved."},
+    {"action": "approve_plan", "assessment": "Permitted, but better after the allele check."},
+    {"action": "verify_checksum", "assessment": "Metadata already shows matches_pin true. It can be re-verified in the plan if needed."},
+    {"action": "search_alternative_scores", "assessment": "Unnecessary. The phenotype correspondence is exact and the data are usable."},
+    {"action": "request_human_review", "assessment": "No blocking issue found yet."},
+    {"action": "abstain", "assessment": "No evidence that the request cannot be met."}
+  ],
+  "selected_action": "validate_effect_alleles",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "Coverage is complete and clean, but the result does not say whether the dosage effect alleles agree with the scoring file. That check is a cheap safeguard against a sign error before a plan is approved.",
+  "expected_result": "Effect alleles in the dosage file match the scoring file for all 81 variants, with no mismatches or flips, which would clear the way for approve_plan."
+}

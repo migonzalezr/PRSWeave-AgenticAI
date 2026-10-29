@@ -1,0 +1,20 @@
+{
+  "run_id": "BL-baseline_strict-B",
+  "variant": "baseline_strict",
+  "scenario_id": "B",
+  "final_state": "FAILED",
+  "reason": "calculate_prs GENOTYPE_SCHEMA_ERROR",
+  "released": false,
+  "n_planner_decisions": 0,
+  "n_model_calls": 0,
+  "n_tool_executions": 4,
+  "critic_judgments": [],
+  "action_sequence": [
+    "inspect_score_metadata",
+    "assess_phenotype_compatibility",
+    "verify_checksum",
+    "calculate_prs"
+  ],
+  "runtime_s": 0.003,
+  "finished_at": "2026-10-29T14:48:05.020+00:00"
+}

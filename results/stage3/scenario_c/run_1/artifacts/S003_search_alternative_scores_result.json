@@ -1,0 +1,28 @@
+{
+  "tool": "search_alternative_scores",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "terms": [
+      "hip",
+      "bone mineral density"
+    ],
+    "n_hits": 0,
+    "hits": [],
+    "truncated": false,
+    "index": {
+      "path": "data/raw/pgs_catalog_api/score_all.json",
+      "sha256": "06e37d1ba919cedacd5ee5ec878995081fdc63551a657a60dee4dec5abfd6a8a",
+      "catalog_release": {
+        "date": "2026-10-23",
+        "scores": 7029,
+        "publications": 850,
+        "traits": 820
+      },
+      "n_scores": 7029
+    },
+    "note": "Matches are text matches on catalog metadata, not eligibility judgements."
+  },
+  "artifacts": [],
+  "network_hosts": []
+}

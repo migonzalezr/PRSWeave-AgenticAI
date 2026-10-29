@@ -1,0 +1,78 @@
+{
+  "pgs_id": "PGS005206",
+  "requested_phenotype": "total-hip BMD",
+  "scientific_suitability": {
+    "requested_sites": [
+      "total_hip"
+    ],
+    "score_phenotype_sources": {
+      "trait_reported": "Bone mineral density",
+      "trait_additional": null,
+      "trait_efo[0]": "bone tissue density (OBA_1000110)",
+      "source_gwas[GCST005348]": "Total body bone mineral density",
+      "evaluation_phenotype[0]": "BMD levels"
+    },
+    "sites_by_source": {
+      "trait_reported": [],
+      "trait_efo[0]": [],
+      "source_gwas[GCST005348]": [
+        "total_body"
+      ],
+      "evaluation_phenotype[0]": []
+    },
+    "score_sites": [
+      "total_body"
+    ],
+    "site_correspondence": "mismatch",
+    "note": "Site correspondence is a vocabulary comparison of recorded metadata; it is evidence, not a decision."
+  },
+  "technical_compatibility": "not yet assessed (run inspect_variant_coverage)",
+  "predictive_validity": {
+    "measurable": false,
+    "reason": "Target genotypes are synthetic effect-allele dosages with no phenotypes and no ancestry; transferability and predictive accuracy cannot be measured."
+  },
+  "ancestry_metadata": {
+    "development_gwas": {
+      "dist": {
+        "NR": 13.9,
+        "AFR": 2,
+        "EUR": 84.1
+      },
+      "count": 66945
+    },
+    "evaluation": {
+      "dist": {
+        "MAE": 100
+      },
+      "count": 1,
+      "multi": [
+        "MAE_EUR",
+        "MAE_ASN",
+        "MAE_AFR"
+      ]
+    },
+    "evaluations": [
+      {
+        "ppm_id": "PPM022584",
+        "phenotype": "BMD levels",
+        "ancestry": "European",
+        "n": 3470,
+        "cohorts": [
+          "Generation_R"
+        ],
+        "age": {
+          "estimate_type": "mean",
+          "estimate": 9.77,
+          "variability_type": "sd",
+          "variability": 0.33,
+          "unit": "years"
+        }
+      }
+    ],
+    "supports_claims_for_target": false
+  },
+  "conditions_possibly_requiring_abstention": [
+    "Requested site(s) ['total_hip'] differ from the site(s) in the score's evidence ['total_body'].",
+    "The score's own trait fields name no skeletal site; any site comes from linked records."
+  ]
+}

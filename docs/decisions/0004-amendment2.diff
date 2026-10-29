@@ -1,0 +1,69 @@
+diff -ru a/src/prsweave/agents/validation_critic.py b/src/prsweave/agents/validation_critic.py
+--- a/src/prsweave/agents/validation_critic.py	2026-10-29 13:28:51
++++ b/src/prsweave/agents/validation_critic.py	2026-10-29 13:28:51
+@@ -199,11 +199,16 @@
+     checks.append(_check("V6a_phenotype_label_correct", label_ok and "total_body" in score_sites,
+                          {"phenotype_reported": label, "score_phenotype_evidence": score_text.strip(), "evidence_record": ev_rel},
+                          "Report the score's actual phenotype (total-body BMD)."))
+-    checks.append(_check("V6b_request_phenotype_correspondence", corresponds and submission.get("fulfils_request") is True,
+-                         {"requested_phenotype": request["requested_phenotype"], "requested_sites": sorted(req_sites),
+-                          "score_sites": sorted(score_sites), "fulfils_request_claimed": submission.get("fulfils_request")},
+-                         "A score for a different skeletal site cannot be released as fulfilling this request; "
+-                         "abstain or obtain explicit researcher approval to change the target phenotype.", retry=False))
++    v6b_ev = {"requested_phenotype": request["requested_phenotype"], "requested_sites": sorted(req_sites),
++              "score_sites": sorted(score_sites), "fulfils_request_claimed": submission.get("fulfils_request")}
++    if not corresponds:
++        checks.append(_check("V6b_request_phenotype_correspondence", False, v6b_ev,
++                             "A score for a different skeletal site cannot be released as fulfilling this request; "
++                             "abstain or obtain explicit researcher approval to change the target phenotype.", retry=False))
++    else:
++        # Amendment 2 (DR-0004): sites correspond; a claim-format problem is retryable, not a phenotype mismatch.
++        checks.append(_check("V6b_request_phenotype_correspondence", submission.get("fulfils_request") is True, v6b_ev,
++                             "Sites correspond; resubmit with fulfils_request as the JSON boolean true."))
+     # V7 claims in the narrative summary
+     text = submission.get("summary") or ""
+     bad = []
+@@ -212,12 +217,18 @@
+             if re.search(pat, sent, re.I) and not NEGATION.search(sent):
+                 bad.append({"pattern": pat, "sentence": sent.strip()})
+     released_vals = {r["score"] for r in released if r["score"]} | {r["coverage"] for r in released}
+-    untraceable = [n for n in re.findall(r"-?\d+\.\d+", text) if n not in released_vals and n.lstrip("-") not in released_vals]
++    # Amendment 2 (DR-0004): numbers may also come from tool results logged in this run (e.g. evidence records).
++    logged_text = " ".join((run_dir / e["tool_result_ref"]["path"]).read_text() for e in events
++                           if e["event_type"] == "tool_execution" and e.get("tool_result_ref"))
++    logged_vals = set(re.findall(r"-?\d+\.\d+", logged_text))
++    untraceable = [n for n in re.findall(r"-?\d+\.\d+", text)
++                   if n not in released_vals and n.lstrip("-") not in released_vals and n not in logged_vals]
+     caveats = {"synthetic": bool(re.search(r"synthetic", text, re.I)),
+                "total_body": "total_body" in _site(text)}
+     checks.append(_check("V7_claims_supported", not bad and not untraceable and all(caveats.values()),
+                          {"unsupported_sentences": bad, "untraceable_numbers": untraceable, "required_caveats_present": caveats,
+-                          "method": "sentence-level pattern screen with negation exemption; numbers must appear in the scores artifact"},
++                          "method": "sentence-level pattern screen with negation exemption; numbers must appear in the scores "
++                                    "artifact or in a tool result logged in this run"},
+                          "Revise the summary: no unsupported claims, numbers only from the artifact, and state that the data are "
+                          "synthetic and the score is total-body BMD."))
+     failed = [c for c in checks if c["status"] == "FAIL"]
+diff -ru a/src/prsweave/orchestration/controller.py b/src/prsweave/orchestration/controller.py
+--- a/src/prsweave/orchestration/controller.py	2026-10-29 13:28:51
++++ b/src/prsweave/orchestration/controller.py	2026-10-29 13:28:51
+@@ -71,7 +71,8 @@
+                      {"plan": "list of planned steps"}),
+     "submit_for_validation": ("Submit scores for independent review by the Validation Critic (PASS releases them).",
+                               {"scores_artifact": "run-relative path from calculate_prs", "pgs_id": "score ID",
+-                               "phenotype_reported": "the score's actual phenotype", "fulfils_request": "true/false",
++                               "phenotype_reported": "the score's actual phenotype",
++                               "fulfils_request": "JSON boolean true or false (not a string)",
+                                "summary": "short factual paragraph"}),
+     "request_human_review": ("Stop and ask the researcher to decide (terminal).", {"question": "what the researcher must decide"}),
+     "abstain": ("Stop without releasing results (terminal).", {"reason": "evidence-based reason"}),
+@@ -243,6 +244,9 @@
+                 expected = self.registry.get(action).arguments if action in self.registry else CONTROL_ACTIONS[action][1]
+                 if set(args) != set(expected):
+                     reason = f"arguments {sorted(args)} != required {sorted(expected)}"
++                elif action == "submit_for_validation" and not isinstance(args.get("fulfils_request"), bool):
++                    # Amendment 2 (DR-0004): type check at authorization so the Planner can correct it.
++                    reason = "fulfils_request must be a JSON boolean (true or false), not a string"
+                 else:
+                     reason = self._precondition(action, args)
+         self._ev(agent_id="Controller", actor_kind="deterministic_controller", event_type="deterministic_rule",

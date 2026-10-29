@@ -1,0 +1,29 @@
+{
+  "observation": "The Validation Critic returned FAIL on V6a_phenotype_label_correct. My submission labelled the phenotype 'Bone mineral density', but the evidence record pairs that with the linked source GWAS trait 'Total body bone mineral density'. The score and its numbers were not faulted, retry is allowed, and the workflow is now REPLAN_REQUIRED. submit_for_validation is blocked until calculate_prs succeeds again.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "calculate_prs",
+      "assessment": "Permitted, and it re-establishes the successful calculation that submit_for_validation requires. The inputs are unchanged and already verified, so the scores should be reproduced exactly. The fix is only to the reported phenotype label."
+    },
+    {
+      "action": "approve_plan",
+      "assessment": "The earlier approved plan covers these exact inputs. A new approval is not listed as needed for calculate_prs."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Not needed. The remediation is a clear labelling correction supported by the evidence record."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Not justified. The failure concerns a label, not the scores or the eligibility checks."
+    }
+  ],
+  "selected_action": "calculate_prs",
+  "action_arguments": {
+    "genotype_artifact": "derived/dosages_canonical_columns.tsv",
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "The critic's only failed criterion is the phenotype label, and the packet blocks submit_for_validation until a successful calculate_prs. Re-running the scorer on the same verified inputs unlocks resubmission with the label total-body bone mineral density, which is the phenotype recorded for the source GWAS.",
+  "expected_result": "Scores identical to the earlier run: 20 of 20 individuals scored, all QC PASS, 81 variants, written to a new scores artifact. After that, resubmit with phenotype_reported set to 'Total body bone mineral density', and say in the summary that the catalog trait field is the generic 'Bone mineral density' and the site comes from GCST005348."
+}

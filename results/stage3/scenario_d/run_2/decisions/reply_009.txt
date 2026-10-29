@@ -1,0 +1,32 @@
+{
+  "observation": "The validation critic returned FAIL on three criteria. First, artifacts/prs_scores_1.csv changed after it was written: the sha256 is now 887c6366... versus 7c1e4edd... at write. Second, the independent recomputation disagrees for SYN11 (-0.709 submitted versus -0.79 independent, abs diff 0.081). Third, the phenotype label 'Bone mineral density' was judged incomplete, since the evidence record also lists 'Total body bone mineral density'. Retry is allowed, and recovery cycles used are 0 of 2.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "regenerate_authorized_test_input",
+      "assessment": "Confirms that inputs/dosages.tsv is still cell-identical to the authorized synthetic file and matches the authorized checksum. The critic asked for recomputation from verified inputs, and this check tells me whether the genotype file itself is trustworthy. It restores the file only if it is cell-identical, so it is safe."
+    },
+    {
+      "action": "calculate_prs",
+      "assessment": "Needed next to produce a fresh, untouched scores file. Running it before confirming the genotype file is intact would not satisfy 'verified inputs'."
+    },
+    {
+      "action": "submit_for_validation",
+      "assessment": "Not permitted now, and the existing scores file is corrupted anyway. Resubmitting it cannot pass."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Held in reserve. If the genotype file turns out not to match the authorized file, the researcher must decide how to proceed."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Premature. The failures are recoverable and retry is allowed."
+    }
+  ],
+  "selected_action": "regenerate_authorized_test_input",
+  "action_arguments": {
+    "genotype_artifact": "inputs/dosages.tsv"
+  },
+  "decision_justification": "The scores file hash changed after writing and one independent value disagrees, so inputs and outputs can no longer be trusted as-is. Verifying the genotype file against the authorized checksum is the evidence-based way to establish 'verified inputs' before recomputing the scores.",
+  "expected_result": "A confirmation that inputs/dosages.tsv is cell-identical to the authorized synthetic test file and matches the authorized checksum (ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd, the genotype hash recorded at scoring). After that I will run calculate_prs for a fresh scores file, and resubmit with phenotype_reported stating the full recorded phenotype, 'Bone mineral density' with the source GWAS 'Total body bone mineral density'."
+}

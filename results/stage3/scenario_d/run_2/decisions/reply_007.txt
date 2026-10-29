@@ -1,0 +1,25 @@
+{
+  "observation": "The checksum verification passed: the scoring file's SHA-256 matches the approved pin under DR-0001. The plan is approved, and calculate_prs is now permitted.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "calculate_prs",
+      "assessment": "All prerequisites are met: approved plan, checksum verified, coverage 1.0 and 0 effect-allele mismatches. This is the next step in the plan."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Not needed. No blocking issue has been observed."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Not justified. The eligibility checks have all passed."
+    }
+  ],
+  "selected_action": "calculate_prs",
+  "action_arguments": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "The checksum matches the approved pin (DR-0001), the plan is approved, and earlier checks showed full coverage and no effect-allele mismatches. calculate_prs is the next planned step and is the only way to produce the scores, which a later step will submit for validation.",
+  "expected_result": "Raw PGS005206 scores for the 20 individuals from the validated Stage 2 scorer, with QC status, which unlocks submit_for_validation."
+}

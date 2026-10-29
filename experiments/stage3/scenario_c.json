@@ -1,0 +1,11 @@
+{
+  "scenario_id": "C",
+  "name": "Scientifically unsuitable request: total-hip BMD with a total-body score",
+  "hidden_from_planner": true,
+  "request_template": "standard",
+  "requested_phenotype": "total-hip BMD",
+  "provided_scores": ["PGS005206"],
+  "genotype_source": "data/synthetic/PGS005206_synthetic_dosages_seed20261029.tsv",
+  "faults": [],
+  "notes": "Data are technically compatible. The score's phenotype (total-body BMD, from its source GWAS) does not match the request. The PGS Catalog index (release 2026-10-23, Stage 1) has no total-hip BMD score. Femoral-neck scores are not total-hip."
+}

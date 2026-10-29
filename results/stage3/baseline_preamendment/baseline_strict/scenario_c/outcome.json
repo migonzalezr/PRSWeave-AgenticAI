@@ -1,0 +1,18 @@
+{
+  "run_id": "BL-baseline_strict-C",
+  "variant": "baseline_strict",
+  "scenario_id": "C",
+  "final_state": "ABSTAINED",
+  "reason": "site correspondence mismatch",
+  "released": false,
+  "n_planner_decisions": 0,
+  "n_model_calls": 0,
+  "n_tool_executions": 2,
+  "critic_judgments": [],
+  "action_sequence": [
+    "inspect_score_metadata",
+    "assess_phenotype_compatibility"
+  ],
+  "runtime_s": 0.0014,
+  "finished_at": "2026-10-29T14:48:05.022+00:00"
+}

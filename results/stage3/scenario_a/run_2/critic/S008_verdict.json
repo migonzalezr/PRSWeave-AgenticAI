@@ -1,0 +1,120 @@
+{
+  "judgment": "PASS",
+  "failed_criteria": [],
+  "retry_allowed": null,
+  "remediation": [],
+  "checks": [
+    {
+      "criterion": "V1_scoring_file_pinned",
+      "status": "PASS",
+      "evidence": {
+        "sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+        "pinned": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3"
+      },
+      "remediation": null,
+      "retry_allowed": false
+    },
+    {
+      "criterion": "V2_weights_match_catalog_original",
+      "status": "PASS",
+      "evidence": {
+        "n_harmonized": 81,
+        "n_original": 81,
+        "n_differing": 0
+      },
+      "remediation": null,
+      "retry_allowed": false
+    },
+    {
+      "criterion": "V3_genotype_provenance",
+      "status": "PASS",
+      "evidence": {
+        "genotype_artifact": "inputs/dosages.tsv",
+        "kind": "original input",
+        "sha_matches_run_start": true
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V4_output_integrity",
+      "status": "PASS",
+      "evidence": {
+        "sha256_now": "7c1e4edd2801ff0e6e86e560a80d74ebf9211f7a3b1615a3fb8044ab60a9d85d",
+        "sha256_at_write": "7c1e4edd2801ff0e6e86e560a80d74ebf9211f7a3b1615a3fb8044ab60a9d85d"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V5_independent_numerical_agreement",
+      "status": "PASS",
+      "evidence": {
+        "tolerance_abs": 1e-09,
+        "max_abs_diff": 2.220446049250313e-16,
+        "disagreements": [],
+        "independent_returncode": 0,
+        "independent_stderr": "",
+        "independent_output": "critic/S008_verdict.independent.csv"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V5b_withheld_scores_not_reported",
+      "status": "PASS",
+      "evidence": {
+        "rule": "DR-0002: LOW_COVERAGE/NO_DATA have empty score"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V6a_phenotype_label_correct",
+      "status": "PASS",
+      "evidence": {
+        "phenotype_reported": "Bone mineral density (PGS Catalog trait; the site, total body, comes from source GWAS GCST005348 'Total body bone mineral density')",
+        "score_phenotype_evidence": "Bone mineral density  Total body bone mineral density",
+        "evidence_record": "artifacts/S001_inspect_score_metadata_result.json"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V6b_request_phenotype_correspondence",
+      "status": "PASS",
+      "evidence": {
+        "requested_phenotype": "total-body BMD",
+        "requested_sites": [
+          "total_body"
+        ],
+        "score_sites": [
+          "total_body"
+        ],
+        "fulfils_request_claimed": true
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V7_claims_supported",
+      "status": "PASS",
+      "evidence": {
+        "unsupported_sentences": [],
+        "untraceable_numbers": [],
+        "required_caveats_present": {
+          "synthetic": true,
+          "total_body": true
+        },
+        "method": "sentence-level pattern screen with negation exemption; numbers must appear in the scores artifact or in a tool result logged in this run"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    }
+  ],
+  "reviewed": {
+    "scores_artifact": "artifacts/prs_scores_1.csv",
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+  }
+}

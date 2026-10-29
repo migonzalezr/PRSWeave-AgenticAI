@@ -1,0 +1,29 @@
+{
+  "observation": "The phenotype assessment reports exact site correspondence (total_body) for PGS005206, but that comes only from the linked source GWAS GCST005348. The score's own trait fields name no site. Technical compatibility is not yet assessed, and predictive validity is not measurable on the synthetic target data.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "inspect_variant_coverage",
+      "assessment": "Required next. approve_plan needs a coverage inspection of inputs/dosages.tsv, and it will also show the layout and any invalid values."
+    },
+    {
+      "action": "validate_effect_alleles",
+      "assessment": "Useful later, after coverage and layout are known."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Not yet needed. The site evidence is exact, and the limitations can be carried into the report."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Not justified. No blocking evidence has been observed."
+    }
+  ],
+  "selected_action": "inspect_variant_coverage",
+  "action_arguments": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "Phenotype assessment is complete and shows exact site correspondence via the source GWAS, so the remaining unknown is technical compatibility. A coverage inspection of inputs/dosages.tsv is required before a plan can be approved.",
+  "expected_result": "A report on the dosage file layout, how many of the 81 score variants match, coverage across the 20 individuals, and any invalid or missing dosage values or column-order problems."
+}

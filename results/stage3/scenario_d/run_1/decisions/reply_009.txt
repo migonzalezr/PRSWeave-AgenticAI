@@ -1,0 +1,15 @@
+{
+  "observation": "Validation FAILED on integrity: the scores file hash changed after it was written (now 887c6366..., at write 7c1e4edd...). The critic's independent recomputation disagreed on SYN11 (submitted -0.709, independent -0.79). The summary also cited 9.77, which is not in the scores artifact. The critic's phenotype-correspondence flag conflicts with the site evidence (requested total_body, score total_body) and likely reflects how I worded phenotype_reported.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "calculate_prs", "assessment": "The critic's remediation is to recompute from verified inputs. The tool reports the genotype SHA-256 at write, so I can compare it with the earlier ac0ea060... to confirm the input is unchanged. A fresh artifact replaces the tampered or corrupted one."},
+    {"action": "inspect_variant_coverage", "assessment": "Does not report a hash, so it would not confirm input integrity."},
+    {"action": "regenerate_authorized_test_input", "assessment": "Premature. Only valid if the genotype file is cell-identical to the seed, and there is no evidence the genotype file changed."},
+    {"action": "abstain", "assessment": "Not yet justified. The failures are recoverable and 2 recovery cycles remain."},
+    {"action": "request_human_review", "assessment": "Reserve for the case where the recomputed output fails integrity again."}
+  ],
+  "selected_action": "calculate_prs",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "The critic's V4 and V5 failures say the scores file was modified after writing, and it prescribes recomputation with calculate_prs. The earlier coverage, allele and checksum checks remain valid for the same inputs, and the genotype hash from the new run can be compared with the earlier value.",
+  "expected_result": "A new scores artifact for 20 individuals, all PASS, with a genotype SHA-256 of ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd. A resubmission should then use phenotype_reported 'Total body bone mineral density' and a summary with no numbers that are absent from the artifact, such as the cohort age."
+}

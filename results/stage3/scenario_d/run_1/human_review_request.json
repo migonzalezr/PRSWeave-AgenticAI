@@ -1,0 +1,5 @@
+{
+  "question": "PGS005206's PGS Catalog trait fields say only 'Bone mineral density' with no skeletal site. Total-body BMD comes only from its source GWAS (GCST005348), and the only evaluation is in a European pediatric cohort. The Validation Critic would not release these scores as fulfilling a total-body BMD request. Do you accept PGS005206 as a total-body BMD score on the strength of the source GWAS (with the limitations of unmeasurable predictive validity, 5 palindromic variants, 24 ambiguous other alleles and unverified weight derivation), or do you want to supply or approve a different score or target phenotype? The recomputed scores for 20 synthetic individuals (artifacts/prs_scores_2.csv, all QC PASS) are available if you accept the score.",
+  "justification": "The Critic's ruling blocks release (retry not allowed) because the score's own metadata names no skeletal site. Whether the GWAS-derived site is acceptable, or the target may change, is the researcher's decision, and I may not change the target phenotype or relabel the score myself.",
+  "requested_at": "2026-10-29T15:08:21.458+00:00"
+}

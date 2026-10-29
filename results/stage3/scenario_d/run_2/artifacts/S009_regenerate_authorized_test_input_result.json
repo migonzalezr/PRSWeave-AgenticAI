@@ -1,0 +1,21 @@
+{
+  "tool": "regenerate_authorized_test_input",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "source_artifact": "inputs/dosages.tsv",
+    "regenerated_artifact": "derived/regenerated_authorized_dosages.tsv",
+    "sha256": "ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd",
+    "authorized_sha256": "ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd",
+    "match": true,
+    "seed": 20261029,
+    "generator": "prsweave.synthetic/1"
+  },
+  "artifacts": [
+    {
+      "path": "derived/regenerated_authorized_dosages.tsv",
+      "sha256": "ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd"
+    }
+  ],
+  "network_hosts": []
+}

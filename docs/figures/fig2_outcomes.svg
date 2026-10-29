@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="Helvetica,Arial,sans-serif" font-size="12">
+<rect width="800" height="430" fill="white"/>
+<text x="20" y="24" font-size="15" font-weight="bold">Figure 2. Observed outcomes by scenario (independent evaluator)</text>
+<text x="350" y="60" text-anchor="middle" font-weight="bold">Scenario A</text>
+<text x="470" y="60" text-anchor="middle" font-weight="bold">Scenario B</text>
+<text x="590" y="60" text-anchor="middle" font-weight="bold">Scenario C</text>
+<text x="710" y="60" text-anchor="middle" font-weight="bold">Scenario D</text>
+<text x="20" y="112">PRSWeave run 1 (pre-registered)</text>
+<rect x="300" y="80" width="100" height="50" rx="6" fill="#f9a825" stroke="#333"/><text x="350" y="110" text-anchor="middle" font-size="10" fill="#000">HUMAN REVIEW</text>
+<rect x="420" y="80" width="100" height="50" rx="6" fill="#f9a825" stroke="#333"/><text x="470" y="110" text-anchor="middle" font-size="10" fill="#000">HUMAN REVIEW</text>
+<rect x="540" y="80" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="590" y="110" text-anchor="middle" font-size="10" fill="#fff">ABSTAINED</text>
+<rect x="660" y="80" width="100" height="50" rx="6" fill="#f9a825" stroke="#333"/><text x="710" y="110" text-anchor="middle" font-size="10" fill="#000">HUMAN REVIEW</text>
+<text x="20" y="182">PRSWeave run 2 (post-amendment)</text>
+<rect x="300" y="150" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="350" y="180" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<rect x="420" y="150" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="470" y="180" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<rect x="540" y="150" width="100" height="50" rx="6" fill="#ffffff" stroke="#333"/><text x="590" y="180" text-anchor="middle" font-size="10" fill="#000">not run</text>
+<rect x="660" y="150" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="710" y="180" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<text x="20" y="252">Baseline strict</text>
+<rect x="300" y="220" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="350" y="250" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<rect x="420" y="220" width="100" height="50" rx="6" fill="#f9a825" stroke="#333"/><text x="470" y="250" text-anchor="middle" font-size="10" fill="#000">FAILED</text>
+<rect x="540" y="220" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="590" y="250" text-anchor="middle" font-size="10" fill="#fff">ABSTAINED</text>
+<rect x="660" y="220" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="710" y="250" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<text x="20" y="322">Baseline robust</text>
+<rect x="300" y="290" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="350" y="320" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<rect x="420" y="290" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="470" y="320" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<rect x="540" y="290" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="590" y="320" text-anchor="middle" font-size="10" fill="#fff">ABSTAINED</text>
+<rect x="660" y="290" width="100" height="50" rx="6" fill="#2e7d32" stroke="#333"/><text x="710" y="320" text-anchor="middle" font-size="10" fill="#fff">COMPLETED</text>
+<rect x="20" y="370" width="14" height="14" fill="#2e7d32" stroke="#333"/><text x="40" y="382">verified success</text>
+<rect x="220" y="370" width="14" height="14" fill="#f9a825" stroke="#333"/><text x="240" y="382">safe non-completion</text>
+<rect x="420" y="370" width="14" height="14" fill="#c62828" stroke="#333"/><text x="440" y="382">invalid result accepted</text>
+<rect x="620" y="370" width="14" height="14" fill="#ffffff" stroke="#333"/><text x="640" y="382">not run</text>
+<text x="20" y="410" font-size="10">Scenario C has a single agentic run, made before the amendment; the amendment did not affect it, because C never submitted to the Critic.</text>
+</svg>

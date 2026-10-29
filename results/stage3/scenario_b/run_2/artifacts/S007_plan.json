@@ -1,0 +1,8 @@
+{
+  "plan": [
+    "Score PGS005206 (GRCh38 harmonized, pin-verified scoring file) on derived/dosages_canonical_columns.tsv for the 20 individuals using calculate_prs, with unchanged published weights",
+    "Submit the results for validation",
+    "Report raw scores only, as synthetic data with the target phenotype given as total-body bone mineral density",
+    "State the limitations: the score's own trait field is generic 'Bone mineral density', the site comes from the linked GWAS GCST005348, the derivation of the 81 weights is unverified, predictive validity cannot be measured on synthetic dosages without phenotypes or ancestry, the only evaluation is in a pediatric European cohort (Generation R), and 24 variants have an ambiguous other allele and 5 are palindromic, which the dosage coding cannot test"
+  ]
+}

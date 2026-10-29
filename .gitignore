@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Third-party data: not redistributed; fetch with scripts/fetch_public_data.py (checksum-verified)
+data/raw/
+results/stage3/cache/
+
+# Local outputs of examples
+examples/output/
+
+# OS / editors / tools
+.DS_Store
+.idea/
+.vscode/
+.claude/

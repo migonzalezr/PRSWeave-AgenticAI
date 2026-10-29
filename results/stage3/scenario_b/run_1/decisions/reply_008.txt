@@ -1,0 +1,14 @@
+{
+  "observation": "The plan is approved (PLAN_APPROVED), but calculate_prs is blocked because verify_checksum has not been run for PGS005206 in this run. The metadata record shows matches_pin true, but that does not substitute for the run-level verification.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "verify_checksum", "assessment": "Directly satisfies the stated prerequisite for calculate_prs and confirms the scoring file against its approved SHA-256 pin."},
+    {"action": "approve_plan", "assessment": "Already done; not needed again."},
+    {"action": "request_human_review", "assessment": "Not warranted: the blocker is a routine verification step."},
+    {"action": "abstain", "assessment": "Not warranted: no ineligibility evidence."}
+  ],
+  "selected_action": "verify_checksum",
+  "action_arguments": {"pgs_id": "PGS005206"},
+  "decision_justification": "The not_permitted list says calculate_prs requires verify_checksum for this score in this run. Running it is also consistent with the approved plan, which relies on the pinned scoring file.",
+  "expected_result": "The computed SHA-256 of the scoring file matches the pin (406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3), unlocking calculate_prs."
+}

@@ -1,0 +1,16 @@
+{
+  "observation": "Coverage is complete: all 81 score variants matched by variant ID, with 0 missing and 0 invalid cells across 20 individuals. However the file has non-canonical column order (COLUMN_ORDER_NONCANONICAL), so readable_by_stage2_scorer is false, though all required columns are present exactly once.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "repair_column_order", "assessment": "Directly addresses the only issue: rewrites by header names, verifies every cell is unchanged, and leaves the original untouched. Does not alter data, weights or thresholds."},
+    {"action": "approve_plan", "assessment": "Premature: the scorer cannot read the current file layout."},
+    {"action": "validate_effect_alleles", "assessment": "Needed before approval, but better run on the repaired file."},
+    {"action": "regenerate_authorized_test_input", "assessment": "Not needed: there is no sign of data corruption, only column order."},
+    {"action": "request_human_review", "assessment": "Unnecessary: a verified, non-destructive repair is available."},
+    {"action": "abstain", "assessment": "Unwarranted: the issue is fixable."}
+  ],
+  "selected_action": "repair_column_order",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv"},
+  "decision_justification": "The coverage inspection shows the only blocker is column order, with all required columns present once and no missing or invalid cells. The repair tool reorders by header name only and verifies every cell is unchanged.",
+  "expected_result": "A new genotype file in canonical column order with cell-for-cell identity to the original confirmed, after which effect alleles can be validated and coverage re-inspected on the repaired file."
+}

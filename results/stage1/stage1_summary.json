@@ -1,0 +1,1884 @@
+{
+  "run_started": "2026-10-29T13:37:10+00:00",
+  "environment": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "catalog": {
+    "rest_api_version": "1.8.6",
+    "latest_release": {
+      "date": "2026-10-23",
+      "scores": 7029,
+      "publications": 850,
+      "traits": 820
+    },
+    "ensembl_version": 105
+  },
+  "trait_search": {
+    "bone mineral density": [
+      {
+        "id": "EFO_0009270",
+        "label": "heel bone mineral density",
+        "n_pgs": 22
+      },
+      {
+        "id": "MONDO_0005298",
+        "label": "osteoporosis",
+        "n_pgs": 24
+      }
+    ],
+    "bone density": [],
+    "hip": [
+      {
+        "id": "EFO_0007788",
+        "label": "BMI-adjusted waist-hip ratio",
+        "n_pgs": 4
+      },
+      {
+        "id": "OBA_2045237",
+        "label": "dentate gyrus volume",
+        "n_pgs": 12
+      },
+      {
+        "id": "EFO_0009725",
+        "label": "friendship satisfaction measurement",
+        "n_pgs": 1
+      },
+      {
+        "id": "OBA_1000032",
+        "label": "hip circumference",
+        "n_pgs": 6
+      },
+      {
+        "id": "EFO_0009401",
+        "label": "hippocampal amigdala transition area volume",
+        "n_pgs": 6
+      },
+      {
+        "id": "EFO_0009394",
+        "label": "hippocampal CA1 volume",
+        "n_pgs": 12
+      },
+      {
+        "id": "EFO_0009395",
+        "label": "hippocampal CA3 volume",
+        "n_pgs": 12
+      },
+      {
+        "id": "EFO_0009396",
+        "label": "hippocampal CA4 volume",
+        "n_pgs": 12
+      },
+      {
+        "id": "OBA_2050043",
+        "label": "hippocampal fissure volume",
+        "n_pgs": 6
+      },
+      {
+        "id": "OBA_2045244",
+        "label": "hippocampal formation volume",
+        "n_pgs": 6
+      },
+      {
+        "id": "EFO_0005035",
+        "label": "hippocampal volume",
+        "n_pgs": 19
+      },
+      {
+        "id": "OBA_2045245",
+        "label": "hippocampus fimbria volume",
+        "n_pgs": 6
+      },
+      {
+        "id": "OBA_2050050",
+        "label": "hippocampus molecular layer volume",
+        "n_pgs": 12
+      },
+      {
+        "id": "MONDO_0006629",
+        "label": "osteoarthritis, hip",
+        "n_pgs": 8
+      },
+      {
+        "id": "EFO_0009806",
+        "label": "total hip arthroplasty",
+        "n_pgs": 1
+      },
+      {
+        "id": "EFO_0004343",
+        "label": "waist-hip ratio",
+        "n_pgs": 10
+      }
+    ],
+    "total hip": [
+      {
+        "id": "EFO_0009806",
+        "label": "total hip arthroplasty",
+        "n_pgs": 1
+      }
+    ],
+    "femoral neck": [],
+    "BMD": [],
+    "osteoporosis": [
+      {
+        "id": "MONDO_0005298",
+        "label": "osteoporosis",
+        "n_pgs": 24
+      }
+    ]
+  },
+  "index_scan": {
+    "n_scores_in_index": 7029,
+    "n_bone_related": 73
+  },
+  "candidates": [
+    {
+      "score": {
+        "id": "PGS005206",
+        "name": "BMD_PRS",
+        "trait_reported": "Bone mineral density",
+        "trait_additional": null,
+        "trait_efo": [
+          "bone tissue density (OBA_1000110)"
+        ],
+        "method_name": "Genome-wide significant SNPs",
+        "method_params": null,
+        "variants_number": 81,
+        "variants_genomebuild": "NR",
+        "weight_type": "beta",
+        "ancestry_distribution": {
+          "eval": {
+            "dist": {
+              "MAE": 100
+            },
+            "count": 1,
+            "multi": [
+              "MAE_EUR",
+              "MAE_ASN",
+              "MAE_AFR"
+            ]
+          },
+          "gwas": {
+            "dist": {
+              "NR": 13.9,
+              "AFR": 2,
+              "EUR": 84.1
+            },
+            "count": 66945
+          }
+        },
+        "ftp_scoring_file": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/PGS005206.txt.gz",
+        "ftp_harmonized_scoring_files": {
+          "GRCh37": {
+            "positions": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh37.txt.gz"
+          },
+          "GRCh38": {
+            "positions": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh38.txt.gz"
+          }
+        },
+        "date_release": "2025-05-20",
+        "license": "PGS obtained from the Catalog should be cited appropriately, and used in accordance with any licensing restrictions set by the authors. See EBI Terms of Use (https://www.ebi.ac.uk/about/terms-of-use/) for additional details.",
+        "publication": {
+          "id": "PGP000728",
+          "firstauthor": "Prijatelj V",
+          "title": "Bone health index in the assessment of bone health: The Generation R Study.",
+          "journal": "Bone",
+          "date_publication": "2024-03-07",
+          "doi": "10.1016/j.bone.2024.117070",
+          "PMID": 38460828
+        },
+        "samples_variants": [
+          {
+            "sample_number": 56284,
+            "ancestry_broad": "European",
+            "source_GWAS_catalog": "GCST005348",
+            "source_PMID": 29304378
+          },
+          {
+            "sample_number": 1333,
+            "ancestry_broad": "African American or Afro-Caribbean",
+            "source_GWAS_catalog": "GCST005348",
+            "source_PMID": 29304378
+          },
+          {
+            "sample_number": 9328,
+            "ancestry_broad": "Not reported",
+            "source_GWAS_catalog": "GCST005348",
+            "source_PMID": 29304378
+          }
+        ]
+      },
+      "performance": [
+        {
+          "ppm_id": "PPM022584",
+          "phenotype": "BMD levels",
+          "covariates": null,
+          "sample_number": 3470,
+          "ancestry": "European",
+          "cohorts": [
+            "Generation_R"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 9.77,
+            "variability_type": "sd",
+            "variability": 0.33,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "\u03b2",
+              "estimate": 0.04,
+              "ci_lower": null,
+              "ci_upper": null
+            }
+          ]
+        }
+      ],
+      "files": {
+        "original": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/PGS005206.txt.gz",
+          "path": "data/raw/scoring_files/PGS005206/PGS005206.txt.gz",
+          "sha256": "ea4ff84176500994199c3d9609055b6e64381c27f314d76d9446b0e3c561b0aa",
+          "bytes": 1568,
+          "retrieved_at": "2026-10-29T13:38:03+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS005206",
+            "pgs_name": "BMD_PRS",
+            "trait_reported": "Bone mineral density",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "NR",
+            "variants_number": "81",
+            "weight_type": "beta",
+            "pgp_id": "PGP000728",
+            "citation": "Prijatelj V et al. Bone (2024). doi:10.1016/j.bone.2024.117070"
+          },
+          "qc": {
+            "n_variants": 81,
+            "columns": [
+              "rsID",
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "effect_weight"
+            ],
+            "has_rsID": true,
+            "has_other_allele_column": false,
+            "n_unique_effect_weights": 64,
+            "all_weights_identical": false,
+            "n_other_allele_missing": 81,
+            "n_other_allele_ambiguous_multiallelic": 0,
+            "n_palindromic_snvs": 0,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 0,
+            "n_non_snv_alleles": 0,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "20",
+              "21"
+            ],
+            "free_text_weights_in_variant_description": 0
+          }
+        },
+        "hmPOS_GRCh37": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh37.txt.gz",
+          "path": "data/raw/scoring_files/PGS005206/PGS005206_hmPOS_GRCh37.txt.gz",
+          "sha256": "acbd3979075950bc0811d952afa3383b58af830804f526ae3459595771547930",
+          "bytes": 2147,
+          "retrieved_at": "2026-10-29T13:38:04+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS005206",
+            "pgs_name": "BMD_PRS",
+            "trait_reported": "Bone mineral density",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "NR",
+            "variants_number": "81",
+            "weight_type": "beta",
+            "pgp_id": "PGP000728",
+            "citation": "Prijatelj V et al. Bone (2024). doi:10.1016/j.bone.2024.117070",
+            "HmPOS_build": "GRCh37",
+            "HmPOS_date": "2025-05-18",
+            "HmPOS_match_chr": "{\"True\": null, \"False\": null}",
+            "HmPOS_match_pos": "{\"True\": null, \"False\": null}"
+          },
+          "qc": {
+            "n_variants": 81,
+            "columns": [
+              "rsID",
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "effect_weight",
+              "hm_source",
+              "hm_rsID",
+              "hm_chr",
+              "hm_pos",
+              "hm_inferOtherAllele"
+            ],
+            "has_rsID": true,
+            "has_other_allele_column": false,
+            "n_unique_effect_weights": 64,
+            "all_weights_identical": false,
+            "n_other_allele_missing": 0,
+            "n_other_allele_ambiguous_multiallelic": 24,
+            "n_palindromic_snvs": 5,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 0,
+            "n_non_snv_alleles": 0,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "20",
+              "21"
+            ],
+            "free_text_weights_in_variant_description": 0
+          }
+        },
+        "hmPOS_GRCh38": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh38.txt.gz",
+          "path": "data/raw/scoring_files/PGS005206/PGS005206_hmPOS_GRCh38.txt.gz",
+          "sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+          "bytes": 2432,
+          "retrieved_at": "2026-10-29T13:38:05+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS005206",
+            "pgs_name": "BMD_PRS",
+            "trait_reported": "Bone mineral density",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "NR",
+            "variants_number": "81",
+            "weight_type": "beta",
+            "pgp_id": "PGP000728",
+            "citation": "Prijatelj V et al. Bone (2024). doi:10.1016/j.bone.2024.117070",
+            "HmPOS_build": "GRCh38",
+            "HmPOS_date": "2025-05-18",
+            "HmPOS_match_chr": "{\"True\": null, \"False\": null}",
+            "HmPOS_match_pos": "{\"True\": null, \"False\": null}"
+          },
+          "qc": {
+            "n_variants": 81,
+            "columns": [
+              "rsID",
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "effect_weight",
+              "hm_source",
+              "hm_rsID",
+              "hm_chr",
+              "hm_pos",
+              "hm_inferOtherAllele"
+            ],
+            "has_rsID": true,
+            "has_other_allele_column": false,
+            "n_unique_effect_weights": 64,
+            "all_weights_identical": false,
+            "n_other_allele_missing": 0,
+            "n_other_allele_ambiguous_multiallelic": 24,
+            "n_palindromic_snvs": 5,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 0,
+            "n_non_snv_alleles": 0,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "20",
+              "21"
+            ],
+            "free_text_weights_in_variant_description": 0
+          }
+        }
+      }
+    },
+    {
+      "score": {
+        "id": "PGS000121",
+        "name": "2018_BMD62_GRS.FN",
+        "trait_reported": "Bone mineral density (BMD)",
+        "trait_additional": "Femoral neck BMD (g/cm2)",
+        "trait_efo": [
+          "bone tissue density (OBA_1000110)"
+        ],
+        "method_name": "Weighted sum of risk alleles",
+        "method_params": null,
+        "variants_number": 62,
+        "variants_genomebuild": "NCBI36",
+        "weight_type": "NR",
+        "ancestry_distribution": {
+          "eval": {
+            "dist": {
+              "EUR": 100
+            },
+            "count": 5
+          },
+          "gwas": {
+            "dist": {
+              "EUR": 100
+            },
+            "count": 11722
+          }
+        },
+        "ftp_scoring_file": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/PGS000121.txt.gz",
+        "ftp_harmonized_scoring_files": {
+          "GRCh37": {
+            "positions": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/Harmonized/PGS000121_hmPOS_GRCh37.txt.gz"
+          },
+          "GRCh38": {
+            "positions": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/Harmonized/PGS000121_hmPOS_GRCh38.txt.gz"
+          }
+        },
+        "date_release": "2020-03-27",
+        "license": "PGS obtained from the Catalog should be cited appropriately, and used in accordance with any licensing restrictions set by the authors. See EBI Terms of Use (https://www.ebi.ac.uk/about/terms-of-use/) for additional details.",
+        "publication": {
+          "id": "PGP000056",
+          "firstauthor": "Ho-Le TP",
+          "title": "Prediction of Bone Mineral Density and Fragility Fracture by Genetic Profiling.",
+          "journal": "J Bone Miner Res",
+          "date_publication": "2016-10-26",
+          "doi": "10.1002/jbmr.2998",
+          "PMID": 27649491
+        },
+        "samples_variants": [
+          {
+            "sample_number": 5861,
+            "ancestry_broad": "European",
+            "source_GWAS_catalog": "GCST000181",
+            "source_PMID": 18445777
+          },
+          {
+            "sample_number": 5861,
+            "ancestry_broad": "European",
+            "source_GWAS_catalog": "GCST000180",
+            "source_PMID": 18445777
+          }
+        ]
+      },
+      "performance": [
+        {
+          "ppm_id": "PPM000349",
+          "phenotype": "Femoral neck BMD",
+          "covariates": null,
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "\u03b2",
+              "estimate": -0.019,
+              "ci_lower": null,
+              "ci_upper": null
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000350",
+          "phenotype": "Lumbar spine BMD",
+          "covariates": null,
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "\u03b2",
+              "estimate": -0.037,
+              "ci_lower": null,
+              "ci_upper": null
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000351",
+          "phenotype": "Total fracture",
+          "covariates": null,
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.2,
+              "ci_lower": 1.04,
+              "ci_upper": 1.38
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000352",
+          "phenotype": "Total fracture",
+          "covariates": "Age",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.19,
+              "ci_lower": 1.03,
+              "ci_upper": 1.37
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000353",
+          "phenotype": "Total fracture",
+          "covariates": "Age, sex, prior fracture or fall",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.18,
+              "ci_lower": 1.03,
+              "ci_upper": 1.36
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000354",
+          "phenotype": "Total fracture",
+          "covariates": "Age, sex, prior fracture or fall, femoral neck bone mineral density",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.13,
+              "ci_lower": 0.98,
+              "ci_upper": 1.29
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000359",
+          "phenotype": "Hip fracture",
+          "covariates": null,
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.23,
+              "ci_lower": 0.92,
+              "ci_upper": 1.63
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000360",
+          "phenotype": "Hip fracture",
+          "covariates": "Age",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.21,
+              "ci_lower": 0.91,
+              "ci_upper": 1.59
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000361",
+          "phenotype": "Hip fracture",
+          "covariates": "Age, sex, prior fracture or fall",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.19,
+              "ci_lower": 0.91,
+              "ci_upper": 1.57
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000362",
+          "phenotype": "Hip fracture",
+          "covariates": "Age, sex, prior fracture or fall, femoral neck bone mineral density",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.03,
+              "ci_lower": 0.77,
+              "ci_upper": 1.36
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000367",
+          "phenotype": "Vertebral fracture",
+          "covariates": null,
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.28,
+              "ci_lower": 1.02,
+              "ci_upper": 1.59
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000368",
+          "phenotype": "Vertebral fracture",
+          "covariates": "Age",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.25,
+              "ci_lower": 1.02,
+              "ci_upper": 1.56
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000369",
+          "phenotype": "Vertebral fracture",
+          "covariates": "Age, sex, prior fracture or fall",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.24,
+              "ci_lower": 1.0,
+              "ci_upper": 1.54
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000370",
+          "phenotype": "Vertebral fracture",
+          "covariates": "Age, sex, prior fracture or fall, femoral neck bone mineral density",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.14,
+              "ci_lower": 0.92,
+              "ci_upper": 1.42
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000375",
+          "phenotype": "Wrist fracture",
+          "covariates": null,
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.51,
+              "ci_lower": 1.08,
+              "ci_upper": 2.1
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000376",
+          "phenotype": "Wrist fracture",
+          "covariates": "Age",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.48,
+              "ci_lower": 1.07,
+              "ci_upper": 2.06
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000377",
+          "phenotype": "Wrist fracture",
+          "covariates": "Age, sex, prior fracture or fall",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.5,
+              "ci_lower": 1.08,
+              "ci_upper": 2.09
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM000378",
+          "phenotype": "Wrist fracture",
+          "covariates": "Age, sex, prior fracture or fall, femoral neck bone mineral density",
+          "sample_number": 902,
+          "ancestry": "European",
+          "cohorts": [
+            "DOES"
+          ],
+          "sample_age": {
+            "estimate_type": "mean",
+            "estimate": 70.1,
+            "variability_type": "sd",
+            "variability": 7.0,
+            "unit": "years"
+          },
+          "metrics": [
+            {
+              "name": "HR",
+              "estimate": 1.41,
+              "ci_lower": 1.01,
+              "ci_upper": 1.96
+            }
+          ]
+        }
+      ],
+      "files": {
+        "original": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/PGS000121.txt.gz",
+          "path": "data/raw/scoring_files/PGS000121/PGS000121.txt.gz",
+          "sha256": "1d0dbdaf4562be2290e1fc8e3eb27fc74049fe0bb75547183aff62e82a650cd8",
+          "bytes": 1691,
+          "retrieved_at": "2026-10-29T13:38:08+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS000121",
+            "pgs_name": "2018_BMD62_GRS.FN",
+            "trait_reported": "Bone mineral density (BMD)",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "weight_type": "NR",
+            "genome_build": "NCBI36",
+            "variants_number": "62",
+            "pgp_id": "PGP000056",
+            "citation": "Ho-Le TP et al. J Bone Miner Res (2016). doi:10.1002/jbmr.2998"
+          },
+          "qc": {
+            "n_variants": 62,
+            "columns": [
+              "rsID",
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "effect_weight",
+              "allelefrequency_effect",
+              "variant_description"
+            ],
+            "has_rsID": true,
+            "has_other_allele_column": false,
+            "n_unique_effect_weights": 1,
+            "all_weights_identical": true,
+            "n_other_allele_missing": 62,
+            "n_other_allele_ambiguous_multiallelic": 0,
+            "n_palindromic_snvs": 0,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 0,
+            "n_non_snv_alleles": 0,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "6",
+              "8",
+              "9",
+              "11",
+              "12",
+              "13",
+              "14",
+              "18",
+              "20"
+            ],
+            "free_text_weights_in_variant_description": 62
+          }
+        },
+        "hmPOS_GRCh37": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/Harmonized/PGS000121_hmPOS_GRCh37.txt.gz",
+          "path": "data/raw/scoring_files/PGS000121/PGS000121_hmPOS_GRCh37.txt.gz",
+          "sha256": "2219550d9b088f1bc8224d246ebddc3874fa627a4f08da0edf72792073289a06",
+          "bytes": 2375,
+          "retrieved_at": "2026-10-29T13:38:10+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS000121",
+            "pgs_name": "2018_BMD62_GRS.FN",
+            "trait_reported": "Bone mineral density (BMD)",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "NCBI36",
+            "variants_number": "62",
+            "weight_type": "NR",
+            "pgp_id": "PGP000056",
+            "citation": "Ho-Le TP et al. J Bone Miner Res (2016). doi:10.1002/jbmr.2998",
+            "HmPOS_build": "GRCh37",
+            "HmPOS_date": "2022-07-28",
+            "HmPOS_match_chr": "{\"True\": null, \"False\": null}",
+            "HmPOS_match_pos": "{\"True\": null, \"False\": null}"
+          },
+          "qc": {
+            "n_variants": 62,
+            "columns": [
+              "rsID",
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "effect_weight",
+              "allelefrequency_effect",
+              "variant_description",
+              "hm_source",
+              "hm_rsID",
+              "hm_chr",
+              "hm_pos",
+              "hm_inferOtherAllele"
+            ],
+            "has_rsID": true,
+            "has_other_allele_column": false,
+            "n_unique_effect_weights": 1,
+            "all_weights_identical": true,
+            "n_other_allele_missing": 11,
+            "n_other_allele_ambiguous_multiallelic": 7,
+            "n_palindromic_snvs": 5,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 0,
+            "n_non_snv_alleles": 0,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "6",
+              "8",
+              "9",
+              "11",
+              "12",
+              "13",
+              "14",
+              "18",
+              "20"
+            ],
+            "free_text_weights_in_variant_description": 62
+          }
+        },
+        "hmPOS_GRCh38": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/Harmonized/PGS000121_hmPOS_GRCh38.txt.gz",
+          "path": "data/raw/scoring_files/PGS000121/PGS000121_hmPOS_GRCh38.txt.gz",
+          "sha256": "cb22ed8bdb284fe93fd2d2fdf3d9d365487803b87dc953987ded2d35b3d53f43",
+          "bytes": 2396,
+          "retrieved_at": "2026-10-29T13:38:12+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS000121",
+            "pgs_name": "2018_BMD62_GRS.FN",
+            "trait_reported": "Bone mineral density (BMD)",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "NCBI36",
+            "variants_number": "62",
+            "weight_type": "NR",
+            "pgp_id": "PGP000056",
+            "citation": "Ho-Le TP et al. J Bone Miner Res (2016). doi:10.1002/jbmr.2998",
+            "HmPOS_build": "GRCh38",
+            "HmPOS_date": "2022-07-29",
+            "HmPOS_match_chr": "{\"True\": null, \"False\": null}",
+            "HmPOS_match_pos": "{\"True\": null, \"False\": null}"
+          },
+          "qc": {
+            "n_variants": 62,
+            "columns": [
+              "rsID",
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "effect_weight",
+              "allelefrequency_effect",
+              "variant_description",
+              "hm_source",
+              "hm_rsID",
+              "hm_chr",
+              "hm_pos",
+              "hm_inferOtherAllele"
+            ],
+            "has_rsID": true,
+            "has_other_allele_column": false,
+            "n_unique_effect_weights": 1,
+            "all_weights_identical": true,
+            "n_other_allele_missing": 11,
+            "n_other_allele_ambiguous_multiallelic": 7,
+            "n_palindromic_snvs": 5,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 0,
+            "n_non_snv_alleles": 0,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "6",
+              "8",
+              "9",
+              "11",
+              "12",
+              "13",
+              "14",
+              "18",
+              "20"
+            ],
+            "free_text_weights_in_variant_description": 62
+          }
+        }
+      }
+    },
+    {
+      "score": {
+        "id": "PGS002583",
+        "name": "bmd_HEEL_TSCOREz.P+T.5e-08",
+        "trait_reported": "Bone mineral density (BMD)",
+        "trait_additional": null,
+        "trait_efo": [
+          "bone tissue density (OBA_1000110)"
+        ],
+        "method_name": "Pruning and Thresholding (P+T)",
+        "method_params": "p < 5e-08",
+        "variants_number": 7908,
+        "variants_genomebuild": "GRCh37",
+        "weight_type": "beta",
+        "ancestry_distribution": {
+          "eval": {
+            "dist": {
+              "AFR": 25,
+              "EAS": 25,
+              "EUR": 25,
+              "SAS": 25
+            },
+            "count": 4
+          },
+          "gwas": {
+            "dist": {
+              "EUR": 100
+            },
+            "count": 327738
+          }
+        },
+        "ftp_scoring_file": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/PGS002583.txt.gz",
+        "ftp_harmonized_scoring_files": {
+          "GRCh37": {
+            "positions": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/Harmonized/PGS002583_hmPOS_GRCh37.txt.gz"
+          },
+          "GRCh38": {
+            "positions": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/Harmonized/PGS002583_hmPOS_GRCh38.txt.gz"
+          }
+        },
+        "date_release": "2022-06-09",
+        "license": "PGS obtained from the Catalog should be cited appropriately, and used in accordance with any licensing restrictions set by the authors. See EBI Terms of Use (https://www.ebi.ac.uk/about/terms-of-use/) for additional details.",
+        "publication": {
+          "id": "PGP000332",
+          "firstauthor": "Weissbrod O",
+          "title": "Leveraging fine-mapping and multipopulation training data to improve cross-population polygenic risk scores.",
+          "journal": "Nat Genet",
+          "date_publication": "2022-04-07",
+          "doi": "10.1038/s41588-022-01036-9",
+          "PMID": 35393596
+        },
+        "samples_variants": [
+          {
+            "sample_number": 327738,
+            "ancestry_broad": "European",
+            "source_GWAS_catalog": null,
+            "source_PMID": null
+          }
+        ]
+      },
+      "performance": [
+        {
+          "ppm_id": "PPM014152",
+          "phenotype": "Bone Mineral Density",
+          "covariates": "age, sex, age*sex, assessment center, genotyping array, 10 PCs",
+          "sample_number": 5639,
+          "ancestry": "African unspecified",
+          "cohorts": [
+            "UKB"
+          ],
+          "sample_age": null,
+          "metrics": [
+            {
+              "name": "Incremental R2 (full model vs. covariates alone)",
+              "estimate": 0.0203,
+              "ci_lower": null,
+              "ci_upper": null
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM014201",
+          "phenotype": "Bone Mineral Density",
+          "covariates": "age, sex, age*sex, assessment center, genotyping array, 10 PCs",
+          "sample_number": 889,
+          "ancestry": "East Asian",
+          "cohorts": [
+            "UKB"
+          ],
+          "sample_age": null,
+          "metrics": [
+            {
+              "name": "Incremental R2 (full model vs. covariates alone)",
+              "estimate": 0.0426,
+              "ci_lower": null,
+              "ci_upper": null
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM014250",
+          "phenotype": "Bone Mineral Density",
+          "covariates": "age, sex, age*sex, assessment center, genotyping array, 10 PCs",
+          "sample_number": 42030,
+          "ancestry": "European",
+          "cohorts": [
+            "UKB"
+          ],
+          "sample_age": null,
+          "metrics": [
+            {
+              "name": "Incremental R2 (full model vs. covariates alone)",
+              "estimate": 0.1328,
+              "ci_lower": null,
+              "ci_upper": null
+            }
+          ]
+        },
+        {
+          "ppm_id": "PPM014299",
+          "phenotype": "Bone Mineral Density",
+          "covariates": "age, sex, age*sex, assessment center, genotyping array, 10 PCs",
+          "sample_number": 7588,
+          "ancestry": "South Asian",
+          "cohorts": [
+            "UKB"
+          ],
+          "sample_age": null,
+          "metrics": [
+            {
+              "name": "Incremental R2 (full model vs. covariates alone)",
+              "estimate": 0.0836,
+              "ci_lower": null,
+              "ci_upper": null
+            }
+          ]
+        }
+      ],
+      "files": {
+        "original": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/PGS002583.txt.gz",
+          "path": "data/raw/scoring_files/PGS002583/PGS002583.txt.gz",
+          "sha256": "3b93008fbd798b2c7f1082ea5336d9bf9557639c26c367703cc6fb0c45bbdc24",
+          "bytes": 95722,
+          "retrieved_at": "2026-10-29T13:38:14+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS002583",
+            "pgs_name": "bmd_HEEL_TSCOREz.P+T.5e-08",
+            "trait_reported": "Bone mineral density (BMD)",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "GRCh37",
+            "variants_number": "7908",
+            "weight_type": "BETA",
+            "pgp_id": "PGP000332",
+            "citation": "Weissbrod O et al. Nat Genet (2022). doi:10.1038/s41588-022-01036-9"
+          },
+          "qc": {
+            "n_variants": 7908,
+            "columns": [
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "other_allele",
+              "effect_weight"
+            ],
+            "has_rsID": false,
+            "has_other_allele_column": true,
+            "n_unique_effect_weights": 7908,
+            "all_weights_identical": false,
+            "n_other_allele_missing": 0,
+            "n_other_allele_ambiguous_multiallelic": 0,
+            "n_palindromic_snvs": 1362,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 3,
+            "n_non_snv_alleles": 977,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22"
+            ],
+            "free_text_weights_in_variant_description": 0
+          }
+        },
+        "hmPOS_GRCh37": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/Harmonized/PGS002583_hmPOS_GRCh37.txt.gz",
+          "path": "data/raw/scoring_files/PGS002583/PGS002583_hmPOS_GRCh37.txt.gz",
+          "sha256": "1622ee923fe5ed513948d8dc4d424c6e215caf6bd66ccbd56663388e986eecfe",
+          "bytes": 129222,
+          "retrieved_at": "2026-10-29T13:38:15+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS002583",
+            "pgs_name": "bmd_HEEL_TSCOREz.P+T.5e-08",
+            "trait_reported": "Bone Mineral Density",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "GRCh37",
+            "variants_number": "7908",
+            "weight_type": "BETA",
+            "pgp_id": "PGP000332",
+            "citation": "Weissbrod O et al. Nat Genet (2022). doi:10.1038/s41588-022-01036-9",
+            "HmPOS_build": "GRCh37",
+            "HmPOS_date": "2022-07-28",
+            "HmPOS_match_chr": "{\"True\": 7908, \"False\": 0}",
+            "HmPOS_match_pos": "{\"True\": 7908, \"False\": 0}"
+          },
+          "qc": {
+            "n_variants": 7908,
+            "columns": [
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "other_allele",
+              "effect_weight",
+              "hm_source",
+              "hm_rsID",
+              "hm_chr",
+              "hm_pos",
+              "hm_inferOtherAllele",
+              "hm_match_chr",
+              "hm_match_pos"
+            ],
+            "has_rsID": false,
+            "has_other_allele_column": true,
+            "n_unique_effect_weights": 7908,
+            "all_weights_identical": false,
+            "n_other_allele_missing": 0,
+            "n_other_allele_ambiguous_multiallelic": 0,
+            "n_palindromic_snvs": 1362,
+            "n_unmapped_in_harmonization": 0,
+            "n_duplicate_positions": 3,
+            "n_non_snv_alleles": 977,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22"
+            ],
+            "free_text_weights_in_variant_description": 0
+          }
+        },
+        "hmPOS_GRCh38": {
+          "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/Harmonized/PGS002583_hmPOS_GRCh38.txt.gz",
+          "path": "data/raw/scoring_files/PGS002583/PGS002583_hmPOS_GRCh38.txt.gz",
+          "sha256": "d0f6b7baaaafe791b03b4d2c0e01da58fc000265bd2fab4de45333304b45a55f",
+          "bytes": 137557,
+          "retrieved_at": "2026-10-29T13:38:16+00:00",
+          "header": {
+            "format_version": "2.0",
+            "pgs_id": "PGS002583",
+            "pgs_name": "bmd_HEEL_TSCOREz.P+T.5e-08",
+            "trait_reported": "Bone Mineral Density",
+            "trait_mapped": "bone density",
+            "trait_efo": "OBA_1000110",
+            "genome_build": "GRCh37",
+            "variants_number": "7908",
+            "weight_type": "BETA",
+            "pgp_id": "PGP000332",
+            "citation": "Weissbrod O et al. Nat Genet (2022). doi:10.1038/s41588-022-01036-9",
+            "HmPOS_build": "GRCh38",
+            "HmPOS_date": "2022-08-01",
+            "HmPOS_match_chr": "{\"True\": null, \"False\": null}",
+            "HmPOS_match_pos": "{\"True\": null, \"False\": null}"
+          },
+          "qc": {
+            "n_variants": 7908,
+            "columns": [
+              "chr_name",
+              "chr_position",
+              "effect_allele",
+              "other_allele",
+              "effect_weight",
+              "hm_source",
+              "hm_rsID",
+              "hm_chr",
+              "hm_pos",
+              "hm_inferOtherAllele"
+            ],
+            "has_rsID": false,
+            "has_other_allele_column": true,
+            "n_unique_effect_weights": 7908,
+            "all_weights_identical": false,
+            "n_other_allele_missing": 0,
+            "n_other_allele_ambiguous_multiallelic": 0,
+            "n_palindromic_snvs": 1362,
+            "n_unmapped_in_harmonization": 5,
+            "n_duplicate_positions": 3,
+            "n_non_snv_alleles": 977,
+            "chromosomes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22"
+            ],
+            "free_text_weights_in_variant_description": 0
+          }
+        }
+      }
+    }
+  ],
+  "run_finished": "2026-10-29T13:38:16+00:00",
+  "requests": [
+    {
+      "url": "https://www.pgscatalog.org/rest/info/",
+      "retrieved_at": "2026-10-29T13:37:10+00:00",
+      "status": 200,
+      "sha256": "24bec1c87cc3e22bde6344f6ccbaf9e9a3d0c2c3ea782bb06fca4808574df573",
+      "nbytes": 1738
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/trait/search?term=bone+mineral+density&include_children=1",
+      "retrieved_at": "2026-10-29T13:37:11+00:00",
+      "status": 200,
+      "sha256": "91236839c3ced5f58c1f4df6178d013939252fd8cdbdb210ec8ddd582c444070",
+      "nbytes": 1817
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/trait/search?term=bone+density&include_children=1",
+      "retrieved_at": "2026-10-29T13:37:12+00:00",
+      "status": 200,
+      "sha256": "ef4623d85d3b8d980a8db0b1e1554578eb9eba81cce5856940dc002aa844a6b0",
+      "nbytes": 61
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/trait/search?term=hip&include_children=1",
+      "retrieved_at": "2026-10-29T13:37:13+00:00",
+      "status": 200,
+      "sha256": "d9a40715e2aeb04a2dea29dd5bcdcb12c1afd5fa5e20ec9ca8775da47b079934",
+      "nbytes": 8914
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/trait/search?term=total+hip&include_children=1",
+      "retrieved_at": "2026-10-29T13:37:13+00:00",
+      "status": 200,
+      "sha256": "fbfb55db2bbf50e4920a3150d92e06fbc31dc2739a3656195278c9e27f3cc514",
+      "nbytes": 705
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/trait/search?term=femoral+neck&include_children=1",
+      "retrieved_at": "2026-10-29T13:37:14+00:00",
+      "status": 200,
+      "sha256": "ef4623d85d3b8d980a8db0b1e1554578eb9eba81cce5856940dc002aa844a6b0",
+      "nbytes": 61
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/trait/search?term=BMD&include_children=1",
+      "retrieved_at": "2026-10-29T13:37:15+00:00",
+      "status": 200,
+      "sha256": "ef4623d85d3b8d980a8db0b1e1554578eb9eba81cce5856940dc002aa844a6b0",
+      "nbytes": 61
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/trait/search?term=osteoporosis&include_children=1",
+      "retrieved_at": "2026-10-29T13:37:15+00:00",
+      "status": 200,
+      "sha256": "80196d109b510c89af92253e03d234c2417f33af214b05163c7972487b481d54",
+      "nbytes": 1227
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250",
+      "retrieved_at": "2026-10-29T13:37:17+00:00",
+      "status": 200,
+      "sha256": "0c05330ec8832dfd28cc005a8f0da8c63451b6e227aa344014315c68b7fd7d33",
+      "nbytes": 1220580
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=250",
+      "retrieved_at": "2026-10-29T13:37:18+00:00",
+      "status": 200,
+      "sha256": "66bc6e709406a1f3581da763a0e451061ed0d3fb05ffc3c78b31f2ef9dbd3454",
+      "nbytes": 1148077
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=500",
+      "retrieved_at": "2026-10-29T13:37:19+00:00",
+      "status": 200,
+      "sha256": "4573e060baa942e4727538b631da70885860be95398e26a5223eca5c0c8f7cb4",
+      "nbytes": 1259442
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=750",
+      "retrieved_at": "2026-10-29T13:37:20+00:00",
+      "status": 200,
+      "sha256": "f4ccc0c257105325a4d054c0ef594dad62d28d592e3956ef61780635b5e37456",
+      "nbytes": 1170941
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=1000",
+      "retrieved_at": "2026-10-29T13:37:21+00:00",
+      "status": 200,
+      "sha256": "30e5e6a7103ffd8e73370d431fc2f8c880e155e2be05ae0acdb18f75cd376d33",
+      "nbytes": 555743
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=1250",
+      "retrieved_at": "2026-10-29T13:37:22+00:00",
+      "status": 200,
+      "sha256": "3f6440b8eaaddfa147a28440f8feeb8cab9deca8f299807e2e2495a01021bdc1",
+      "nbytes": 622439
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=1500",
+      "retrieved_at": "2026-10-29T13:37:23+00:00",
+      "status": 200,
+      "sha256": "b1bf001189e37eeea5dbc931898a3bbee3b252a205780a82d838ed2c29a9c5a3",
+      "nbytes": 747725
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=1750",
+      "retrieved_at": "2026-10-29T13:37:24+00:00",
+      "status": 200,
+      "sha256": "560976b6832551cf76eee77c5dd2b1f95df9b7b1a6b015818ef5c5ba3b01f67f",
+      "nbytes": 571762
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=2000",
+      "retrieved_at": "2026-10-29T13:37:25+00:00",
+      "status": 200,
+      "sha256": "5546902f0e5a149230f67cde0e560577a467a3862b8d766a080c48fabc3e143f",
+      "nbytes": 776309
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=2250",
+      "retrieved_at": "2026-10-29T13:37:26+00:00",
+      "status": 200,
+      "sha256": "dad4667b0a358bcfb624b4c367f5d8e7895e8cd38a4c625cff20e266222df3ae",
+      "nbytes": 548011
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=2500",
+      "retrieved_at": "2026-10-29T13:37:27+00:00",
+      "status": 200,
+      "sha256": "c5fae85dc8500e1a9faaebd9adb842ec58b8754c791489514ec334653e3cbd14",
+      "nbytes": 870245
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=2750",
+      "retrieved_at": "2026-10-29T13:37:28+00:00",
+      "status": 200,
+      "sha256": "87005ebf4fe5c25d3d3183f17db2dfdf626eb2e750e56516fd2729daeb589442",
+      "nbytes": 695596
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=3000",
+      "retrieved_at": "2026-10-29T13:37:29+00:00",
+      "status": 200,
+      "sha256": "902f406bfe217c24d4a7dee1c419472a06dfc48790ef4a7dc5392feffa6450e0",
+      "nbytes": 710137
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=3250",
+      "retrieved_at": "2026-10-29T13:37:30+00:00",
+      "status": 200,
+      "sha256": "a6f02342b4e51628c8e79e2bd9cef7bd923d620bf61649340232b62984e5a69e",
+      "nbytes": 696111
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=3500",
+      "retrieved_at": "2026-10-29T13:37:31+00:00",
+      "status": 200,
+      "sha256": "014b77280cabafb0e35b9e344a6e0bd8f9281908ea496cf5923719ae09116de8",
+      "nbytes": 669737
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=3750",
+      "retrieved_at": "2026-10-29T13:37:32+00:00",
+      "status": 200,
+      "sha256": "1d21c3e87f1946ab0473ca2ba25f15ecb93e9def1ff5901fda86e1f4a27c80c3",
+      "nbytes": 806767
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=4000",
+      "retrieved_at": "2026-10-29T13:37:33+00:00",
+      "status": 200,
+      "sha256": "7fedfbe9c36dfddfcbe334a640a8554fb9b3f0705ef0f651d57ef19a720f8a1a",
+      "nbytes": 747891
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=4250",
+      "retrieved_at": "2026-10-29T13:37:34+00:00",
+      "status": 200,
+      "sha256": "46756a508dcc1096cf319e565ab9731647d30ec4c6d7fe069228a2dcf99227f3",
+      "nbytes": 554437
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=4500",
+      "retrieved_at": "2026-10-29T13:37:35+00:00",
+      "status": 200,
+      "sha256": "7317d492cc926664a516e8efe56df5550054ef142cef3f5475eb6b107a45ec76",
+      "nbytes": 673498
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=4750",
+      "retrieved_at": "2026-10-29T13:37:37+00:00",
+      "status": 200,
+      "sha256": "35fcc0aeae3dd28d81f56d5dd79661c2ca5cde02d461ce55aa8d1c4c7b7d41dd",
+      "nbytes": 977934
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=5000",
+      "retrieved_at": "2026-10-29T13:37:38+00:00",
+      "status": 200,
+      "sha256": "99f8ea5f1f5c05a31815e241a09018ca665aaa61fe926c6a842abaeee747dbec",
+      "nbytes": 1156971
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=5250",
+      "retrieved_at": "2026-10-29T13:37:39+00:00",
+      "status": 200,
+      "sha256": "1d8733bec86d6977056a89a9a632ae256468de40d43c40a2483b79c0d1e4ac61",
+      "nbytes": 1923452
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=5500",
+      "retrieved_at": "2026-10-29T13:37:40+00:00",
+      "status": 200,
+      "sha256": "7305ffefe713220adabd91ff362f93c9ca2ab32236bb57009970f9e9d221a795",
+      "nbytes": 693295
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=5750",
+      "retrieved_at": "2026-10-29T13:37:41+00:00",
+      "status": 200,
+      "sha256": "afec42a28ba0b48825a591244a7bfedb8aa7d58332c4e6df9cd05565afc20aac",
+      "nbytes": 706654
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=6000",
+      "retrieved_at": "2026-10-29T13:37:42+00:00",
+      "status": 200,
+      "sha256": "d90c7e01f54aa6fe8a1ff9c479af876a135a42ebac5079a0848f093da7100394",
+      "nbytes": 693105
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=6250",
+      "retrieved_at": "2026-10-29T13:37:43+00:00",
+      "status": 200,
+      "sha256": "68026a3025abc9c1921d0441820a2f7b2beb3f05d1569a1b00f4be164364e3f2",
+      "nbytes": 699839
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=6500",
+      "retrieved_at": "2026-10-29T13:37:44+00:00",
+      "status": 200,
+      "sha256": "536807f43a1f9e366d021185ba9283f2ff6d8c8ba67d5afe50d08c2c6189db2e",
+      "nbytes": 696843
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=6750",
+      "retrieved_at": "2026-10-29T13:37:45+00:00",
+      "status": 200,
+      "sha256": "6b97f338056407e7eb7e23cd330ebd36454840f713f32d7d5dae1851d74f8b77",
+      "nbytes": 704960
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/all?limit=250&offset=7000",
+      "retrieved_at": "2026-10-29T13:37:45+00:00",
+      "status": 200,
+      "sha256": "ccee2567639c1727e6671faa3cc87e22b5832d1515cfccde90c7dd4a708791d9",
+      "nbytes": 67744
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/PGS005206",
+      "retrieved_at": "2026-10-29T13:37:46+00:00",
+      "status": 200,
+      "sha256": "105c3ae6658a83feb0206149d20c54d9a661f2699bf6dd3e1869b7207316d2f8",
+      "nbytes": 2893
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/performance/search?pgs_id=PGS005206&limit=250",
+      "retrieved_at": "2026-10-29T13:37:46+00:00",
+      "status": 200,
+      "sha256": "65cc15744194eb86743de864d056862cb0ed9e7b2cb107a0a93567cbcafc8af7",
+      "nbytes": 2291
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/PGS005206.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:03+00:00",
+      "status": 200,
+      "sha256": "ea4ff84176500994199c3d9609055b6e64381c27f314d76d9446b0e3c561b0aa",
+      "nbytes": 1568
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh37.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:04+00:00",
+      "status": 200,
+      "sha256": "acbd3979075950bc0811d952afa3383b58af830804f526ae3459595771547930",
+      "nbytes": 2147
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh38.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:05+00:00",
+      "status": 200,
+      "sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+      "nbytes": 2432
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/PGS000121",
+      "retrieved_at": "2026-10-29T13:38:05+00:00",
+      "status": 200,
+      "sha256": "a5d425a2313ec364c6489df252fd7f1b403e82c1b6de5336bb5133afbc9d89e1",
+      "nbytes": 2373
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/performance/search?pgs_id=PGS000121&limit=250",
+      "retrieved_at": "2026-10-29T13:38:06+00:00",
+      "status": 200,
+      "sha256": "ecf43d42df3bfca818a6ac8952f2bfe91f82166d38ebdf14ef99bcb5cb7590ff",
+      "nbytes": 30920
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/PGS000121.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:08+00:00",
+      "status": 200,
+      "sha256": "1d0dbdaf4562be2290e1fc8e3eb27fc74049fe0bb75547183aff62e82a650cd8",
+      "nbytes": 1691
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/Harmonized/PGS000121_hmPOS_GRCh37.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:10+00:00",
+      "status": 200,
+      "sha256": "2219550d9b088f1bc8224d246ebddc3874fa627a4f08da0edf72792073289a06",
+      "nbytes": 2375
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000121/ScoringFiles/Harmonized/PGS000121_hmPOS_GRCh38.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:12+00:00",
+      "status": 200,
+      "sha256": "cb22ed8bdb284fe93fd2d2fdf3d9d365487803b87dc953987ded2d35b3d53f43",
+      "nbytes": 2396
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/score/PGS002583",
+      "retrieved_at": "2026-10-29T13:38:12+00:00",
+      "status": 200,
+      "sha256": "3badf2d0e4c008475dc4b968d43b6e14a6fe0dec61a887064ad193378e19ebc1",
+      "nbytes": 2122
+    },
+    {
+      "url": "https://www.pgscatalog.org/rest/performance/search?pgs_id=PGS002583&limit=250",
+      "retrieved_at": "2026-10-29T13:38:13+00:00",
+      "status": 200,
+      "sha256": "752b2190030baf13ee440ee908e560f63e5033816cd17ad43cab52030192bda9",
+      "nbytes": 4794
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/PGS002583.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:14+00:00",
+      "status": 200,
+      "sha256": "3b93008fbd798b2c7f1082ea5336d9bf9557639c26c367703cc6fb0c45bbdc24",
+      "nbytes": 95722
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/Harmonized/PGS002583_hmPOS_GRCh37.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:15+00:00",
+      "status": 200,
+      "sha256": "1622ee923fe5ed513948d8dc4d424c6e215caf6bd66ccbd56663388e986eecfe",
+      "nbytes": 129222
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS002583/ScoringFiles/Harmonized/PGS002583_hmPOS_GRCh38.txt.gz",
+      "retrieved_at": "2026-10-29T13:38:16+00:00",
+      "status": 200,
+      "sha256": "d0f6b7baaaafe791b03b4d2c0e01da58fc000265bd2fab4de45333304b45a55f",
+      "nbytes": 137557
+    }
+  ]
+}

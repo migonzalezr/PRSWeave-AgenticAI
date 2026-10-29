@@ -1,0 +1,16 @@
+{
+  "observation": "Phenotype assessment reports exact site correspondence (total_body) via the linked source GWAS GCST005348. The score's own trait fields name no site, and predictive validity is not measurable with synthetic dosages. Technical compatibility is still not assessed, and coverage has not been inspected.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "inspect_variant_coverage", "assessment": "Required next: it gives technical compatibility, layout, variant matching and invalid values for inputs/dosages.tsv, and it is a prerequisite for approve_plan."},
+    {"action": "validate_effect_alleles", "assessment": "Useful later, after the layout and coverage are known."},
+    {"action": "verify_checksum", "assessment": "Metadata already shows matches_pin true against DR-0001; lower priority."},
+    {"action": "search_alternative_scores", "assessment": "Not needed: site correspondence with the provided score is exact."},
+    {"action": "request_human_review", "assessment": "Premature: no blocking issue has been found yet."},
+    {"action": "abstain", "assessment": "Premature: the site-naming caveat is not disqualifying given the exact linked-record correspondence."}
+  ],
+  "selected_action": "inspect_variant_coverage",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "The phenotype assessment found exact site correspondence but left technical compatibility unassessed, and approve_plan requires a coverage inspection of inputs/dosages.tsv. Inspecting the file by header names is the next evidence step.",
+  "expected_result": "A report on the file layout (column order), the number of the 81 score variants matched in the file, coverage fraction, and any invalid dosage values."
+}

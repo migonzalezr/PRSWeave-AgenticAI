@@ -1,0 +1,16 @@
+{
+  "observation": "Column-order repair succeeded: derived/dosages_canonical_columns.tsv is cell-identical to the source (1620 cells compared) and the original is unchanged. The current genotype artifact is now the repaired file, so coverage inspection must be redone on it before approve_plan is permitted.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "inspect_variant_coverage", "assessment": "Required: approve_plan is gated on a coverage inspection of the current artifact, and this confirms the repaired file is readable by the scorer."},
+    {"action": "validate_effect_alleles", "assessment": "Needed before planning, but best run after confirming the repaired layout."},
+    {"action": "verify_checksum", "assessment": "Metadata already shows matches_pin true; can be run later if desired."},
+    {"action": "approve_plan", "assessment": "Not permitted yet."},
+    {"action": "request_human_review", "assessment": "Premature: no unresolved issue."},
+    {"action": "abstain", "assessment": "Premature: eligibility checks are proceeding normally."}
+  ],
+  "selected_action": "inspect_variant_coverage",
+  "action_arguments": {"genotype_artifact": "derived/dosages_canonical_columns.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "The repair tool reported cells_identical true, but approve_plan explicitly requires a coverage inspection of derived/dosages_canonical_columns.tsv. This also verifies the scorer can now read the layout.",
+  "expected_result": "81 of 81 variants matched, 0 missing and 0 invalid cells for 20 individuals, no column-order issue, and readable_by_stage2_scorer true."
+}

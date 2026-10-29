@@ -1,0 +1,120 @@
+[
+  {
+    "run": "results/stage3/scenario_a/run_1",
+    "n_outcomes_original": 8,
+    "n_outcomes_replay": 7,
+    "identical": false,
+    "first_difference_index": 6,
+    "first_difference": {
+      "original": [
+        "verdict",
+        "S008",
+        "FAIL",
+        [
+          "V6b_request_phenotype_correspondence",
+          "V7_claims_supported"
+        ]
+      ],
+      "replay": [
+        "end",
+        "REQUIRES_HUMAN_REVIEW"
+      ]
+    }
+  },
+  {
+    "run": "results/stage3/scenario_a/run_2",
+    "n_outcomes_original": 8,
+    "n_outcomes_replay": 8,
+    "identical": true,
+    "first_difference_index": null,
+    "first_difference": null
+  },
+  {
+    "run": "results/stage3/scenario_b/run_1",
+    "n_outcomes_original": 10,
+    "n_outcomes_replay": 9,
+    "identical": false,
+    "first_difference_index": 8,
+    "first_difference": {
+      "original": [
+        "verdict",
+        "S010",
+        "FAIL",
+        [
+          "V6b_request_phenotype_correspondence"
+        ]
+      ],
+      "replay": [
+        "end",
+        "REQUIRES_HUMAN_REVIEW"
+      ]
+    }
+  },
+  {
+    "run": "results/stage3/scenario_b/run_2",
+    "n_outcomes_original": 12,
+    "n_outcomes_replay": 12,
+    "identical": true,
+    "first_difference_index": null,
+    "first_difference": null
+  },
+  {
+    "run": "results/stage3/scenario_c/run_1",
+    "n_outcomes_original": 5,
+    "n_outcomes_replay": 5,
+    "identical": true,
+    "first_difference_index": null,
+    "first_difference": null
+  },
+  {
+    "run": "results/stage3/scenario_d/run_1",
+    "n_outcomes_original": 9,
+    "n_outcomes_replay": 8,
+    "identical": false,
+    "first_difference_index": 6,
+    "first_difference": {
+      "original": [
+        "verdict",
+        "S008",
+        "FAIL",
+        [
+          "V4_output_integrity",
+          "V5_independent_numerical_agreement",
+          "V6b_request_phenotype_correspondence",
+          "V7_claims_supported"
+        ]
+      ],
+      "replay": [
+        "tool",
+        "S009",
+        "calculate_prs",
+        "ok",
+        {
+          "scores_artifact": "artifacts/prs_scores_2.csv",
+          "scores_sha256_at_write": "7c1e4edd2801ff0e6e86e560a80d74ebf9211f7a3b1615a3fb8044ab60a9d85d",
+          "genotype_artifact": "inputs/dosages.tsv",
+          "genotype_sha256": "ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd",
+          "pgs_id": "PGS005206",
+          "n_individuals": 20,
+          "n_scored": 20,
+          "qc_status_counts": {
+            "PASS": 20,
+            "PARTIAL": 0,
+            "LOW_COVERAGE": 0,
+            "NO_DATA": 0
+          },
+          "n_variants_total": 81,
+          "scorer": "prsweave.prs.score_individuals (Stage 2, Decimal, min_coverage 0.95)"
+        }
+      ]
+    }
+  },
+  {
+    "run": "results/stage3/scenario_d/run_2",
+    "n_outcomes_original": 12,
+    "n_outcomes_replay": 12,
+    "identical": true,
+    "first_difference_index": null,
+    "first_difference": null
+  }
+]

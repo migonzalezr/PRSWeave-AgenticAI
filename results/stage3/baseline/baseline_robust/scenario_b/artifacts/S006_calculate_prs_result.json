@@ -1,0 +1,29 @@
+{
+  "tool": "calculate_prs",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "scores_artifact": "artifacts/prs_scores_1.csv",
+    "scores_sha256_at_write": "7c1e4edd2801ff0e6e86e560a80d74ebf9211f7a3b1615a3fb8044ab60a9d85d",
+    "genotype_artifact": "derived/dosages_canonical_columns.tsv",
+    "genotype_sha256": "c9f32905a1076b2876f752ff156f2d467fa67ea7a910ddcf2cd57052942b5d9d",
+    "pgs_id": "PGS005206",
+    "n_individuals": 20,
+    "n_scored": 20,
+    "qc_status_counts": {
+      "PASS": 20,
+      "PARTIAL": 0,
+      "LOW_COVERAGE": 0,
+      "NO_DATA": 0
+    },
+    "n_variants_total": 81,
+    "scorer": "prsweave.prs.score_individuals (Stage 2, Decimal, min_coverage 0.95)"
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/prs_scores_1.csv",
+      "sha256": "7c1e4edd2801ff0e6e86e560a80d74ebf9211f7a3b1615a3fb8044ab60a9d85d"
+    }
+  ],
+  "network_hosts": []
+}

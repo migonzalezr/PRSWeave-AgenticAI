@@ -1,0 +1,7 @@
+{
+  "scores_artifact": "artifacts/prs_scores_1.csv",
+  "pgs_id": "PGS005206",
+  "phenotype_reported": "Bone mineral density (PGS Catalog trait; the site, total body, comes from source GWAS GCST005348 'Total body bone mineral density')",
+  "fulfils_request": true,
+  "summary": "Raw polygenic scores for PGS005206 (Bone mineral density; source GWAS GCST005348, Total body bone mineral density) were computed for 20 individuals from a synthetic effect-allele dosage file. All 81 score variants were matched, no effect-allele mismatches were found, and all 20 individuals passed QC (20 PASS, 0 PARTIAL, 0 LOW_COVERAGE, 0 NO_DATA). The scoring file matched its approved SHA-256 pin. The input data are synthetic and contain no phenotypes or ancestry, so predictive validity and transferability could not be assessed. The only catalog evaluation is in European children (Generation R, n=3470, mean age 9.77 years). The original genome build is not reported, the derivation of the weights is unverified (8 of 12 weights overlapping the GWAS table differ in magnitude), 24 variants have an ambiguous other allele and 5 are palindromic, and the dosage coding does not test strand resolution. The scores are raw values with no percentiles, risk categories or clinical interpretation."
+}

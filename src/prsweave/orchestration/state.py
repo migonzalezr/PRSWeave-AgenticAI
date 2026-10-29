@@ -1,0 +1,42 @@
+"""Workflow states and permitted transitions (deterministic controller rules)."""
+
+from __future__ import annotations
+
+INITIALIZED = "INITIALIZED"
+EVIDENCE_RETRIEVED = "EVIDENCE_RETRIEVED"
+ELIGIBILITY_CHECKED = "ELIGIBILITY_CHECKED"
+PLAN_APPROVED = "PLAN_APPROVED"
+EXECUTING = "EXECUTING"
+VALIDATING = "VALIDATING"
+REPLAN_REQUIRED = "REPLAN_REQUIRED"
+COMPLETED = "COMPLETED"
+ABSTAINED = "ABSTAINED"
+FAILED = "FAILED"
+REQUIRES_HUMAN_REVIEW = "REQUIRES_HUMAN_REVIEW"
+
+TERMINAL = frozenset({COMPLETED, ABSTAINED, FAILED, REQUIRES_HUMAN_REVIEW})
+_ANY_LIVE = (INITIALIZED, EVIDENCE_RETRIEVED, ELIGIBILITY_CHECKED, PLAN_APPROVED, EXECUTING, VALIDATING, REPLAN_REQUIRED)
+
+TRANSITIONS: dict[str, frozenset[str]] = {
+    INITIALIZED: frozenset({EVIDENCE_RETRIEVED}),
+    EVIDENCE_RETRIEVED: frozenset({ELIGIBILITY_CHECKED}),
+    ELIGIBILITY_CHECKED: frozenset({PLAN_APPROVED, EVIDENCE_RETRIEVED}),
+    PLAN_APPROVED: frozenset({EXECUTING, EVIDENCE_RETRIEVED, ELIGIBILITY_CHECKED}),
+    EXECUTING: frozenset({VALIDATING, REPLAN_REQUIRED}),
+    VALIDATING: frozenset({COMPLETED, REPLAN_REQUIRED}),
+    REPLAN_REQUIRED: frozenset({EVIDENCE_RETRIEVED, ELIGIBILITY_CHECKED, PLAN_APPROVED, EXECUTING}),
+}
+# Terminal exits are reachable from every live state.
+for _s in _ANY_LIVE:
+    TRANSITIONS[_s] = TRANSITIONS.get(_s, frozenset()) | {ABSTAINED, FAILED, REQUIRES_HUMAN_REVIEW}
+for _s in TERMINAL:
+    TRANSITIONS[_s] = frozenset()
+
+
+class IllegalTransition(Exception):
+    pass
+
+
+def check_transition(src: str, dst: str) -> None:
+    if dst not in TRANSITIONS.get(src, frozenset()):
+        raise IllegalTransition(f"{src} -> {dst} is not permitted")

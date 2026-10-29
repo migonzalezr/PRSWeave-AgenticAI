@@ -1,0 +1,33 @@
+{
+  "observation": "Coverage is complete. All 81 score variants matched by ID, with 20 individuals, no missing or invalid cells, and 1.0 coverage for every individual. The file is readable by the stage-2 scorer. The scoring file checksum already matched its pin in the metadata, but effect-allele agreement between the dosage file and the scoring file has not been checked.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "validate_effect_alleles",
+      "assessment": "Do now. Effect-allele orientation in the dosage file has not been verified, and a mismatch would silently invert score contributions."
+    },
+    {
+      "action": "approve_plan",
+      "assessment": "Allowed now, but committing before the allele check risks an unsupported plan."
+    },
+    {
+      "action": "verify_checksum",
+      "assessment": "Redundant. The metadata already reports matches_pin true against approval DR-0001."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Not warranted. Phenotype site and coverage evidence are favorable."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Not warranted at this point."
+    }
+  ],
+  "selected_action": "validate_effect_alleles",
+  "action_arguments": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "Coverage inspection found no layout or value issues, but its report says nothing about whether the dosage file's counted allele equals the scoring file's effect allele. Checking this before approving the plan avoids computing scores from mis-oriented dosages.",
+  "expected_result": "A report that the effect alleles in the dosage file agree with the scoring file for all 81 variants, or a list of any mismatched variants."
+}

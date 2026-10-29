@@ -1,0 +1,19 @@
+{
+  "run_id": "0eeb15d60302",
+  "generated_at": "2026-10-29T14:07:33.549+00:00",
+  "seed": 20261029,
+  "files": {
+    "data/raw/scoring_files/PGS005206/PGS005206_hmPOS_GRCh38.txt.gz": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+    "data/raw/literature/medina_gomez_2018_table1.tsv": "9b61b4cfbbeb4e4de5740c2836d98c35d8b0ea4b64a09fe0b3e4bb52f6c4b96c",
+    "data/synthetic/PGS005206_synthetic_dosages_seed20261029.tsv": "ac0ea0601f4750b69b902044a63fd7799a1de97006a902f08d625de69b9f5ffd",
+    "data/synthetic/PGS005206_synthetic_dosages_seed20261029.json": "fbac7de7ca1a94db52d278e47d6ae012b5b08d678b68d86cbcb3a7a18e9fc790",
+    "results/stage2/manual_check_SYN01.csv": "b987b134555a4958fff2c95fcc1d5a503f13640876b689f95ed63e3409bfb4f0",
+    "results/stage2/manual_check_SYN02.csv": "731871595a59fab3b8d3f3a30838ccd45f41b4e1919e43207182923a10032cae",
+    "results/stage2/prs_scores.csv": "6b4e5dd063b76e12569ab0bf6826edb13de353978521388aee1abb4b0e96112f",
+    "results/stage2/prs_scores_independent.csv": "85df847edf40eb71ed52a0f362a75c3ec9eeaa524f4145c03ad11ba1e88b776d",
+    "results/stage2/variant_qc.csv": "534c8a8941e92bca68a114502b4a60548243cfe6d012db5fb00b9c151d34ce31",
+    "results/stage2/validation.json": "dfba329db69d739b9389b5ec7cda8a2309931298bc9882c6905b24a33475977e",
+    "results/stage2/weight_crosscheck.json": "57b5dbdbcd5d18f8c0e5ee0690dee3d7afc75a0af3051cec44b0cbd0867c872f",
+    "results/stage2/test_output.txt": "7d1d525eb4743620a0f88a36447b17568e67231a17b42bfda211eef14ef47599"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "tool": "inspect_variant_coverage",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "genotype_artifact": "derived/regenerated_authorized_dosages.tsv",
+    "n_individuals": 20,
+    "n_score_variants": 81,
+    "n_matched_by_variant_id": 81,
+    "n_rsid_consistent": 81,
+    "n_missing_cells": 0,
+    "n_invalid_cells": 0,
+    "coverage_min": 1.0,
+    "coverage_max": 1.0,
+    "individuals_below_0.95": [],
+    "readable_by_stage2_scorer": true,
+    "issues": []
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/coverage_derived_regenerated_authorized_dosages.tsv.json",
+      "sha256": "2fc06c80a2c5af5d5720484f914ab25013caec50bcbf685b77581ac4921ac216"
+    }
+  ],
+  "network_hosts": []
+}

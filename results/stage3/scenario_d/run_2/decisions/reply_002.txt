@@ -1,0 +1,32 @@
+{
+  "observation": "Metadata retrieved for PGS005206 (81 variants, GRCh38 harmonized file, checksum matches pin DR-0001). The catalog trait is generic 'Bone mineral density' and does not state a skeletal site. The source GWAS GCST005348 is 'Total body bone mineral density'. The only evaluation is in Generation R European children (n=3470), and the weight derivation is unverified.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "assess_phenotype_compatibility",
+      "assessment": "Needed next. It separates technical compatibility, scientific suitability and predictive-validity status for generic BMD versus total-body BMD."
+    },
+    {
+      "action": "inspect_variant_coverage",
+      "assessment": "Required before plan approval, but it is premature until phenotype suitability is known."
+    },
+    {
+      "action": "search_alternative_scores",
+      "assessment": "Premature. No incompatibility has been established yet."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Premature. The compatibility assessment may resolve the site ambiguity."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Premature. There is no evidence yet that the request cannot be met."
+    }
+  ],
+  "selected_action": "assess_phenotype_compatibility",
+  "action_arguments": {
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "The catalog trait 'Bone mineral density' lacks a skeletal site, while the source GWAS is total-body BMD and the only evaluation is in European children. A formal phenotype compatibility assessment is required to settle whether the score fits the requested total-body BMD target, and it is a prerequisite for approve_plan.",
+  "expected_result": "A compatibility report that separates technical compatibility (BMD trait match), scientific suitability evidence (source GWAS is total-body BMD, but the catalog site is unspecified) and predictive-validity status (limited evaluation in European children only)."
+}

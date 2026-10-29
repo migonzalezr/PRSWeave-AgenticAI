@@ -1,0 +1,32 @@
+{
+  "observation": "Coverage is complete: 81 of 81 score variants matched, with no missing or invalid cells, and every one of the 20 individuals has coverage of 1.0. The file is not readable by the scorer because its columns are in non-canonical order (COLUMN_ORDER_NONCANONICAL). All required columns are present exactly once.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "repair_column_order",
+      "assessment": "Fixes the only reported issue. It uses header names only, checks that every cell is unchanged, and leaves the original file untouched, so it does not alter genotypes."
+    },
+    {
+      "action": "validate_effect_alleles",
+      "assessment": "Needed before approving a plan, but it should run on the repaired, readable file."
+    },
+    {
+      "action": "approve_plan",
+      "assessment": "Premature, because the file is unreadable by the scorer and the effect alleles have not been validated."
+    },
+    {
+      "action": "regenerate_authorized_test_input",
+      "assessment": "Unnecessary. A header-based reorder is less invasive and the data are intact."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Not justified. The problem is a recoverable layout issue."
+    }
+  ],
+  "selected_action": "repair_column_order",
+  "action_arguments": {
+    "genotype_artifact": "inputs/dosages.tsv"
+  },
+  "decision_justification": "Coverage inspection reports readable_by_stage2_scorer=false solely because of COLUMN_ORDER_NONCANONICAL, with all required columns present once and no invalid cells. A name-based reorder with cell-level verification is a safe fix that does not touch values.",
+  "expected_result": "A new genotype table in canonical column order, with a verification that all cells are identical to the original. After that, re-inspect coverage and validate effect alleles on the repaired file."
+}

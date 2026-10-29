@@ -1,0 +1,29 @@
+{
+  "observation": "repair_column_order produced derived/dosages_canonical_columns.tsv. All 1620 cells were compared and are identical to the source, and the original is unchanged. The workflow state reset to EVIDENCE_RETRIEVED, so approve_plan now needs a coverage inspection of the repaired file.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "inspect_variant_coverage",
+      "assessment": "Required. approve_plan needs a coverage inspection of the current artifact (derived/dosages_canonical_columns.tsv). It should also confirm the file is now readable by the scorer."
+    },
+    {
+      "action": "validate_effect_alleles",
+      "assessment": "Needed before approving the plan, but it should run after coverage confirms the file is readable."
+    },
+    {
+      "action": "verify_checksum",
+      "assessment": "The scoring file already matches its pin (matches_pin true). Can be repeated later if needed."
+    },
+    {
+      "action": "approve_plan",
+      "assessment": "Not permitted yet."
+    }
+  ],
+  "selected_action": "inspect_variant_coverage",
+  "action_arguments": {
+    "genotype_artifact": "derived/dosages_canonical_columns.tsv",
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "The state packet says approve_plan requires a coverage inspection for the current genotype artifact, which is now the repaired file. The repair was verified cell-identical, so re-inspection should confirm readability.",
+  "expected_result": "81 of 81 variants matched, coverage 1.0 for all 20 individuals, no invalid cells, and no column-order issue (readable_by_stage2_scorer true)."
+}

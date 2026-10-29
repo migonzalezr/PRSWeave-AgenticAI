@@ -1,0 +1,178 @@
+{
+  "run_id": "R8a5bf58f",
+  "task_id": "R8a5bf58f-T1",
+  "request": "Using the published polygenic score provided (PGS005206) and the genotype dosage file provided for 20 individuals, compute a validated polygenic score for total-body BMD for each individual and report the results with their limitations.",
+  "requested_phenotype": "total-body BMD",
+  "provided_scores": [
+    "PGS005206"
+  ],
+  "inputs": {
+    "genotype_artifact": "inputs/dosages.tsv"
+  },
+  "state": "COMPLETED",
+  "step": 8,
+  "packet": 8,
+  "decisions": 8,
+  "invalid_streak": 0,
+  "recovery_cycles": 0,
+  "in_recovery": false,
+  "pending_problem": false,
+  "plan_approved": true,
+  "checksum_verified": {
+    "PGS005206": true
+  },
+  "current_genotype": "inputs/dosages.tsv",
+  "current_score": "PGS005206",
+  "last_scores": {
+    "scores_artifact": "artifacts/prs_scores_1.csv",
+    "pgs_id": "PGS005206"
+  },
+  "blocked_submissions": [],
+  "critic_verdicts": [
+    {
+      "step": "S008",
+      "judgment": "PASS",
+      "failed_criteria": [],
+      "retry_allowed": null,
+      "remediation": [],
+      "missing_evidence": null,
+      "failed_evidence": []
+    }
+  ],
+  "history": [
+    {
+      "step": "S001",
+      "action": "inspect_score_metadata",
+      "arguments": {
+        "pgs_id": "PGS005206"
+      },
+      "status": "ok",
+      "error_code": null
+    },
+    {
+      "step": "S002",
+      "action": "assess_phenotype_compatibility",
+      "arguments": {
+        "pgs_id": "PGS005206"
+      },
+      "status": "ok",
+      "error_code": null
+    },
+    {
+      "step": "S003",
+      "action": "inspect_variant_coverage",
+      "arguments": {
+        "genotype_artifact": "inputs/dosages.tsv",
+        "pgs_id": "PGS005206"
+      },
+      "status": "ok",
+      "error_code": null
+    },
+    {
+      "step": "S004",
+      "action": "validate_effect_alleles",
+      "arguments": {
+        "genotype_artifact": "inputs/dosages.tsv",
+        "pgs_id": "PGS005206"
+      },
+      "status": "ok",
+      "error_code": null
+    },
+    {
+      "step": "S005",
+      "action": "approve_plan",
+      "status": "ok"
+    },
+    {
+      "step": "S006",
+      "action": "verify_checksum",
+      "arguments": {
+        "pgs_id": "PGS005206"
+      },
+      "status": "ok",
+      "error_code": null
+    },
+    {
+      "step": "S007",
+      "action": "calculate_prs",
+      "arguments": {
+        "genotype_artifact": "inputs/dosages.tsv",
+        "pgs_id": "PGS005206"
+      },
+      "status": "ok",
+      "error_code": null
+    },
+    {
+      "step": "S008",
+      "action": "submit_for_validation",
+      "status": "PASS"
+    }
+  ],
+  "last_result": {
+    "step": "S008",
+    "action": "submit_for_validation",
+    "status": "PASS",
+    "data": {
+      "step": "S008",
+      "judgment": "PASS",
+      "failed_criteria": [],
+      "retry_allowed": null,
+      "remediation": [],
+      "missing_evidence": null,
+      "failed_evidence": []
+    }
+  },
+  "last_rejection": null,
+  "task_definition": {
+    "target_phenotype": "Total-body bone mineral density (BMD)",
+    "scoring_requirements": "Use the provided PGS005206 and inputs/dosages.tsv (20 individuals). Verify the score's phenotype, performance records, variant coverage, effect alleles and checksum before calculating. Report limitations."
+  },
+  "evidence": {
+    "PGS005206": "artifacts/evidence_PGS005206.json"
+  },
+  "assessments": {
+    "phenotype:PGS005206": "artifacts/phenotype_assessment_PGS005206.json",
+    "coverage_summary": {
+      "genotype_artifact": "inputs/dosages.tsv",
+      "n_matched_by_variant_id": 81,
+      "coverage_min": 1.0,
+      "readable_by_stage2_scorer": true
+    },
+    "coverage:inputs/dosages.tsv": "artifacts/coverage_inputs_dosages.tsv.json"
+  },
+  "terminal": {
+    "run_id": "R8a5bf58f",
+    "final_state": "COMPLETED",
+    "reason": "validated",
+    "released": true,
+    "n_planner_decisions": 8,
+    "n_tool_executions": 6,
+    "n_critic_reviews": 1,
+    "critic_judgments": [
+      "PASS"
+    ],
+    "recovery_cycles": 0,
+    "action_sequence": [
+      "inspect_score_metadata",
+      "assess_phenotype_compatibility",
+      "inspect_variant_coverage",
+      "validate_effect_alleles",
+      "approve_plan",
+      "verify_checksum",
+      "calculate_prs",
+      "submit_for_validation"
+    ],
+    "tool_time_s": 0.0037,
+    "relay_latency_s": 396.7,
+    "planner_total_tokens": 510295,
+    "planner_tool_uses": 12,
+    "started_at": "2026-10-29T15:10:39.323+00:00",
+    "finished_at": "2026-10-29T15:22:30.898+00:00",
+    "task_definition": {
+      "target_phenotype": "Total-body bone mineral density (BMD)",
+      "scoring_requirements": "Use the provided PGS005206 and inputs/dosages.tsv (20 individuals). Verify the score's phenotype, performance records, variant coverage, effect alleles and checksum before calculating. Report limitations."
+    }
+  },
+  "started_at": "2026-10-29T15:10:39.323+00:00",
+  "t0": 1793286639.323255
+}

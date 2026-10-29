@@ -1,0 +1,11 @@
+{
+  "tool": "calculate_prs",
+  "status": "error",
+  "error_code": "GENOTYPE_SCHEMA_ERROR",
+  "data": {
+    "message": "unexpected genotype header: ['SYN14', 'effect_allele', 'SYN03', 'SYN20', 'rsID']",
+    "genotype_artifact": "inputs/dosages.tsv"
+  },
+  "artifacts": [],
+  "network_hosts": []
+}

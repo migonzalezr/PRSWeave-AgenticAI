@@ -1,0 +1,28 @@
+{
+  "observation": "Metadata for PGS005206 shows the reported trait is 'Bone mineral density' (no skeletal site stated). The source GWAS (GCST005348) is 'Total body bone mineral density'. The scoring file checksum matches its pin (approval DR-0001). The only evaluation (PPM022584) is in Generation R, a European cohort with mean age 9.77 years.",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "assess_phenotype_compatibility",
+      "assessment": "Required next step. It will separate technical compatibility, scientific suitability and predictive-validity status for total-body BMD versus the score's generic 'Bone mineral density' trait."
+    },
+    {
+      "action": "inspect_variant_coverage",
+      "assessment": "Also required before plan approval, but the phenotype question comes first because it could end the run."
+    },
+    {
+      "action": "search_alternative_scores",
+      "assessment": "Premature. Do not look for alternatives until the compatibility assessment shows a problem."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Premature. The phenotype ambiguity can first be assessed with a tool."
+    }
+  ],
+  "selected_action": "assess_phenotype_compatibility",
+  "action_arguments": {
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "The score's reported trait is generic 'Bone mineral density' with no skeletal site, while its source GWAS is total-body BMD and the request is for total-body BMD. The mapping needs a formal compatibility assessment, which approve_plan requires, before any scoring.",
+  "expected_result": "A compatibility report that separates the technical match (the source GWAS is total-body BMD) from scientific suitability (the score's trait field gives no site). It should also state that predictive validity is limited to one pediatric European evaluation (Generation R)."
+}

@@ -1,0 +1,38 @@
+{
+  "run_id": "R7eb0c4e7",
+  "final_state": "COMPLETED",
+  "reason": "validated",
+  "released": true,
+  "n_planner_decisions": 12,
+  "n_tool_executions": 9,
+  "n_critic_reviews": 2,
+  "critic_judgments": [
+    "FAIL",
+    "PASS"
+  ],
+  "recovery_cycles": 2,
+  "action_sequence": [
+    "inspect_score_metadata",
+    "assess_phenotype_compatibility",
+    "inspect_variant_coverage",
+    "repair_column_order",
+    "inspect_variant_coverage",
+    "validate_effect_alleles",
+    "approve_plan",
+    "verify_checksum",
+    "calculate_prs",
+    "submit_for_validation",
+    "calculate_prs",
+    "submit_for_validation"
+  ],
+  "tool_time_s": 0.0072,
+  "relay_latency_s": 843.88,
+  "planner_total_tokens": 838729,
+  "planner_tool_uses": 21,
+  "started_at": "2026-10-29T15:10:39.389+00:00",
+  "finished_at": "2026-10-29T15:28:20.352+00:00",
+  "task_definition": {
+    "target_phenotype": "Total-body bone mineral density (BMD)",
+    "scoring_requirements": "Apply PGS005206 to the 20-individual dosage file (inputs/dosages.tsv). The score must be confirmed to target total-body BMD, with adequate variant coverage and valid effect alleles. Report results with their limitations. Data are synthetic."
+  }
+}

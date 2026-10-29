@@ -1,0 +1,15 @@
+[project]
+name = "prsweave"
+version = "0.1.0.dev0"
+description = "Preliminary multi-agent proof of concept for adaptive polygenic score research"
+readme = "README.md"
+requires-python = ">=3.10"
+# Stage 1 is standard library only. Dependencies are added per stage, with approval.
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

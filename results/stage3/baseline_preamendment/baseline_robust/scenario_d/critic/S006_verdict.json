@@ -1,0 +1,133 @@
+{
+  "judgment": "FAIL",
+  "failed_criteria": [
+    "V4_output_integrity",
+    "V5_independent_numerical_agreement"
+  ],
+  "retry_allowed": true,
+  "remediation": [
+    "The scores file changed after it was written; recompute it with calculate_prs from verified inputs.",
+    "Recompute scores with calculate_prs from verified inputs, then resubmit."
+  ],
+  "checks": [
+    {
+      "criterion": "V1_scoring_file_pinned",
+      "status": "PASS",
+      "evidence": {
+        "sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+        "pinned": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3"
+      },
+      "remediation": null,
+      "retry_allowed": false
+    },
+    {
+      "criterion": "V2_weights_match_catalog_original",
+      "status": "PASS",
+      "evidence": {
+        "n_harmonized": 81,
+        "n_original": 81,
+        "n_differing": 0
+      },
+      "remediation": null,
+      "retry_allowed": false
+    },
+    {
+      "criterion": "V3_genotype_provenance",
+      "status": "PASS",
+      "evidence": {
+        "genotype_artifact": "inputs/dosages.tsv",
+        "kind": "original input",
+        "sha_matches_run_start": true
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V4_output_integrity",
+      "status": "FAIL",
+      "evidence": {
+        "sha256_now": "887c63664332a0c0223b0b44b983e6aff80a1f1b6ce9e10a23dbca51a5a72231",
+        "sha256_at_write": "7c1e4edd2801ff0e6e86e560a80d74ebf9211f7a3b1615a3fb8044ab60a9d85d"
+      },
+      "remediation": "The scores file changed after it was written; recompute it with calculate_prs from verified inputs.",
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V5_independent_numerical_agreement",
+      "status": "FAIL",
+      "evidence": {
+        "tolerance_abs": 1e-09,
+        "max_abs_diff": 0.08100000000000007,
+        "disagreements": [
+          {
+            "IID": "SYN11",
+            "submitted": "-0.709",
+            "independent": "-0.79",
+            "abs_diff": 0.08100000000000007
+          }
+        ],
+        "independent_returncode": 0,
+        "independent_stderr": "",
+        "independent_output": "critic/S006_verdict.independent.csv"
+      },
+      "remediation": "Recompute scores with calculate_prs from verified inputs, then resubmit.",
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V5b_withheld_scores_not_reported",
+      "status": "PASS",
+      "evidence": {
+        "rule": "DR-0002: LOW_COVERAGE/NO_DATA have empty score"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V6a_phenotype_label_correct",
+      "status": "PASS",
+      "evidence": {
+        "phenotype_reported": "total-body BMD",
+        "score_phenotype_evidence": "Bone mineral density  Total body bone mineral density",
+        "evidence_record": "artifacts/S001_inspect_score_metadata_result.json"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    },
+    {
+      "criterion": "V6b_request_phenotype_correspondence",
+      "status": "PASS",
+      "evidence": {
+        "requested_phenotype": "total-body BMD",
+        "requested_sites": [
+          "total_body"
+        ],
+        "score_sites": [
+          "total_body"
+        ],
+        "fulfils_request_claimed": true
+      },
+      "remediation": null,
+      "retry_allowed": false
+    },
+    {
+      "criterion": "V7_claims_supported",
+      "status": "PASS",
+      "evidence": {
+        "unsupported_sentences": [],
+        "untraceable_numbers": [],
+        "required_caveats_present": {
+          "synthetic": true,
+          "total_body": true
+        },
+        "method": "sentence-level pattern screen with negation exemption; numbers must appear in the scores artifact"
+      },
+      "remediation": null,
+      "retry_allowed": true
+    }
+  ],
+  "reviewed": {
+    "scores_artifact": "artifacts/prs_scores_1.csv",
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+  }
+}

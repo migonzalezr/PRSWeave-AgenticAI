@@ -1,0 +1,30 @@
+{
+  "tool": "repair_column_order",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "source_artifact": "inputs/dosages.tsv",
+    "source_sha256": "5f48975abe3f53480d839d1906fb81584f4a66ebe5eca7b82d535593b2e73d5d",
+    "source_unchanged": true,
+    "repaired_artifact": "derived/dosages_canonical_columns.tsv",
+    "repaired_sha256": "c9f32905a1076b2876f752ff156f2d467fa67ea7a910ddcf2cd57052942b5d9d",
+    "n_cells_compared": 1620,
+    "cells_identical": true,
+    "column_order_applied": [
+      "variant_id",
+      "rsID",
+      "chr_GRCh38",
+      "pos_GRCh38",
+      "effect_allele",
+      "individual IDs sorted"
+    ],
+    "method": "reorder by header name; no value changed"
+  },
+  "artifacts": [
+    {
+      "path": "derived/dosages_canonical_columns.tsv",
+      "sha256": "c9f32905a1076b2876f752ff156f2d467fa67ea7a910ddcf2cd57052942b5d9d"
+    }
+  ],
+  "network_hosts": []
+}

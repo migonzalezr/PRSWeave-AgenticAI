@@ -1,0 +1,14 @@
+{
+  "scenario_id": "D",
+  "name": "Numerical validation failure: output corrupted after scoring",
+  "hidden_from_planner": true,
+  "request_template": "standard",
+  "requested_phenotype": "total-body BMD",
+  "provided_scores": ["PGS005206"],
+  "genotype_source": "data/synthetic/PGS005206_synthetic_dosages_seed20261029.tsv",
+  "faults": [
+    {"type": "corrupt_scores_after_write", "stage": "after_tool:calculate_prs", "occurrence": 1,
+     "iid": "SYN11", "replace_with": "-0.709"}
+  ],
+  "notes": "After the first calculate_prs writes its CSV, the harness overwrites SYN11's score (true value -0.790). It happens only once. Recorded only in the hidden harness log."
+}

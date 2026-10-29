@@ -1,0 +1,16 @@
+{
+  "scenario_id": "B",
+  "name": "Recoverable error: dosage table columns out of order",
+  "hidden_from_planner": true,
+  "request_template": "standard",
+  "requested_phenotype": "total-body BMD",
+  "provided_scores": ["PGS005206"],
+  "genotype_source": "data/synthetic/PGS005206_synthetic_dosages_seed20261029.tsv",
+  "faults": [
+    {"type": "permute_columns", "stage": "before_run",
+     "column_order": ["SYN14", "effect_allele", "SYN03", "SYN20", "rsID", "SYN01", "SYN09", "pos_GRCh38", "SYN17", "SYN06",
+                      "SYN11", "variant_id", "SYN02", "SYN19", "SYN08", "chr_GRCh38", "SYN05", "SYN12", "SYN16", "SYN04",
+                      "SYN10", "SYN07", "SYN13", "SYN15", "SYN18"]}
+  ],
+  "notes": "Same 1,620 dosage values and header names; only column order changes. The Stage 2 strict reader rejects this layout. A correct repair is possible from the header names alone."
+}

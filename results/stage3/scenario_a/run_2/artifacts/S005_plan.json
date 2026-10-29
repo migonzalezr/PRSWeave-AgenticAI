@@ -1,0 +1,10 @@
+{
+  "plan": [
+    "Compute the PGS005206 weighted effect-allele dosage sum for each of the 20 individuals in inputs/dosages.tsv, using the pinned GRCh38 harmonized scoring file (SHA-256 matching DR-0001).",
+    "Report the raw per-individual scores only, with no percentiles, risk categories or clinical interpretation.",
+    "State that the data are synthetic dosages with no phenotypes or ancestry, so predictive validity and transferability cannot be measured here.",
+    "State the score's actual phenotype, bone mineral density, with the total-body site coming from source GWAS GCST005348 and not from the score's own trait fields.",
+    "Record the limitations: the only catalog evaluation is in European children (Generation R, n=3470, mean age 9.77 years); the original genome build is not reported; the derivation of the weights is unverified, and 8 of 12 weights overlapping the GWAS table differ in magnitude; 24 variants have an ambiguous other allele and 5 are palindromic, and the dosage coding does not test strand resolution.",
+    "Submit the results for validation after a successful calculation."
+  ]
+}

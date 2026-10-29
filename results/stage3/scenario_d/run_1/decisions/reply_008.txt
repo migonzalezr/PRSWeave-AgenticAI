@@ -1,0 +1,19 @@
+{
+  "observation": "calculate_prs scored all 20 individuals. All 20 have QC status PASS (0 PARTIAL, 0 LOW_COVERAGE, 0 NO_DATA), with 81 variants in the score. The scores are in artifacts/prs_scores_1.csv.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "submit_for_validation", "assessment": "Next required step. Independent review of the scores artifact is the route to release."},
+    {"action": "request_human_review", "assessment": "Not needed. Limitations can be stated in the summary."},
+    {"action": "abstain", "assessment": "Not justified. Scores were computed with clean QC."}
+  ],
+  "selected_action": "submit_for_validation",
+  "action_arguments": {
+    "scores_artifact": "artifacts/prs_scores_1.csv",
+    "pgs_id": "PGS005206",
+    "phenotype_reported": "Bone mineral density (PGS Catalog reported trait; source GWAS GCST005348 is total body bone mineral density)",
+    "fulfils_request": "true",
+    "summary": "Raw polygenic scores were computed for 20 synthetic individuals from the provided dosage file using PGS005206 (81 variants, GRCh38 harmonized scoring file matching its approved SHA-256 pin). All 20 individuals passed QC. The data are synthetic. The score's reported phenotype is bone mineral density; the PGS Catalog trait fields do not state a skeletal site, and total body bone mineral density comes only from the linked source GWAS (GCST005348). Limitations: the synthetic dosages carry no phenotypes or ancestry, so predictive validity and transferability could not be measured. The only published evaluation is in a European pediatric cohort (Generation R, n=3470, mean age 9.77 years). The score has 5 palindromic variants and 24 variants with an ambiguous other allele, and effect-allele agreement does not test strand resolution. The original genome build is not reported. The derivation of the 81 weights is unverified, and 8 of 12 weights overlapping the GWAS Table 1 differ in magnitude. Scores are raw values only, with no percentiles, risk categories or clinical interpretation."
+  },
+  "decision_justification": "The Stage 2 scorer returned 20 scored individuals, all PASS, and every eligibility gate was cleared. Independent validation is required before release.",
+  "expected_result": "The Validation Critic reviews the scores artifact and summary against the evidence and returns PASS or feedback."
+}

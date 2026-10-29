@@ -1,0 +1,23 @@
+{
+  "baseline_version": "prsweave-stage3-baseline/1",
+  "description": "Conventional pipelines with no model-driven orchestration. They use the same Stage 2 scoring and independent-verification code, the same inputs, the same pinned checksum and the same acceptance rubric as PRSWeave. Two variants are pre-registered so that the comparison does not rest on a deliberately weak baseline.",
+  "variants": {
+    "baseline_strict": {
+      "steps": [
+        "fetch score metadata and source-GWAS trait (same cached evidence tools)",
+        "phenotype rule: the requested skeletal site must equal the score's site (same deterministic site extractor as the Population Context specialist); otherwise ABSTAINED",
+        "verify scoring-file SHA-256; mismatch -> FAILED",
+        "read genotypes with the Stage 2 strict reader; any error -> FAILED (no repair)",
+        "score with Stage 2 primary scorer",
+        "verify with Stage 2 independent scorer (tol 1e-9) plus output checksum; disagreement -> re-run scoring once, re-verify; still failing -> FAILED",
+        "COMPLETED"
+      ]
+    },
+    "baseline_robust": {
+      "steps": [
+        "as baseline_strict, except genotypes are read by header name: if every required column is present exactly once, the table is reordered to the canonical layout (the same deterministic repair tool PRSWeave can call), and the reordered file is verified cell-for-cell before scoring"
+      ]
+    }
+  },
+  "not_included": "Neither baseline searches for alternative scores or requests human review; both abstain on phenotype mismatch."
+}

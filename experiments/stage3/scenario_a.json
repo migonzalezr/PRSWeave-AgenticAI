@@ -1,0 +1,11 @@
+{
+  "scenario_id": "A",
+  "name": "Compatible data",
+  "hidden_from_planner": true,
+  "request_template": "standard",
+  "requested_phenotype": "total-body BMD",
+  "provided_scores": ["PGS005206"],
+  "genotype_source": "data/synthetic/PGS005206_synthetic_dosages_seed20261029.tsv",
+  "faults": [],
+  "notes": "Approved score, valid checksum, complete effect-allele dosages for 20 synthetic individuals."
+}

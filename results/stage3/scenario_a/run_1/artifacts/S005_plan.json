@@ -1,0 +1,8 @@
+{
+  "plan": [
+    "Compute the weighted sum of effect-allele dosages (beta weights) from the pinned PGS005206 GRCh38 harmonized scoring file for each of the 20 individuals in inputs/dosages.tsv, using all 81 variants with no weight alteration or imputation",
+    "Submit the raw scores for validation",
+    "Report raw scores as synthetic-data outputs for the score's phenotype (bone mineral density, source GWAS total body BMD), with no percentiles, risk categories or clinical interpretation",
+    "Report limitations: skeletal site is not stated in the score's own trait fields and comes from the linked source GWAS; predictive validity cannot be measured on synthetic dosages with no phenotypes or ancestry; the only evaluation is a European paediatric cohort (Generation R, n=3470, mean age 9.77 years); derivation of the 81 weights is unverified and 8 of 12 weights overlapping GWAS Table 1 differ in magnitude; original genome build is not reported; 24 variants have an ambiguous other allele and 5 are palindromic, and strand and allele harmonization is untested on dosage-coded input"
+  ]
+}

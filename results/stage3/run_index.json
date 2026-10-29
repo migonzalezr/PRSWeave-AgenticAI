@@ -1,0 +1,37 @@
+{
+  "R4180a893": {
+    "scenario_id": "A",
+    "rep": 1,
+    "run_dir": "results/stage3/scenario_a/run_1"
+  },
+  "Rc5de288f": {
+    "scenario_id": "B",
+    "rep": 1,
+    "run_dir": "results/stage3/scenario_b/run_1"
+  },
+  "R3a6d4f6c": {
+    "scenario_id": "C",
+    "rep": 1,
+    "run_dir": "results/stage3/scenario_c/run_1"
+  },
+  "Rd2094f4f": {
+    "scenario_id": "D",
+    "rep": 1,
+    "run_dir": "results/stage3/scenario_d/run_1"
+  },
+  "R8a5bf58f": {
+    "scenario_id": "A",
+    "rep": 2,
+    "run_dir": "results/stage3/scenario_a/run_2"
+  },
+  "R7eb0c4e7": {
+    "scenario_id": "B",
+    "rep": 2,
+    "run_dir": "results/stage3/scenario_b/run_2"
+  },
+  "R5576ba54": {
+    "scenario_id": "D",
+    "rep": 2,
+    "run_dir": "results/stage3/scenario_d/run_2"
+  }
+}

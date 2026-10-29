@@ -1,0 +1,13 @@
+{
+  "observation": "The scoring file SHA-256 matches the approved pin (match true, approval DR-0001). The plan is approved and calculate_prs is now permitted.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "calculate_prs", "assessment": "All prerequisites are met: phenotype assessment, coverage, effect-allele validation, approved plan and checksum verification. The Stage 2 scorer does the computation."},
+    {"action": "request_human_review", "assessment": "Not needed. The remaining caveats are reportable limitations."},
+    {"action": "abstain", "assessment": "Not justified. Every eligibility check passed."}
+  ],
+  "selected_action": "calculate_prs",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "The checksum matches its pin, so the last gate on calculate_prs is cleared. The approved plan calls for scoring the 20 individuals in inputs/dosages.tsv with PGS005206 using the Stage 2 scorer.",
+  "expected_result": "Raw scores for 20 individuals with QC results under DR-0002 (81 of 81 variants used per the coverage inspection), ready for submit_for_validation."
+}

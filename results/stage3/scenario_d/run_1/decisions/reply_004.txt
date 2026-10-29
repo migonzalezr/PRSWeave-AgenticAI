@@ -1,0 +1,15 @@
+{
+  "observation": "Coverage is complete: all 81 score variants matched by ID with rsIDs consistent, 20 individuals, 0 missing and 0 invalid cells, coverage 1.0, and the file is readable by the scorer. The scoring file checksum matched its pin in the earlier metadata record, but effect-allele agreement between the dosage file and the scoring file has not been checked.",
+  "task_definition": null,
+  "options_considered": [
+    {"action": "validate_effect_alleles", "assessment": "Cheap and relevant. A dosage file counting the wrong allele would silently flip score contributions, and this has not yet been checked."},
+    {"action": "approve_plan", "assessment": "Now permitted, but committing before effect-allele validation risks planning on unverified allele orientation."},
+    {"action": "verify_checksum", "assessment": "Largely redundant. The metadata record already shows matches_pin true for the scoring file."},
+    {"action": "request_human_review", "assessment": "Not needed. The site caveat is a reportable limitation, not a blocker."},
+    {"action": "abstain", "assessment": "Not justified. Eligibility evidence is clean so far."}
+  ],
+  "selected_action": "validate_effect_alleles",
+  "action_arguments": {"genotype_artifact": "inputs/dosages.tsv", "pgs_id": "PGS005206"},
+  "decision_justification": "Coverage and layout are clean, but the effect-allele check is the remaining unverified integrity step before committing to a scoring plan. It guards against allele-orientation errors that coverage inspection cannot detect.",
+  "expected_result": "A report that the effect alleles in the dosage file agree with the scoring file for all 81 variants, with no mismatches or flips, after which approve_plan can proceed."
+}

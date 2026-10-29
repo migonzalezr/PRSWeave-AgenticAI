@@ -1,0 +1,33 @@
+{
+  "observation": "The genotype file matches the authorized synthetic checksum (ac0ea0601f47...), so the input was intact. The workflow's current genotype artifact is now derived/regenerated_authorized_dosages.tsv. calculate_prs and approve_plan are blocked until coverage is inspected for this new artifact. One recovery cycle has been used (1 of 2).",
+  "task_definition": null,
+  "options_considered": [
+    {
+      "action": "inspect_variant_coverage",
+      "assessment": "Required next. approve_plan needs coverage inspection for the current genotype artifact, derived/regenerated_authorized_dosages.tsv."
+    },
+    {
+      "action": "validate_effect_alleles",
+      "assessment": "Also worthwhile on the regenerated file, but it is not the blocking prerequisite. Do it after coverage."
+    },
+    {
+      "action": "calculate_prs",
+      "assessment": "Not permitted until a plan is approved for the current inputs."
+    },
+    {
+      "action": "request_human_review",
+      "assessment": "Not needed. The regenerated file is checksum-verified."
+    },
+    {
+      "action": "abstain",
+      "assessment": "Not justified. The failure is recoverable and the inputs are verified."
+    }
+  ],
+  "selected_action": "inspect_variant_coverage",
+  "action_arguments": {
+    "genotype_artifact": "derived/regenerated_authorized_dosages.tsv",
+    "pgs_id": "PGS005206"
+  },
+  "decision_justification": "The not_permitted list says approve_plan requires coverage inspection for derived/regenerated_authorized_dosages.tsv, and calculate_prs requires an approved plan. This is the shortest path to a fresh scores file.",
+  "expected_result": "A report matching the earlier one: 20 individuals, 81 of 81 variants matched, no missing or invalid cells, and coverage 1.0, since the file has the same checksum as the original."
+}

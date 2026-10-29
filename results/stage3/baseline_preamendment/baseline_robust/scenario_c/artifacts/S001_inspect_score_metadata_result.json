@@ -1,0 +1,166 @@
+{
+  "tool": "inspect_score_metadata",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "score_id": "PGS005206",
+    "name": "BMD_PRS",
+    "phenotype": {
+      "trait_reported": "Bone mineral density",
+      "trait_additional": null,
+      "trait_efo": [
+        "bone tissue density (OBA_1000110)"
+      ],
+      "source_gwas": [
+        {
+          "accession": "GCST005348",
+          "disease_trait": "Total body bone mineral density",
+          "pubmed_id": 29304378,
+          "initial_sample_size": "56,284 European ancestry individuals, up to 1,333 African American individuals, up to 9,328 admixed individuals",
+          "url": "https://www.ebi.ac.uk/gwas/rest/api/v2/studies/GCST005348"
+        }
+      ],
+      "evaluation_phenotypes": [
+        "BMD levels"
+      ]
+    },
+    "genome_build": {
+      "original": "NR",
+      "harmonized_available": [
+        "GRCh37",
+        "GRCh38"
+      ]
+    },
+    "variants_number": 81,
+    "weight_type": "beta",
+    "method": "Genome-wide significant SNPs",
+    "effect_allele_specification": {
+      "effect_allele_column": true,
+      "other_allele_column": false,
+      "other_allele_inferred_by_catalog": true,
+      "non_additive_columns": []
+    },
+    "scoring_file": {
+      "ftp_scoring_file": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/PGS005206.txt.gz",
+      "harmonized": {
+        "GRCh37": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh37.txt.gz",
+        "GRCh38": "https://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS005206/ScoringFiles/Harmonized/PGS005206_hmPOS_GRCh38.txt.gz"
+      },
+      "local_path": "data/raw/scoring_files/PGS005206/PGS005206_hmPOS_GRCh38.txt.gz",
+      "sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+      "pinned_sha256": "406045ea0a082ae6fe640d22b8e2f282cacdcdfa2536b62148fb027703b0b6d3",
+      "matches_pin": true,
+      "approval": "DR-0001",
+      "harmonized_build_used": "GRCh38",
+      "harmonization_date": "2025-05-18",
+      "columns": [
+        "rsID",
+        "chr_name",
+        "chr_position",
+        "effect_allele",
+        "effect_weight",
+        "hm_source",
+        "hm_rsID",
+        "hm_chr",
+        "hm_pos",
+        "hm_inferOtherAllele"
+      ]
+    },
+    "ancestry_distribution": {
+      "eval": {
+        "dist": {
+          "MAE": 100
+        },
+        "count": 1,
+        "multi": [
+          "MAE_EUR",
+          "MAE_ASN",
+          "MAE_AFR"
+        ]
+      },
+      "gwas": {
+        "dist": {
+          "NR": 13.9,
+          "AFR": 2,
+          "EUR": 84.1
+        },
+        "count": 66945
+      }
+    },
+    "evaluations": [
+      {
+        "ppm_id": "PPM022584",
+        "phenotype": "BMD levels",
+        "ancestry": "European",
+        "n": 3470,
+        "cohorts": [
+          "Generation_R"
+        ],
+        "age": {
+          "estimate_type": "mean",
+          "estimate": 9.77,
+          "variability_type": "sd",
+          "variability": 0.33,
+          "unit": "years"
+        }
+      }
+    ],
+    "publication": {
+      "firstauthor": "Prijatelj V",
+      "title": "Bone health index in the assessment of bone health: The Generation R Study.",
+      "journal": "Bone",
+      "date_publication": "2024-03-07",
+      "doi": "10.1016/j.bone.2024.117070",
+      "PMID": 38460828
+    },
+    "verified_metadata": [
+      "https://www.pgscatalog.org/rest/score/PGS005206",
+      "https://www.pgscatalog.org/rest/performance/search?pgs_id=PGS005206&limit=250",
+      "https://www.ebi.ac.uk/gwas/rest/api/v2/studies/GCST005348"
+    ],
+    "missing_information": [
+      "PGS Catalog trait fields do not state a skeletal site.",
+      "Original genome build not reported (NR).",
+      "No author-supplied other_allele; catalog-inferred only.",
+      "Full text of Prijatelj et al. 2024 (PGS publication) not reviewed; derivation of the 81 weights unverified. 8 of 12 weights that overlap GWAS Table 1 differ in magnitude (same allele and sign)."
+    ],
+    "source_citations": [
+      "https://www.pgscatalog.org/rest/score/PGS005206",
+      "https://www.pgscatalog.org/rest/performance/search?pgs_id=PGS005206&limit=250",
+      "https://www.ebi.ac.uk/gwas/rest/api/v2/studies/GCST005348",
+      "docs/decisions/0002-stage2-scoring-conventions.md",
+      "https://doi.org/10.1016/j.bone.2024.117070"
+    ],
+    "retrieval": [
+      {
+        "url": "https://www.pgscatalog.org/rest/score/PGS005206",
+        "retrieved_at": "2026-10-29T14:43:23.470+00:00",
+        "sha256": "105c3ae6658a83feb0206149d20c54d9a661f2699bf6dd3e1869b7207316d2f8",
+        "served_from": "cache"
+      },
+      {
+        "url": "https://www.pgscatalog.org/rest/performance/search?pgs_id=PGS005206&limit=250",
+        "retrieved_at": "2026-10-29T14:43:23.820+00:00",
+        "sha256": "65cc15744194eb86743de864d056862cb0ed9e7b2cb107a0a93567cbcafc8af7",
+        "served_from": "cache"
+      },
+      {
+        "url": "https://www.ebi.ac.uk/gwas/rest/api/v2/studies/GCST005348",
+        "retrieved_at": "2026-10-29T14:43:24.958+00:00",
+        "sha256": "8346676c019ce085f8d7c5bf98da0fee0e4b2b7c0e4261d1c5d19fb0d28e45b8",
+        "served_from": "cache"
+      }
+    ],
+    "retrieval_time": "2026-10-29T14:48:05.123+00:00",
+    "candidate_corrective_actions": [
+      "search_alternative_scores"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/evidence_PGS005206.json",
+      "sha256": "e8ab1b33efdd6c14b3b9e80e57816beb050715043f7568761ebbf2504d118393"
+    }
+  ],
+  "network_hosts": []
+}

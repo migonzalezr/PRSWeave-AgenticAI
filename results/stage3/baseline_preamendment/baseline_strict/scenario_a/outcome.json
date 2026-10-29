@@ -1,0 +1,23 @@
+{
+  "run_id": "BL-baseline_strict-A",
+  "variant": "baseline_strict",
+  "scenario_id": "A",
+  "final_state": "COMPLETED",
+  "reason": "validated",
+  "released": true,
+  "n_planner_decisions": 0,
+  "n_model_calls": 0,
+  "n_tool_executions": 4,
+  "critic_judgments": [
+    "PASS"
+  ],
+  "action_sequence": [
+    "inspect_score_metadata",
+    "assess_phenotype_compatibility",
+    "verify_checksum",
+    "calculate_prs",
+    "submit_for_validation"
+  ],
+  "runtime_s": 0.0253,
+  "finished_at": "2026-10-29T14:48:05.016+00:00"
+}

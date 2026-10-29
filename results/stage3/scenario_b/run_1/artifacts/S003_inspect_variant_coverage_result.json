@@ -1,0 +1,50 @@
+{
+  "tool": "inspect_variant_coverage",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "n_individuals": 20,
+    "n_score_variants": 81,
+    "n_matched_by_variant_id": 81,
+    "n_rsid_consistent": 81,
+    "n_missing_cells": 0,
+    "n_invalid_cells": 0,
+    "coverage_min": 1.0,
+    "coverage_max": 1.0,
+    "individuals_below_0.95": [],
+    "readable_by_stage2_scorer": false,
+    "issues": [
+      {
+        "code": "COLUMN_ORDER_NONCANONICAL",
+        "detail": {
+          "observed_first_columns": [
+            "SYN14",
+            "effect_allele",
+            "SYN03",
+            "SYN20",
+            "rsID",
+            "SYN01",
+            "SYN09",
+            "pos_GRCh38"
+          ],
+          "expected_first_columns": [
+            "variant_id",
+            "rsID",
+            "chr_GRCh38",
+            "pos_GRCh38",
+            "effect_allele"
+          ],
+          "all_required_columns_present_once": true
+        }
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/coverage_inputs_dosages.tsv.json",
+      "sha256": "60fe944475673c859198fba5211766e85ef73df9031a2f515d6eac72b35634e4"
+    }
+  ],
+  "network_hosts": []
+}

@@ -1,0 +1,183 @@
+{
+ "packet_number": 5,
+ "run_id": "R7eb0c4e7",
+ "researcher_request": "Using the published polygenic score provided (PGS005206) and the genotype dosage file provided for 20 individuals, compute a validated polygenic score for total-body BMD for each individual and report the results with their limitations.",
+ "provided_inputs": {
+  "genotype_artifact": "inputs/dosages.tsv",
+  "provided_scores": [
+   "PGS005206"
+  ]
+ },
+ "current_genotype_artifact": "derived/dosages_canonical_columns.tsv",
+ "current_score": "PGS005206",
+ "workflow_state": "EVIDENCE_RETRIEVED",
+ "budgets": {
+  "decisions_used": 4,
+  "max_decisions": 14,
+  "recovery_cycles_used": 1,
+  "max_recovery_cycles": 2
+ },
+ "permitted_actions": [
+  {
+   "action": "inspect_score_metadata",
+   "description": "Retrieve PGS Catalog score, performance and source-GWAS records with provenance.",
+   "arguments": {
+    "pgs_id": "PGS Catalog score ID"
+   }
+  },
+  {
+   "action": "search_alternative_scores",
+   "description": "Text search of the full PGS Catalog score index (all terms must match).",
+   "arguments": {
+    "terms": "list of search terms"
+   }
+  },
+  {
+   "action": "assess_phenotype_compatibility",
+   "description": "Compare requested phenotype with the score's phenotype evidence; report technical compatibility, scientific suitability evidence and predictive-validity status separately.",
+   "arguments": {
+    "pgs_id": "score ID with an evidence record"
+   }
+  },
+  {
+   "action": "inspect_variant_coverage",
+   "description": "Inspect a genotype file by header names: layout, variant matching, coverage, invalid values.",
+   "arguments": {
+    "genotype_artifact": "run-relative path",
+    "pgs_id": "score ID"
+   }
+  },
+  {
+   "action": "validate_effect_alleles",
+   "description": "Check effect alleles in a genotype file against the scoring file.",
+   "arguments": {
+    "genotype_artifact": "run-relative path",
+    "pgs_id": "score ID"
+   }
+  },
+  {
+   "action": "select_alternative_eligible_score",
+   "description": "Check whether another score may replace the provided one without researcher approval (requires exact phenotype correspondence and an approved pinned file).",
+   "arguments": {
+    "pgs_id": "candidate score ID"
+   }
+  },
+  {
+   "action": "verify_checksum",
+   "description": "Verify the scoring file against its approved SHA-256 pin.",
+   "arguments": {
+    "pgs_id": "score ID"
+   }
+  },
+  {
+   "action": "repair_column_order",
+   "description": "Rewrite a genotype table into canonical column order using header names only; verifies every cell is unchanged; original left untouched.",
+   "arguments": {
+    "genotype_artifact": "run-relative path"
+   }
+  },
+  {
+   "action": "regenerate_authorized_test_input",
+   "description": "Restore the authorized synthetic test file from its seed, only if the given file is cell-identical to it; verifies the authorized checksum.",
+   "arguments": {
+    "genotype_artifact": "run-relative path"
+   }
+  },
+  {
+   "action": "request_human_review",
+   "description": "Stop and ask the researcher to decide (terminal).",
+   "arguments": {
+    "question": "what the researcher must decide"
+   }
+  },
+  {
+   "action": "abstain",
+   "description": "Stop without releasing results (terminal).",
+   "arguments": {
+    "reason": "evidence-based reason"
+   }
+  }
+ ],
+ "not_permitted_now": [
+  {
+   "action": "calculate_prs",
+   "reason": "requires an approved plan for the current inputs"
+  },
+  {
+   "action": "approve_plan",
+   "reason": "requires phenotype assessment for the current score and coverage inspection for the current genotype artifact (derived/dosages_canonical_columns.tsv)"
+  },
+  {
+   "action": "submit_for_validation",
+   "reason": "requires a successful calculate_prs"
+  }
+ ],
+ "last_action_result": {
+  "step": "S004",
+  "action": "repair_column_order",
+  "arguments": {
+   "genotype_artifact": "inputs/dosages.tsv"
+  },
+  "status": "ok",
+  "error_code": null,
+  "data": {
+   "source_artifact": "inputs/dosages.tsv",
+   "source_sha256": "5f48975abe3f53480d839d1906fb81584f4a66ebe5eca7b82d535593b2e73d5d",
+   "source_unchanged": true,
+   "repaired_artifact": "derived/dosages_canonical_columns.tsv",
+   "repaired_sha256": "c9f32905a1076b2876f752ff156f2d467fa67ea7a910ddcf2cd57052942b5d9d",
+   "n_cells_compared": 1620,
+   "cells_identical": true,
+   "column_order_applied": [
+    "variant_id",
+    "rsID",
+    "chr_GRCh38",
+    "pos_GRCh38",
+    "effect_allele",
+    "individual IDs sorted"
+   ],
+   "method": "reorder by header name; no value changed"
+  }
+ },
+ "last_decision_rejected": null,
+ "critic_feedback": null,
+ "history": [
+  {
+   "step": "S001",
+   "action": "inspect_score_metadata",
+   "arguments": {
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S002",
+   "action": "assess_phenotype_compatibility",
+   "arguments": {
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S003",
+   "action": "inspect_variant_coverage",
+   "arguments": {
+    "genotype_artifact": "inputs/dosages.tsv",
+    "pgs_id": "PGS005206"
+   },
+   "status": "ok",
+   "error_code": null
+  },
+  {
+   "step": "S004",
+   "action": "repair_column_order",
+   "arguments": {
+    "genotype_artifact": "inputs/dosages.tsv"
+   },
+   "status": "ok",
+   "error_code": null
+  }
+ ]
+}

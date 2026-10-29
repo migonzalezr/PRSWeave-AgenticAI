@@ -1,0 +1,13 @@
+{
+  "observation": "Workflow is INITIALIZED with no tool results yet. The request is for a total-body BMD score using PGS005206, and the score's actual phenotype is not yet established by any evidence record.",
+  "task_definition": {"target_phenotype": "Total-body bone mineral density (BMD)", "scoring_requirements": "Compute PGS005206 for 20 individuals from inputs/dosages.tsv only if the score's phenotype matches total-body BMD, variant coverage and effect alleles pass checks, and report limitations."},
+  "options_considered": [
+    {"action": "inspect_score_metadata", "assessment": "Required first step. It gives the score's reported trait, performance and source-GWAS records, which are needed before any compatibility or coverage checks."},
+    {"action": "request_human_review", "assessment": "Premature. No evidence of a problem yet."},
+    {"action": "abstain", "assessment": "Premature. No evidence that the request cannot be met."}
+  ],
+  "selected_action": "inspect_score_metadata",
+  "action_arguments": {"pgs_id": "PGS005206"},
+  "decision_justification": "Every downstream action is gated on an evidence record from inspect_score_metadata. The phenotype of PGS005206 must be verified against the requested total-body BMD before any computation.",
+  "expected_result": "A PGS Catalog record for PGS005206 showing its reported trait, variant count, genome build, source GWAS and performance evaluations, with provenance."
+}

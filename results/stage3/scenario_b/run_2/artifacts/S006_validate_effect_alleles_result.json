@@ -1,0 +1,22 @@
+{
+  "tool": "validate_effect_alleles",
+  "status": "ok",
+  "error_code": null,
+  "data": {
+    "n_checked": 81,
+    "n_effect_allele_mismatch": 0,
+    "mismatches": [],
+    "n_other_allele_ambiguous_in_score": 24,
+    "n_palindromic_in_score": 5,
+    "palindromic_rsids": [
+      "rs2041490",
+      "rs12258451",
+      "rs10450586",
+      "rs117543324",
+      "rs71390846"
+    ],
+    "note": "The file is coded as effect-allele dosage, so agreement here does not test strand resolution or allele harmonization of real genotypes."
+  },
+  "artifacts": [],
+  "network_hosts": []
+}
