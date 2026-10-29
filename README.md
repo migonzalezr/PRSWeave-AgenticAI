@@ -56,7 +56,7 @@ The first application uses a published score from the [PGS Catalog](https://www.
 
 ## Scientific contribution
 
-### Why this first version is valuable
+### What this first version provides
 
 v0.1 turns a research question into something that can be executed and checked. It provides a working, pre-registered and fully logged test bed in which an LLM makes the workflow decisions, deterministic tools do all the science, and an independent validator decides what may be released. With it, claims about adaptive AI in genomics can be tested against recorded evidence and strong conventional baselines, instead of being argued in the abstract.
 
