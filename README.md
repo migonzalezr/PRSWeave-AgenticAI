@@ -14,7 +14,7 @@ PRSWeave is a research prototype that asks a specific question: can AI-driven pl
 | Orchestration | Adaptive multi-agent orchestration: several model-driven agents that plan, retrieve evidence, choose methods and validate, coordinating with one another | **One** LLM-driven Planner that coordinates the workflow |
 | Specialists | Model-driven specialists working through validated scientific tools | **Deterministic** specialists (evidence retrieval, population context, PRS methods) |
 | Validation | Validators that stay independent of the agents they check | An **independent, deterministic** Validation Critic with veto power |
-| Scope | Genomic research workflows beyond PRS | One published polygenic score on 20 synthetic individuals, in four designed scenarios |
+| Scope | Specialized polygenic risk estimation across a broad range of diseases and trait types | One published polygenic score on 20 synthetic individuals, in four designed scenarios |
 
 The title names the research direction. The evidence reported here concerns only the v0.1 configuration in the right-hand column.
 
@@ -247,7 +247,7 @@ Replaying recorded agent decisions, re-grading experiments and running new agent
 - real-cohort data with harmonization and ancestry assessment;
 - larger, randomized scenario sets with statistical comparison against strong deterministic baselines;
 - human approval steps within a run;
-- extension beyond PRS to other genomic workflows.
+- deeper specialization in polygenic risk research, extending to a broad range of diseases and trait types (for example binary diseases and continuous traits), each with its own scientific suitability checks.
 
 ## Repository layout and documentation
 
