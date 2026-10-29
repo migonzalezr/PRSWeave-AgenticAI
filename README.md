@@ -14,7 +14,7 @@ PRSWeave is a research prototype that asks a specific question: can AI-driven pl
 | Orchestration | Adaptive multi-agent orchestration: several model-driven agents that plan, retrieve evidence, choose methods and validate, coordinating with one another | **One** LLM-driven Planner that coordinates the workflow |
 | Specialists | Model-driven specialists working through validated scientific tools | **Deterministic** specialists (evidence retrieval, population context, PRS methods) |
 | Validation | Validators that stay independent of the agents they check | An **independent, deterministic** Validation Critic with veto power |
-| Scope | Specialized polygenic risk estimation across a broad range of diseases and trait types | One published polygenic score on 20 synthetic individuals, in four designed scenarios |
+| Scope | Specialized polygenic risk estimation across a broad range of diseases and trait types, toward precision medicine | One published polygenic score on 20 synthetic individuals, in four designed scenarios |
 
 The title names the research direction. The evidence reported here concerns only the v0.1 configuration in the right-hand column.
 
@@ -247,7 +247,8 @@ Replaying recorded agent decisions, re-grading experiments and running new agent
 - real-cohort data with harmonization and ancestry assessment;
 - larger, randomized scenario sets with statistical comparison against strong deterministic baselines;
 - human approval steps within a run;
-- deeper specialization in polygenic risk research, extending to a broad range of diseases and trait types (for example binary diseases and continuous traits), each with its own scientific suitability checks.
+- deeper specialization in polygenic risk research, extending to a broad range of diseases and trait types, such as cancer, Alzheimer's disease, diabetes, cardiovascular diseases and rare diseases (where polygenic background can modify risk), each with its own scientific suitability checks;
+- in the long term, contributing to precision medicine by supporting clinicians with transparent, evidence-based and ethically interpreted risk information. This would require validation in real cohorts and appropriate regulatory and ethical review.
 
 ## Repository layout and documentation
 
