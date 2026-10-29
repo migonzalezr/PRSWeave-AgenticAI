@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it using the metadata below.
+  Please also cite the PGS Catalog, the PGS005206 publication and the
+  source GWAS listed in the README when using the included data.
+type: software
+title: "PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research"
+version: 0.1.0.dev0
+abstract: >-
+  PRSWeave is a research prototype for studying adaptive, evidence-grounded
+  orchestration of polygenic risk score (PRS) workflows. Adaptive multi-agent
+  orchestration is the long-term research architecture. Version 0.1 implements
+  an LLM-driven Planner that coordinates deterministic scientific specialists,
+  with an independent deterministic Validation Critic, a hash-chained audit
+  log and pre-registered experiments on synthetic genotypes. It is not
+  intended for clinical use.
+authors:
+  - family-names: González-Ramírez
+    given-names: Martha Isabel
+    email: martha.gonzalezr@tulane.edu
+    affiliation: >-
+      Center for Biomedical Informatics and Genomics (CBG), Tulane University,
+      New Orleans, Louisiana, USA
+contact:
+  - family-names: González-Ramírez
+    given-names: Martha Isabel
+    email: martha.gonzalezr@tulane.edu
+    affiliation: >-
+      Center for Biomedical Informatics and Genomics (CBG), Tulane University,
+      New Orleans, Louisiana, USA
+repository-code: "https://github.com/migonzalezr/PRSWeave-AgenticAI"
+url: "https://github.com/migonzalezr/PRSWeave-AgenticAI"
+license: MIT
+keywords:
+  - polygenic risk scores
+  - polygenic scores
+  - multi-agent systems
+  - large language models
+  - genomics
+  - reproducibility
+  - independent validation

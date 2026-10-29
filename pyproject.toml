@@ -1,7 +1,9 @@
 [project]
 name = "prsweave"
 version = "0.1.0.dev0"
-description = "Preliminary multi-agent proof of concept for adaptive polygenic score research"
+description = "PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research (v0.1 research prototype)"
+license = {text = "MIT"}
+authors = [{name = "Martha Isabel González-Ramírez", email = "martha.gonzalezr@tulane.edu"}]
 readme = "README.md"
 requires-python = ">=3.10"
 # Stage 1 is standard library only. Dependencies are added per stage, with approval.

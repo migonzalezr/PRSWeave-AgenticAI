@@ -1,25 +1,36 @@
-# PRSWeave
-
-**Evidence-Grounded Agentic AI for Adaptive and Verifiable Genomic Research**
+# PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research
 
 PRSWeave is a research prototype that asks a specific question: can AI-driven planning, constrained to evidence and to specialized deterministic scientific tools and checked by an independent validator, support genomic analyses that adapt to what they find while remaining auditable and reproducible?
 
-The long-term aim is an extensible agentic framework for genomic research. Polygenic risk scores (PRS) are the first application.
-
 > **Status: v0.1, research prototype (Stages 1–3 complete).** Synthetic genotypes only. Not for clinical use.
 > In this version the Planner is an LLM (a Claude subagent mediated by Claude Code). All scientific computation, checking and validation is deterministic code. PRSWeave is **not** a fully autonomous or production-ready multi-agent system.
+
+### Research vision and current scope
+
+| | Long-term research architecture | What v0.1 implements |
+|---|---|---|
+| Orchestration | Adaptive multi-agent orchestration: several model-driven agents that plan, retrieve evidence, choose methods and validate, coordinating with one another | **One** LLM-driven Planner that coordinates the workflow |
+| Specialists | Model-driven specialists working through validated scientific tools | **Deterministic** specialists (evidence retrieval, population context, PRS methods) |
+| Validation | Validators that stay independent of the agents they check | An **independent, deterministic** Validation Critic with veto power |
+| Scope | Genomic research workflows beyond PRS | One published polygenic score on 20 synthetic individuals, in four designed scenarios |
+
+The title names the research direction. The evidence reported here concerns only the v0.1 configuration in the right-hand column.
 
 ---
 
 ## Contents
 
 - [Overview](#overview)
-- [Why PRSWeave matters](#why-prsweave-matters)
+- [Scientific contribution](#scientific-contribution)
 - [Architecture](#architecture)
 - [What we have demonstrated](#what-we-have-demonstrated)
 - [Quick start](#quick-start)
 - [Limitations and roadmap](#limitations-and-roadmap)
 - [Repository layout and documentation](#repository-layout-and-documentation)
+- [Data and third-party sources](#data-and-third-party-sources)
+- [Citing PRSWeave](#citing-prsweave)
+- [License](#license)
+- [Research Team and Contact](#research-team-and-contact)
 
 ---
 
@@ -43,7 +54,19 @@ Every decision, tool call and verdict is written to a tamper-evident log.
 
 The first application uses a published score from the [PGS Catalog](https://www.pgscatalog.org/), PGS005206 (a bone mineral density score, 81 variants), on 20 synthetic individuals.
 
-## Why PRSWeave matters
+## Scientific contribution
+
+### Why this first version is valuable
+
+v0.1 turns a research question into something that can be executed and checked. It provides a working, pre-registered and fully logged test bed in which an LLM makes the workflow decisions, deterministic tools do all the science, and an independent validator decides what may be released. With it, claims about adaptive AI in genomics can be tested against recorded evidence and strong conventional baselines, instead of being argued in the abstract.
+
+### How it differs conceptually
+
+- **Evidence-grounded decision-making.** Conventional pipelines follow a sequence fixed in advance. General-purpose AI agents decide freely and may compute or reinterpret things themselves. In PRSWeave the Planner chooses each step from logged tool evidence, among authorized actions only, and records why. It never computes results.
+- **Adaptive error recovery.** When a tool reports a problem or the validator rejects a result, the Planner must diagnose the cause and choose a corrective action, such as a value-preserving repair, a restore or a recalculation. Every correction is itself verified before the workflow continues.
+- **Independent verification.** Release does not depend on the Planner's own judgment. A separately written Critic recomputes every score, checks provenance and phenotype suitability, and can veto. Abstaining is treated as a valid scientific outcome.
+
+These are differences in design, not demonstrated advantages. In the preliminary experiments a robust deterministic baseline reached the same outcomes faster ([see below](#an-essential-finding-a-strong-deterministic-baseline-did-as-well)).
 
 ### The problem
 
@@ -249,15 +272,31 @@ docs/                    Stage reports, architecture, decision records (DR-0001 
 | [Reproducibility guide](docs/REPRODUCIBILITY.md) | What can be rerun, and with which data |
 | [Decision records](docs/decisions/) | Score approval, scoring conventions, pre-registration, post-hoc amendment |
 
-## Data and citation
+## Data and third-party sources
 
 - **Not redistributed:** PGS Catalog scoring files and API records. They are fetched from the official source by `scripts/fetch_public_data.py`.
-- **Included:** all genotypes in this repository are synthetic. Some archived result files include published PGS005206 weights and catalog metadata, as part of the experimental record.
-- **Citations:**
+- **Included:** all genotypes in this repository are synthetic. Some archived result files include published PGS005206 weights, PGS Catalog and GWAS Catalog metadata, and effect sizes from the source GWAS, as part of the experimental record. These remain subject to their original sources' terms. Use of PGS Catalog data follows the [EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use/).
+- **Please cite the original sources** when using these data:
   - PGS Catalog: Lambert et al., *Nat Genet* 2024, doi:10.1038/s41588-024-01937-x.
   - PGS005206: Prijatelj et al., *Bone* 2024, doi:10.1016/j.bone.2024.117070.
   - Source GWAS: Medina-Gomez et al., *Am J Hum Genet* 2018, doi:10.1016/j.ajhg.2017.12.005.
 
-  Use of PGS Catalog data follows the [EMBL-EBI Terms of Use](https://www.ebi.ac.uk/about/terms-of-use/).
+## Citing PRSWeave
 
-**License:** not yet chosen. All rights reserved until a license is added.
+Citation metadata is in [`CITATION.cff`](CITATION.cff); GitHub's "Cite this repository" button reads it. Suggested form:
+
+> González-Ramírez MI. *PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research* (v0.1, research prototype). Center for Biomedical Informatics and Genomics, Tulane University; 2026. https://github.com/migonzalezr/PRSWeave-AgenticAI
+
+## License
+
+The PRSWeave source code and documentation are released under the [MIT License](LICENSE).
+
+The license does not cover third-party data or metadata included in the archived results (see [Data and third-party sources](#data-and-third-party-sources)); those remain under their original terms.
+
+## Research Team and Contact
+
+PRSWeave is developed by researchers at the **Center for Biomedical Informatics and Genomics (CBG), Tulane University**, New Orleans, Louisiana, USA.
+
+**Primary contact:** Martha Isabel González-Ramírez, [martha.gonzalezr@tulane.edu](mailto:martha.gonzalezr@tulane.edu)
+
+Questions, issues and collaboration proposals are welcome through the contact above or the repository's [issue tracker](https://github.com/migonzalezr/PRSWeave-AgenticAI/issues).
