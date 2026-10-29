@@ -2,7 +2,7 @@
 
 **PRSWeave** = Polygenic Risk Score Workflow for Evidence, Adaptation, Validation, and Evaluation
 
-**Predicting the risk of a disease is as complex as the disease itself.** A reliable polygenic risk estimate requires disease-specific expertise, solid published evidence, well-defined phenotypes with ground-truth outcomes for validation, and SNP weights derived from a representative population that is genetically similar to the individuals being scored. Getting there involves many interdependent steps, including quality control, genome-build and allele harmonization, ancestry assessment, method selection and validation, and each step demands specialized knowledge and programming skills. The result matters: it describes a person's genetic susceptibility to a disease, so it must be accurate, transparent and carefully interpreted. PRSWeave is designed to help researchers carry out this process rigorously, with every decision grounded in evidence and independently checked.
+**Predicting disease risk is as complex as the disease itself.** Polygenic risk scores (PRS) aggregate the effects of many common genetic variants, weighted by effect sizes from genome-wide association studies (GWAS), into an estimate of an individual's genetic predisposition to a trait or disease relative to a reference population [1,2]. PRS can identify individuals whose risk is comparable to that conferred by monogenic mutations [3], and they are being evaluated for clinical implementation [4,5]. Yet reliable estimation is not a single calculation. It requires disease-specific expertise, robust published evidence, well-defined phenotypes with ground-truth outcomes for validation, and variant weights derived from a population genetically similar to the individuals being scored. Because most GWAS have been conducted in individuals of European ancestry, PRS transfer poorly to other populations, and their accuracy declines with increasing genetic distance from the discovery sample [6–9]; left unaddressed, this gap may widen health disparities [6,9]. Producing a valid score therefore involves many interdependent steps, including quality control, genome-build and allele harmonization, ancestry assessment, method selection and independent validation, each demanding specialized statistical-genetics knowledge and programming skills [2]. This complexity is among the barriers that have slowed the translation of PRS from research into practice [4], while genetic risk assessment is increasingly offered through commercial services rather than open, reproducible tools. PRSWeave aims to make this process more rigorous, transparent and accessible to researchers, with every decision grounded in evidence and independently checked.
 
 PRSWeave is a research prototype that asks a specific question: can AI-driven planning, constrained to evidence and to specialized deterministic scientific tools and checked by an independent validator, support genomic analyses that adapt to what they find while remaining auditable and reproducible?
 
@@ -35,6 +35,7 @@ The title names the research direction. The evidence reported here concerns only
 - [Citing PRSWeave](#citing-prsweave)
 - [License](#license)
 - [Research Team and Contact](#research-team-and-contact)
+- [References](#references)
 
 ---
 
@@ -307,3 +308,15 @@ PRSWeave is developed by researchers at the **Center for Biomedical Informatics 
 - Martha Isabel González-Ramírez, PhD(c), CBG, Tulane University, [martha.gonzalezr@tulane.edu](mailto:martha.gonzalezr@tulane.edu)
 
 Questions, issues and collaboration proposals are welcome through the contact above or the repository's [issue tracker](https://github.com/migonzalezr/PRSWeave-AgenticAI/issues).
+
+## References
+
+1. Torkamani A, Wineinger NE, Topol EJ. The personal and clinical utility of polygenic risk scores. *Nat Rev Genet.* 2018;19:581–590. doi:10.1038/s41576-018-0018-x
+2. Choi SW, Mak TSH, O'Reilly PF. Tutorial: a guide to performing polygenic risk score analyses. *Nat Protoc.* 2020;15:2759–2772. doi:10.1038/s41596-020-0353-1
+3. Khera AV, Chaffin M, Aragam KG, et al. Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations. *Nat Genet.* 2018;50:1219–1224. doi:10.1038/s41588-018-0183-z
+4. Lewis CM, Vassos E. Polygenic risk scores: from research tools to clinical instruments. *Genome Med.* 2020;12:44. doi:10.1186/s13073-020-00742-5
+5. Lennon NJ, Kottyan LC, Kachulis C, et al. Selection, optimization and validation of ten chronic disease polygenic risk scores for clinical implementation in diverse US populations. *Nat Med.* 2024;30:480–487. doi:10.1038/s41591-024-02796-z
+6. Martin AR, Kanai M, Kamatani Y, et al. Clinical use of current polygenic risk scores may exacerbate health disparities. *Nat Genet.* 2019;51:584–591. doi:10.1038/s41588-019-0379-x
+7. Duncan L, Shen H, Gelaye B, et al. Analysis of polygenic risk score usage and performance in diverse human populations. *Nat Commun.* 2019;10:3328. doi:10.1038/s41467-019-11112-0
+8. Privé F, Aschard H, Carmi S, et al. Portability of 245 polygenic scores when derived from the UK Biobank and applied to 9 ancestry groups from the same cohort. *Am J Hum Genet.* 2022;109:12–23. doi:10.1016/j.ajhg.2021.11.008
+9. Fatumo S, Chikowore T, Choudhury A, et al. A roadmap to increase diversity in genomic studies. *Nat Med.* 2022;28:243–250. doi:10.1038/s41591-021-01672-4
