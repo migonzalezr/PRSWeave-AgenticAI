@@ -248,7 +248,7 @@ Replaying recorded agent decisions, re-grading experiments and running new agent
 - larger, randomized scenario sets with statistical comparison against strong deterministic baselines;
 - human approval steps within a run;
 - deeper specialization in polygenic risk research, extending to a broad range of diseases and trait types, such as cancer, Alzheimer's disease, diabetes, cardiovascular diseases and rare diseases (where polygenic background can modify risk), each with its own scientific suitability checks;
-- in the long term, contributing to precision medicine by supporting clinicians with transparent, evidence-based and ethically interpreted risk information. This would require validation in real cohorts and appropriate regulatory and ethical review.
+- in the long term, contributing to precision medicine by supporting researchers and clinicians with transparent, evidence-based and ethically interpreted risk information. This would require validation in real cohorts and appropriate regulatory and ethical review.
 
 ## Repository layout and documentation
 
