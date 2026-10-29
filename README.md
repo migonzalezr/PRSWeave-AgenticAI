@@ -3,7 +3,7 @@
 PRSWeave is a research prototype that asks a specific question: can AI-driven planning, constrained to evidence and to specialized deterministic scientific tools and checked by an independent validator, support genomic analyses that adapt to what they find while remaining auditable and reproducible?
 
 > **Status: v0.1, research prototype (Stages 1–3 complete).** Synthetic genotypes only. Not for clinical use.
-> In this version the Planner is an LLM (a Claude subagent mediated by Claude Code). All scientific computation, checking and validation is deterministic code. PRSWeave is **not** a fully autonomous or production-ready multi-agent system.
+> In this version an LLM Planner (a Claude subagent mediated by Claude Code) coordinates specialized deterministic scientific tools and an independent validator.
 
 ### Research vision and current scope
 
