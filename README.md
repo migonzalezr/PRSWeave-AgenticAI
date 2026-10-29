@@ -285,7 +285,7 @@ docs/                    Stage reports, architecture, decision records (DR-0001 
 
 Citation metadata is in [`CITATION.cff`](CITATION.cff); GitHub's "Cite this repository" button reads it. Suggested form:
 
-> PRSWeave. *PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research* (v0.1, research prototype). 2026. https://github.com/migonzalezr/PRSWeave-AgenticAI
+> *PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research* (v0.1, research prototype). 2026. https://github.com/migonzalezr/PRSWeave-AgenticAI
 
 ## License
 
