@@ -2,6 +2,8 @@
 
 **PRSWeave** = Polygenic Risk Score Workflow for Evidence, Adaptation, Validation, and Evaluation
 
+**Predicting the risk of a disease is as complex as the disease itself.** A reliable polygenic risk estimate requires disease-specific expertise, solid published evidence, well-defined phenotypes with ground-truth outcomes for validation, and SNP weights derived from a representative population that is genetically similar to the individuals being scored. Getting there involves many interdependent steps, including quality control, genome-build and allele harmonization, ancestry assessment, method selection and validation, and each step demands specialized knowledge and programming skills. The result matters: it describes a person's genetic susceptibility to a disease, so it must be accurate, transparent and carefully interpreted. PRSWeave is designed to help researchers carry out this process rigorously, with every decision grounded in evidence and independently checked.
+
 PRSWeave is a research prototype that asks a specific question: can AI-driven planning, constrained to evidence and to specialized deterministic scientific tools and checked by an independent validator, support genomic analyses that adapt to what they find while remaining auditable and reproducible?
 
 > **Status: v0.1, research prototype (Stages 1–3 complete).** Synthetic genotypes only. Not for clinical use.
