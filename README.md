@@ -25,7 +25,7 @@ The title names the research direction. The evidence reported here concerns only
 - [Overview](#overview)
 - [Scientific contribution](#scientific-contribution)
 - [Architecture](#architecture)
-- [What we have demonstrated](#what-we-have-demonstrated)
+- [What PRSWeave v0.1 has shown](#what-prsweave-v01-has-shown)
 - [Quick start](#quick-start)
 - [Limitations and roadmap](#limitations-and-roadmap)
 - [Repository layout and documentation](#repository-layout-and-documentation)
@@ -166,7 +166,7 @@ The Planner runs as a Claude Code subagent. The Claude Code session relays each 
 
 Details: [`docs/stage3_architecture.md`](docs/stage3_architecture.md).
 
-## What we have demonstrated
+## What PRSWeave v0.1 has shown
 
 ### Stage 1: feasibility and score selection
 We queried the PGS Catalog (release 2026-10-23, 7,029 scores) for hip and bone-mineral-density scores. **No total-hip BMD score exists in the catalog.** PGS005206 (total-body BMD, 81 variants, beta weights, harmonized GRCh38 file) was chosen as the most technically feasible candidate and pinned by checksum.
