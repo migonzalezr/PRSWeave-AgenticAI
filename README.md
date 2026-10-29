@@ -301,7 +301,7 @@ The license does not cover third-party data or metadata included in the archived
 PRSWeave is developed by researchers at the **Center for Biomedical Informatics and Genomics (CBG), Tulane University**, New Orleans, Louisiana, USA.
 
 **Contacts:**
-- Kuan-Jui Su, PhD, Principal Investigator, CBG, Tulane University
+- Kuan-Jui Su, PhD, Principal Investigator, CBG, Tulane University, [ksu2@tulane.edu](mailto:ksu2@tulane.edu)
 - Martha Isabel González-Ramírez, CBG, Tulane University, [martha.gonzalezr@tulane.edu](mailto:martha.gonzalezr@tulane.edu)
 
 Questions, issues and collaboration proposals are welcome through the contact above or the repository's [issue tracker](https://github.com/migonzalezr/PRSWeave-AgenticAI/issues).
