@@ -7,7 +7,8 @@ type: software
 title: "PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research"
 version: 0.1.0.dev0
 abstract: >-
-  PRSWeave is a research prototype for studying adaptive, evidence-grounded
+  PRSWeave (Polygenic Risk Score Workflow for Evidence, Adaptation,
+  Validation, and Evaluation) is a research prototype for studying adaptive, evidence-grounded
   orchestration of polygenic risk score (PRS) workflows. Adaptive multi-agent
   orchestration is the long-term research architecture. Version 0.1 implements
   an LLM-driven Planner that coordinates deterministic scientific specialists,
