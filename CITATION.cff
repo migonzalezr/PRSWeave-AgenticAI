@@ -15,12 +15,10 @@ abstract: >-
   log and pre-registered experiments on synthetic genotypes. It is not
   intended for clinical use.
 authors:
-  - family-names: González-Ramírez
-    given-names: Martha Isabel
-    email: martha.gonzalezr@tulane.edu
-    affiliation: >-
-      Center for Biomedical Informatics and Genomics (CBG), Tulane University,
-      New Orleans, Louisiana, USA
+  - name: PRSWeave
+    city: New Orleans
+    region: Louisiana
+    country: US
 contact:
   - family-names: González-Ramírez
     given-names: Martha Isabel
