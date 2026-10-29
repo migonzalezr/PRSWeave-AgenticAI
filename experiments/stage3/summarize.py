@@ -108,7 +108,7 @@ def fig1() -> None:
          f'<rect x="20" y="500" width="14" height="14" fill="{M}" stroke="#333"/><text x="40" y="512">model-driven</text>',
          f'<rect x="150" y="500" width="14" height="14" fill="{D}" stroke="#333"/><text x="170" y="512">deterministic code</text>',
          f'<rect x="310" y="500" width="14" height="14" fill="{R}" stroke="#333"/><text x="330" y="512">human / relay</text>',
-         '<text x="20" y="540" font-size="10">Not implemented: Bedrock or any cloud runtime; direct model API calls from Python; '
+         '<text x="20" y="540" font-size="10">Not implemented: scalable cloud/HPC runtime; direct model API calls from Python; '
          'human approval inside a run (REQUIRES_HUMAN_REVIEW is terminal).</text>']
     svg(FIG / "fig1_architecture.svg", 900, 560, b)
 

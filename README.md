@@ -84,6 +84,17 @@ In controlled experiments with synthetic data:
 
 These are **preliminary demonstrations of controlled, evidence-grounded workflow adaptation** in four designed scenarios. They are not evidence of general autonomous scientific reasoning.
 
+### Learning from wrong decisions, in the open
+
+We publish our mistakes alongside our successes, because showing how a system improves after a bad decision is part of the evidence.
+
+- **Our validator made a wrong decision.** In the pre-registered runs, the Critic rejected scientifically correct results. The Planner had sent `"true"` as text, and the Critic treated that as an uncorrectable phenotype mismatch. It also rejected a number that had been correctly copied from an evidence record.
+- **The safeguards held.** The Planners did not force a release or relabel the phenotype. They noticed that the Critic's verdict contradicted its own evidence and escalated to human review. No incorrect result was released.
+- **We kept the failure on the record.** The failed runs stay as the primary result, with their complete logs.
+- **We fixed it openly and re-tested.** We diagnosed the defect, recorded the fix as a dated decision record ([DR-0004](docs/decisions/0004-stage3-amendment2-post-hoc.md)) with the exact code change ([diff](docs/decisions/0004-amendment2.diff)), and reran the scenarios separately as post-hoc runs. In those runs all three answerable tasks were completed and verified.
+- **The Planner also corrected its own mistakes when challenged.** In the reruns it first submitted an incomplete phenotype label ("Bone mineral density" without the skeletal site). The Critic rejected it with a specific reason, and the Planner fixed the label and passed on its next submission. This is the reject → reconsider → correct loop the architecture is designed to test.
+- **Anyone can check this.** Reversing the recorded fix reproduces the original failed runs exactly, and applying it reproduces the corrected ones. The improvement can be verified, not just described.
+
 ### An essential finding: a strong deterministic baseline did as well
 
 A conventional pipeline with well-chosen fixed rules (header-name repair, a phenotype-site check, one recalculation after a failed verification) **achieved the same outcomes in all four scenarios, in milliseconds and with no model calls.** The LLM-driven runs took minutes.
@@ -206,7 +217,7 @@ Replaying recorded agent decisions, re-grading experiments and running new agent
 - **Score caveats:** PGS005206 is a total-body BMD score, used here as a proxy. Its weight derivation is partly unverified.
 
 **Future research:**
-- cloud deployment (for example AWS Bedrock) with directly measured cost and latency;
+- running on dedicated computational resources (cloud or HPC). Today each Planner decision is relayed manually and a run takes minutes; more compute would allow larger, repeated and faster experiments with directly measured cost and latency;
 - model-driven specialists and validators, and how to keep them independent;
 - real-cohort data with harmonization and ancestry assessment;
 - larger, randomized scenario sets with statistical comparison against strong deterministic baselines;

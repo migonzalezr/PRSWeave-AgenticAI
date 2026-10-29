@@ -53,7 +53,7 @@ The specialists are deliberately deterministic. Calling them "agents" refers to 
 
 ## Provider independence
 
-The tools, the controller and the Critic take no model dependency. A Bedrock-hosted (or any other) planner would need only to:
+The tools, the controller and the Critic take no model dependency. A planner hosted by any other model provider or computing platform would need only to:
 1. read `packet_NNN.json`,
 2. return the same JSON decision schema (`planner.REQUIRED_KEYS`),
 3. call `Controller.apply_decision`.

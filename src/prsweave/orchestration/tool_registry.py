@@ -3,7 +3,7 @@
 Only registered tools can run. Each execution writes its arguments and result
 to JSON artifacts, logs a ``tool_execution`` event with SHA-256 references and
 duration, and returns a ToolResult. Tools are plain Python callables with no
-LLM inside, so a future Bedrock (or other) planner can call the same registry.
+LLM inside, so a future planner on any model backend can call the same registry.
 """
 
 from __future__ import annotations

@@ -139,6 +139,8 @@ It sees logged tool arguments, results and justifications, but not the hidden ha
 
 ## F. Failure analysis
 
+Errors are reported in full because the way a system recovers from a wrong decision is itself evidence. In run 1 our Critic made a wrong decision: it rejected correct results. The Planners escalated instead of forcing a release. We kept those runs as the primary record, fixed the defect openly (DR-0004, with an exact and reversible diff), and the reruns completed and passed verification. In the reruns the Planner's own incomplete phenotype labels were rejected by the Critic and corrected on the next attempt. Both the failure and the improvement can be reproduced from the archived logs.
+
 1. **Critic/controller defect (run 1, A/B/D; our error, not the Planner's).**
    - The packet described `fulfils_request` as `"true/false"`. All three Planners returned the string `"true"`.
    - V6b tested `is True` and treated every V6b failure as non-retryable, so the controller blocked resubmission of correct results.
@@ -161,7 +163,7 @@ It sees logged tool arguments, results and justifications, but not the hidden ha
 - **Phenotype and weights.** PGS005206 is a total-body BMD score. Its weight derivation is partly unverified (Prijatelj 2024 full text not reviewed; DR-0002).
 - **Small experiment.** Four scenarios, seven agentic runs, one model. The run 2 results are post-hoc. No statistical claims are made.
 
-## H. Relevance to the AWS proposal
+## H. What has been demonstrated, and what needs more computational resources
 
 **Demonstrated locally:**
 - a model-driven Planner choosing among restricted, executable tools from observed evidence;
@@ -171,18 +173,18 @@ It sees logged tool arguments, results and justifications, but not the hidden ha
 - replay of recorded decisions;
 - a pre-registered rubric graded by independent code.
 
-**Not demonstrated; would be future work:**
-- Bedrock or any cloud deployment;
-- direct API-based agent runtimes with measured cost;
+**Not demonstrated; future work:**
+- deployment on scalable computing resources (cloud or HPC). Today each Planner decision is relayed manually through Claude Code and a run takes minutes; dedicated computational resources would make larger, repeated and faster experiments possible;
+- direct API-based agent runtimes with measured cost and latency;
 - model-driven specialists or a model-based Critic, and the question of independence between models;
 - multiple model families;
 - real cohort genotypes with harmonization, ancestry and imputation;
 - larger, randomized scenario sets with statistical comparison against strong baselines;
 - human-in-the-loop approval within a run.
 
-### Preliminary-results paragraph (for cautious use in the proposal)
+### Preliminary-results summary
 
-> In a pre-registered local feasibility study, we built PRSWeave, a prototype in which a model-driven Planner (a Claude subagent) coordinates deterministic evidence-retrieval, population-context and PRS-calculation specialists. A deterministic Validation Critic independently recomputes every score and can reject results. Using the published PGS005206 weights (total-body BMD) and 20 synthetic genotypes, the system abstained correctly when asked for total-hip BMD (no eligible score among 7,029 catalog entries). In the pre-registered runs it released no invalid result, but it failed to complete three answerable tasks because of a defect in our validation interface. After a documented post-hoc correction, it completed all three, including a Planner-selected repair of a malformed genotype table and recovery from a post-scoring output corruption that the Critic detected. All released scores matched an independent reference exactly. A fixed-rule pipeline with equivalent checks achieved the same outcomes faster. The prototype therefore demonstrates auditable, evidence-linked orchestration and safe escalation, not superior performance. Cloud deployment, model-driven specialists, real-cohort data and statistically powered comparisons remain future work.
+> In a pre-registered local feasibility study, we built PRSWeave, a prototype in which a model-driven Planner (a Claude subagent) coordinates deterministic evidence-retrieval, population-context and PRS-calculation specialists. A deterministic Validation Critic independently recomputes every score and can reject results. Using the published PGS005206 weights (total-body BMD) and 20 synthetic genotypes, the system abstained correctly when asked for total-hip BMD (no eligible score among 7,029 catalog entries). In the pre-registered runs it released no invalid result, but it failed to complete three answerable tasks because of a defect in our validation interface. After a documented post-hoc correction, it completed all three, including a Planner-selected repair of a malformed genotype table and recovery from a post-scoring output corruption that the Critic detected. All released scores matched an independent reference exactly. A fixed-rule pipeline with equivalent checks achieved the same outcomes faster. The prototype therefore demonstrates auditable, evidence-linked orchestration and safe escalation, not superior performance. Running the framework at scale on dedicated computational resources, model-driven specialists, real-cohort data and statistically powered comparisons remain future work.
 
 ## Reproduction
 
