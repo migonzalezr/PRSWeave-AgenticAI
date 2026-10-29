@@ -15,7 +15,7 @@ abstract: >-
   log and pre-registered experiments on synthetic genotypes. It is not
   intended for clinical use.
 authors:
-  - name: PRSWeave
+  - name: "Center for Biomedical Informatics and Genomics (CBG), Tulane University"
     city: New Orleans
     region: Louisiana
     country: US

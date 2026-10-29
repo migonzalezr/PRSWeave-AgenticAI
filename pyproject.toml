@@ -3,7 +3,7 @@ name = "prsweave"
 version = "0.1.0.dev0"
 description = "PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research (v0.1 research prototype)"
 license = {text = "MIT"}
-authors = [{name = "PRSWeave"}]
+authors = [{name = "Center for Biomedical Informatics and Genomics (CBG), Tulane University"}]
 readme = "README.md"
 requires-python = ">=3.10"
 # Stage 1 is standard library only. Dependencies are added per stage, with approval.
