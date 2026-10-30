@@ -295,6 +295,8 @@ Citation metadata is in [`CITATION.cff`](CITATION.cff); GitHub's "Cite this repo
 
 > Center for Biomedical Informatics and Genomics (CBG), Tulane University. *PRSWeave: Adaptive Multi-Agent Orchestration for Polygenic Risk Research* (v0.1, research prototype). 2026. https://github.com/migonzalezr/PRSWeave-AgenticAI
 
+<sub>**Agentic AI Team, CBG, Tulane University:** Kuan-Jui Su, PhD; Martha Isabel González-Ramírez, PhD(c); Lindong Jiang; Yuwei Hou; Lei Huang. **Senior scientific advisors:** Hong-Wen Deng, PhD; Hui Shen, PhD; Yipu Zhang, PhD; David Crosslin, PhD; Chuan Qiu.</sub>
+
 ## License
 
 The PRSWeave source code and documentation are released under the [MIT License](LICENSE).
